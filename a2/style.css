@@ -1,24 +1,291 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+html {
+	scroll-behavior: smooth;
+}
+.nav{
+	border:1px solid #ccc;
+	border-width:1px 0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	background-color: #333;
+}
+.nav li{
+	display:inline;
+}
+.nav a{
+	display: block;
+	color: white;
+	display:inline-block;
+	padding:10px;
+}
+.nav a:hover { 
+	background-color: #111;
 }
 
-li {
-  float: left;
+@media screen and (max-width: 44em) {
+	nav[role="full-horizontal"] {
+		ul > li {
+			width: 100%;
+		}
+	}
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.parallax { 
+	/* The image used */
+	background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+
+	/* Set a specific height */
+	height: 500px; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.centered {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 500%);
+}
+/* Feature */
+
+.feature {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	margin-bottom: 6em;
+
+}
+
+.feature:last-child {
+	margin-bottom: 2em;
+}
+
+.feature.left {
+
+	flex-direction: row;
+}
+
+.feature.right {
+
+	flex-direction: row-reverse;
+}
+
+.feature .image {
+	width: 48%;
+}
+
+.feature .image img {
+	max-width: 100%;
+}
+
+.feature .content {
+	padding: 2em 3em 0.1em 3em;
+	width: 52%;
+}
+
+@media screen and (max-width: 1280px) {
+
+	.feature {
+		margin-bottom: 4em;
+	}
+
+	.feature .content {
+		padding: 1em 2em 0.1em 2em;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.feature.left, .feature.right {
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.feature .image {
+		width: 100%;
+	}
+
+	.feature .image img {
+		width: 100%;
+	}
+
+	.feature .content {
+		padding: 2em 2em 0.1em 2em;
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.feature {
+		margin-bottom: 2em;
+	}
+
+	.feature .content {
+		padding: 2em 1em 0.1em 1em;
+	}
+
+}
+
+.feature {
+	background-color: rgba(144, 144, 144, 0.075);
+}
+
+
+/* Wrapper */
+
+.wrapper {
+	padding: 8em 0 6em 0;
+	position: relative;
+}
+
+.wrapper > .inner {
+	margin: 0 auto;
+	width: 70em;
+}
+
+.wrapper.style1 {
+	background-color: #EEE;
+	color: #777;
+}
+
+.wrapper.style1 input, .wrapper.style1 select, .wrapper.style1 textarea {
+	color: #555;
+}
+
+.wrapper.style1 a {
+	color: #51BAA4;
+}
+
+.wrapper.style1 strong, .wrapper.style1 b {
+	color: #555;
+}
+
+.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
+	color: #555;
+}
+
+.wrapper.style1 blockquote {
+	border-left-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 code {
+	background: #fff;
+	border-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 hr {
+	border-bottom-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 header p {
+	color: #555;
+}
+
+.wrapper.style1 .feature {
+	background-color: #fff;
+}
+
+.wrapper.style1 label {
+	color: #555;
+}
+
+
+.wrapper.style1 ul.alt > li {
+	border-top-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 table tbody tr {
+	border-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 table tbody tr:nth-child(2n + 1) {
+	background-color: #fff;
+}
+
+.wrapper.style1 table th {
+	color: #555;
+}
+
+.wrapper.style1 table thead {
+	border-bottom-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 table tfoot {
+	border-top-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style1 table.alt tbody tr td {
+	border-color: rgba(144, 144, 144, 0.25);
+}
+
+.wrapper.style3 {
+	background-color: #1E2832;
+	color: rgba(255, 255, 255, 0.75);
+	background-attachment: fixed;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat;
+	background-image: url("../../media/overlay.png"), url("https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=945&q=80");
+	background-size: cover;
+	height: 500px;
+	border: 2px solid 
+
+}
+
+
+@media screen and (max-width: 1280px) {
+
+	.wrapper {
+		padding: 6em 0 4em 0;
+	}
+
+	.wrapper > .inner {
+		width: 65em;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.wrapper {
+		padding: 5em 3em 3em 3em;
+	}
+
+	.wrapper > .inner {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.wrapper {
+		padding: 3em 2em 1em 2em;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.wrapper {
+		padding: 2em 1em 0.1em 1em;
+	}
+
 }
