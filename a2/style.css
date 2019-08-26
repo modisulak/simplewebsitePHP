@@ -289,3 +289,65 @@ html {
 	}
 
 }
+.movieCard
+{
+  background: grey;
+  margin:2%;
+  max-width: 500px;
+  max-height: 500px;
+  font-family: arial;
+  border-style: solid; 
+  border-width: 3px;
+  overflow: auto;
+  box-sizing:border-box;
+}
+
+.movieCardImage
+{
+    display: inline-block;
+    width: 45%;
+    height: 75%;
+    padding: auto;
+    margin: 2%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    box-sizing:border-box;
+   
+}
+
+.movieCardTitle
+{
+    width:45%;
+    height:auto;
+    float:right;
+    display:inline-block;
+    white-space: nowrap;
+    box-sizing:border-box;
+}
+
+.movieCardText
+{
+    text-align: justify;
+    line-height: 1.8;
+    float:right;
+    height:auto;
+    width:auto;
+    margin-top: -300px;
+    padding-right: 10%;
+    display: inline-block;
+    box-sizing:border-box;
+}
+
+.flex-container
+{
+    width:100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;  
+}
+
