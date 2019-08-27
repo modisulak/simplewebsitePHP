@@ -116,8 +116,6 @@
       </section>
 
 
-
-
       <section id="NOW SHOWING" class="flex-container">
         <div class="movieCard">
           <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
@@ -130,17 +128,41 @@
           <h1 class="movieCardTitle">Top End Wedding (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
+          
         <div class="movieCard">
           <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
           <h1 class="movieCardTitle">Dumbo (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
+          
         <div class="movieCard">
           <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
           <h1 class="movieCardTitle">The Happy Prince (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
       </section>
+        
+<section style>
+<div class=synopsis-box>
+    <div class="flex-container">
+<span> 
+<h1> Avengers Endgame (M) </h1> 
+<p> THis is the synopsis of this movie. THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie. </p>
+</span>
+<img src='../../media/website-under-construction.png' alt="avengers" class="synopsis-image" >       </div>
+    <div class="synopsis-bar"> 
+            <div class="flex-container"> 
+<p> MAKE A BOOKING: <br> 
+<button> WED 9:00pm</button>
+<button> THU 9:00pm</button>
+<button> FRI 9:00pm</button>
+<button> SAT 6:00pm</button>
+<button> SUN 6:00pm</button>
+</p> 
+            </div>
+    </div>
+</div>
+</section>
 
     </main>
 
