@@ -9,7 +9,24 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
+    <script type="text/javascript">
+      function toggleText()
+      {
+        style = window.getComputedStyle(document.getElementById('responsiveButton'));
+        color = style.getPropertyValue('color');
 
+        if(color == 'rgb(255, 255, 255)')
+        {
+          document.getElementById("responsiveButton").classList.remove('white');
+          document.getElementById("responsiveButton").classList.add('blue');
+        }
+        else
+        {
+          document.getElementById("responsiveButton").classList.remove('blue');
+          document.getElementById("responsiveButton").classList.add('white');
+        }
+      }		
+    </script>
 
   </head>
 
@@ -30,7 +47,7 @@
           <li><a href="#ABOUT US">ABOUT US</a></li>
           <li><a href="#PRICES">PRICES</a></li>
           <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-          <li><a href="#SYPNOSIS">SYPNOSISj</a></li>
+          <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
         </ul>
       </div>
     </nav>
@@ -61,7 +78,7 @@
             </div>
           </article>
           <article class="feature right">
-            <span class="image"><img src='../../media/logo.png' alt="" /></span>
+            <span class="image"><img src='../../media/atmos.jpg' alt="" /></span>
             <div class="content">
               <h2>New Chairs</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
@@ -69,9 +86,18 @@
             </div>
           </article>
           <article class="feature left">
-            <span class="image"><img src='../../media/logo.png' alt="" /></span>
+            <span class="image"><img src='../../media/seat.jpg' alt="" /></span>
             <div class="content">
               <h2>Something Something, other chair?</h2>
+              <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+
+            </div>
+          </article>
+
+          <article class="feature right">
+            <span class="image"><img src='../../media/seat2.png' alt="" /></span>
+            <div class="content">
+              <h2>New Chairs</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
 
             </div>
@@ -80,60 +106,41 @@
       </section>
 
       <!-- Three -->
-      <section id="three" class="wrapper style3 special">
-        <div class="inner">
-          <header class="major narrow	">
-            <h2>Magna sed consequat tempus</h2>
-            <p>Ipsum dolor tempus commodo turpis adipiscing Tempor placerat sed amet accumsan</p>
-          </header>
-          <ul class="actions">
-            <li><a href="#" class="button big alt">Magna feugiat</a></li>
-          </ul>
+      <section id="PRICES" class="wrapper style3 special">
+        <div class="priceButtons">
+          <input type="button" id="responsiveButton" onclick="toggleText()" value="Some text" class="blue">
+          <input type="button" id="responsiveButton2" onclick="toggleText()" value="Some text" class="blue">
+          <input type="button" id="responsiveButton3" onclick="toggleText()" value="Some text" class="blue">
+
         </div>
       </section>
-      
-<div>
- <div>
-     <div class="label">LABEL</div>
-     <div>filler</div>
- </div>
-  <div>
-     <div class="label">LABEL</div>
-     <div>filler</div>
- </div>
-  <div>
-     <div class="label">LABEL</div>
-     <div>filler</div>
- </div>
-</div>
 
-      <article id='SYPNOSIS'> 
-        <h2 'TEST'> </h2>
-        <img src='../../media/cinema.jpg' alt='Cinema' height=600/>
-      </article>
-        
-         <section id="NOW SHOWING" class="flex-container">
-<div class="movieCard">
-  <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
-  <h1 class="movieCardTitle">Avengers Endgame (M) </h1>
-  <p class="movieCardText"> <br> Wednesday- 9:00PM<br><br> Thursday- 9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p>
-</div>
-            
-<div class="movieCard">
-  <img src='../../media/website-under-construction.png' alt="Top End Wedding Poster" class="movieCardImage">
-  <h1 class="movieCardTitle">Top End Wedding (M) </h1>
-  <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-</div>
-            <div class="movieCard">
-  <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
-  <h1 class="movieCardTitle">Dumbo (M) </h1>
-  <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-</div>
-            <div class="movieCard">
-  <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
-  <h1 class="movieCardTitle">The Happy Prince (M) </h1>
-  <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-</div>
+
+
+
+      <section id="NOW SHOWING" class="flex-container">
+        <div class="movieCard">
+          <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
+          <h1 class="movieCardTitle">Avengers Endgame (M) </h1>
+          <p class="movieCardText"> <br> Wednesday- 9:00PM<br><br> Thursday- 9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p>
+        </div>
+
+        <div class="movieCard">
+          <img src='../../media/website-under-construction.png' alt="Top End Wedding Poster" class="movieCardImage">
+          <h1 class="movieCardTitle">Top End Wedding (M) </h1>
+          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+        </div>
+        <div class="movieCard">
+          <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
+          <h1 class="movieCardTitle">Dumbo (M) </h1>
+          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+        </div>
+        <div class="movieCard">
+          <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
+          <h1 class="movieCardTitle">The Happy Prince (M) </h1>
+          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+        </div>
+      </section>
 
     </main>
 
