@@ -90,10 +90,11 @@
       </section>
 
       <!-- Three -->
-      <section id="PRICES" class="section3">
-        <section id="NOW SHOWING" class="flex-container" style = margin:0>
+      <section id="PRICES1" class="section3">
+        <a class = "anchor" id= "PRICES"> </a>
+        <h1><center>PRICES</center></h1>
+        <section id="prices" class="flex-container" style = margin:0>
           <div class="pricesbox">
-            <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
 
 
           </div>
@@ -111,31 +112,36 @@
 
       </section>
 
+      <section>
+        <a class = "anchor" id= "NOW SHOWING"> </a>
+        <h1><center>NOW SHOWING</center></h1>
+        
+        <article class="flex-container">
 
-      <section id="NOW SHOWING" class="flex-container">
-        <div class="movieCard">
-          <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
-          <h1 class="movieCardTitle">Avengers Endgame (M) </h1>
-          <p class="movieCardText"> <br> Wednesday- 9:00PM<br><br> Thursday- 9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p>
-        </div>
+          <div class="movieCard">
+            <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
+            <h1 class="movieCardTitle">Avengers Endgame (M) </h1>
+            <p class="movieCardText"> <br> Wednesday- 9:00PM<br><br> Thursday- 9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p>
+          </div>
 
-        <div class="movieCard">
-          <img src='../../media/website-under-construction.png' alt="Top End Wedding Poster" class="movieCardImage">
-          <h1 class="movieCardTitle">Top End Wedding (M) </h1>
-          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-        </div>
+          <div class="movieCard">
+            <img src='../../media/website-under-construction.png' alt="Top End Wedding Poster" class="movieCardImage">
+            <h1 class="movieCardTitle">Top End Wedding (M) </h1>
+            <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+          </div>
 
-        <div class="movieCard">
-          <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
-          <h1 class="movieCardTitle">Dumbo (M) </h1>
-          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-        </div>
+          <div class="movieCard">
+            <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
+            <h1 class="movieCardTitle">Dumbo (M) </h1>
+            <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+          </div>
 
-        <div class="movieCard">
-          <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
-          <h1 class="movieCardTitle">The Happy Prince (M) </h1>
-          <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
-        </div>
+          <div class="movieCard">
+            <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
+            <h1 class="movieCardTitle">The Happy Prince (M) </h1>
+            <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
+          </div>
+        </article>
       </section>
 
       <section style>
