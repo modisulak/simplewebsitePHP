@@ -9,24 +9,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
-    <script type="text/javascript">
-      function toggleText()
-      {
-        style = window.getComputedStyle(document.getElementById('responsiveButton'));
-        color = style.getPropertyValue('color');
 
-        if(color == 'rgb(255, 255, 255)')
-        {
-          document.getElementById("responsiveButton").classList.remove('white');
-          document.getElementById("responsiveButton").classList.add('blue');
-        }
-        else
-        {
-          document.getElementById("responsiveButton").classList.remove('blue');
-          document.getElementById("responsiveButton").classList.add('white');
-        }
-      }		
-    </script>
 
   </head>
 
@@ -39,18 +22,19 @@
           <h1>LUNADO</h1>
         </div>
       </center>
+      <nav role="full-horizontal">
+        <div>
+          <ul class ="nav">
+            <li><a href="#ABOUT US">ABOUT US</a></li>
+            <li><a href="#PRICES">PRICES</a></li>
+            <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
+            <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
-    <nav role="full-horizontal">
-      <div>
-        <ul class ="nav">
-          <li><a href="#ABOUT US">ABOUT US</a></li>
-          <li><a href="#PRICES">PRICES</a></li>
-          <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-          <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <main>
 
@@ -106,13 +90,25 @@
       </section>
 
       <!-- Three -->
-      <section id="PRICES" class="wrapper style3 special">
-        <div class="priceButtons">
-          <input type="button" id="responsiveButton" onclick="toggleText()" value="Some text" class="blue">
-          <input type="button" id="responsiveButton2" onclick="toggleText()" value="Some text" class="blue">
-          <input type="button" id="responsiveButton3" onclick="toggleText()" value="Some text" class="blue">
+      <section id="PRICES" class="section3">
+        <section id="NOW SHOWING" class="flex-container" style = margin:0>
+          <div class="pricesbox">
+            <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
 
-        </div>
+
+          </div>
+          <div class="pricesbox">
+            <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
+
+
+          </div>
+          <div class="pricesbox">
+            <img src='../../media/website-under-construction.png' alt="Avengers Poster" class="movieCardImage">
+
+
+          </div>
+        </section>
+
       </section>
 
 
@@ -128,41 +124,41 @@
           <h1 class="movieCardTitle">Top End Wedding (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
-          
+
         <div class="movieCard">
           <img src='../../media/website-under-construction.png' alt="Dumbo Poster" class="movieCardImage">
           <h1 class="movieCardTitle">Dumbo (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
-          
+
         <div class="movieCard">
           <img src='../../media/website-under-construction.png' alt="Happy Prince Poster" class="movieCardImage">
           <h1 class="movieCardTitle">The Happy Prince (M) </h1>
           <p class="movieCardText"> <br> Wednesday-9:00PM<br><br> Thursday-9:00PM<br><br> Friday- 9:00PM<br><br> Saturday-6:00PM<br><br> Sunday-6:00PM<br></p> 
         </div>
       </section>
-        
-<section style>
-<div class=synopsis-box>
-    <div class="flex-container">
-<span> 
-<h1> Avengers Endgame (M) </h1> 
-<p> THis is the synopsis of this movie. THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie. </p>
-</span>
-<img src='../../media/website-under-construction.png' alt="avengers" class="synopsis-image" >       </div>
-    <div class="synopsis-bar"> 
+
+      <section style>
+        <div class=synopsis-box>
+          <div class="flex-container">
+            <span> 
+              <h1> Avengers Endgame (M) </h1> 
+              <p> THis is the synopsis of this movie. THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie. </p>
+            </span>
+            <img src='../../media/website-under-construction.png' alt="avengers" class="synopsis-image" >       </div>
+          <div class="synopsis-bar"> 
             <div class="flex-container"> 
-<p> MAKE A BOOKING: <br> 
-<button> WED 9:00pm</button>
-<button> THU 9:00pm</button>
-<button> FRI 9:00pm</button>
-<button> SAT 6:00pm</button>
-<button> SUN 6:00pm</button>
-</p> 
+              <p> MAKE A BOOKING: <br> 
+                <button> WED 9:00pm</button>
+                <button> THU 9:00pm</button>
+                <button> FRI 9:00pm</button>
+                <button> SAT 6:00pm</button>
+                <button> SUN 6:00pm</button>
+              </p> 
             </div>
-    </div>
-</div>
-</section>
+          </div>
+        </div>
+      </section>
 
     </main>
 
