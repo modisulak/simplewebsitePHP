@@ -72,7 +72,7 @@
           <article class="feature left">
             <span class="image"><img src='../../media/logo.png' alt="" /></span>
             <div class="content">
-              <h2>Brand New Dolby System</h2>
+              <h2>About Us</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
 
             </div>
@@ -80,7 +80,7 @@
           <article class="feature right">
             <span class="image"><img src='../../media/atmos.jpg' alt="" /></span>
             <div class="content">
-              <h2>New Chairs</h2>
+              <h2>Dolby Atmos Sound System</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
 
             </div>
@@ -88,7 +88,7 @@
           <article class="feature left">
             <span class="image"><img src='../../media/seat.jpg' alt="" /></span>
             <div class="content">
-              <h2>Something Something, other chair?</h2>
+              <h2>New Chairs</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
 
             </div>
@@ -97,7 +97,7 @@
           <article class="feature right">
             <span class="image"><img src='../../media/seat2.png' alt="" /></span>
             <div class="content">
-              <h2>New Chairs</h2>
+              <h2>The Premuim chairs, to be written</h2>
               <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
 
             </div>
