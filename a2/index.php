@@ -22,19 +22,19 @@
           <h2>LUNARDO</h2>
         </div>
       </center>
-      <nav role="full-horizontal">
-        <div>
-          <ul class ="nav">
-            <li><a href="#ABOUT US">ABOUT US</a></li>
-            <li><a href="#PRICES">PRICES</a></li>
-            <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-            <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
-          </ul>
-        </div>
-      </nav>
+
 
     </header>
-
+    <nav role="full-horizontal">
+      <div>
+        <ul class ="nav">
+          <li><a href="#ABOUT US">ABOUT US</a></li>
+          <li><a href="#PRICES">PRICES</a></li>
+          <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
+          <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <main>
 
@@ -58,8 +58,8 @@
             <div class="content">
               <h2>About Us</h2>
               <p>
-                  Welcome to the new and improved Lunardo Cinema! We know you've missed us, but following extensive renovations we are proud to be re-opening soon, bringing world class films and comforts to your back-door. Our roots and history are the most important things to us, and we can't wait to open up our doors and show off our brand new screens, sound and seats to all of you- familiar or new. Stay tuned and join us for the next step in our story... see you at the movies! 
-            </p>
+                Welcome to the new and improved Lunardo Cinema! We know you've missed us, but following extensive renovations we are proud to be re-opening soon, bringing world class films and comforts to your back-door. Our roots and history are the most important things to us, and we can't wait to open up our doors and show off our brand new screens, sound and seats to all of you- familiar or new. Stay tuned and join us for the next step in our story... see you at the movies! 
+              </p>
 
             </div>
           </article>
@@ -68,10 +68,10 @@
             <div class="content">
               <h2>Dolby Atmos Sound System</h2>
               <p>
-                  Say hello to the next big thing in Screen and Sound... Dolby Atmos. 
-                  
-                  'Surround' doesnt do this justice, with up to 128 individual speakers placed throughout the theatre, making for the most immersive watching experience on the market. Flowing from around, above and behind, you'll feel like you're right there in the battle with your favourite Hero, or listening to every drop of rain or chatter in a quiet, thoughtful cafe. We've also upgraded to <b>3D Projectors</b> for selected shows, so stay tuned to grab your tickets quickly! 
-                </p>
+                Say hello to the next big thing in Screen and Sound... Dolby Atmos. 
+
+                'Surround' doesnt do this justice, with up to 128 individual speakers placed throughout the theatre, making for the most immersive watching experience on the market. Flowing from around, above and behind, you'll feel like you're right there in the battle with your favourite Hero, or listening to every drop of rain or chatter in a quiet, thoughtful cafe. We've also upgraded to <b>3D Projectors</b> for selected shows, so stay tuned to grab your tickets quickly! 
+              </p>
 
             </div>
           </article>
@@ -80,8 +80,8 @@
             <div class="content">
               <h2>Upgraded Seats</h2>
               <p>
-                  Your eyes and ears won't be the only things thanking you for choosing Lunardo.. We've also installed brand new seats for our standard theatres! These seats are so soft, the only hard part will be standing up to leave them.
-                </p>
+                Your eyes and ears won't be the only things thanking you for choosing Lunardo.. We've also installed brand new seats for our standard theatres! These seats are so soft, the only hard part will be standing up to leave them.
+              </p>
 
             </div>
           </article>
@@ -91,9 +91,9 @@
             <div class="content">
               <h2>First Class</h2>
               <p>
-                  Here at Lunardo we believe that every cinema experience is special... But we also understand that sometimes you feel <b>Extra Special</b>. As of our Grand re-opening, we have the just the thing- First Class. Complete with padded, reclining premium seats and in-film service, First Class is the perfect treat for yourself, or anyone special in your life. Whether you've got something to celebrate, or just need a treat, we hope you'll give it a shot.. Be warned though, it's hard to go back! Find pricing information below. 
-                
-                </p>
+                Here at Lunardo we believe that every cinema experience is special... But we also understand that sometimes you feel <b>Extra Special</b>. As of our Grand re-opening, we have the just the thing- First Class. Complete with padded, reclining premium seats and in-film service, First Class is the perfect treat for yourself, or anyone special in your life. Whether you've got something to celebrate, or just need a treat, we hope you'll give it a shot.. Be warned though, it's hard to go back! Find pricing information below. 
+
+              </p>
 
             </div>
           </article>
@@ -109,15 +109,18 @@
         <section id="prices" class="flex-container" style = margin:0>
           <div class="pricesbox">
 
+            
+          <div class="pricesbox">
             <div class="flex-container"> 
+              <div class="flex-container"> 
               <p> ADULT PRICES <br> 
               </p>
 
               <table>
                 <tr>
                   <th>Seat</th>
-                  <th>Monday,Wednesday AND 12pm on Weekdays</th>
-                  <th>All other Times</th>
+                  <th>Discount Prices</th>
+                  <th>Full Price</th>
                 </tr>
                 <tr>
                   <td>Standard Adult</td>
@@ -132,16 +135,12 @@
               </table>
 
             </div>
-          </div>
-
-          <div class="pricesbox">
-            <div class="flex-container"> 
               <p> CHILD PRICES <br> 
               <table>
                 <tr>
                   <th>Seat</th>
-                  <th>Monday,Wednesday AND 12pm on Weekdays</th>
-                  <th>All other Times</th>
+                  <th>Discount Prices</th>
+                  <th>Full Price</th>
                 </tr>
                 <tr>
                   <td>Standard Adult</td>
@@ -154,19 +153,13 @@
                   <td>$30.00</td>
                 </tr>
               </table>
-              </p>
-          </div>
-
-
-          </div>
-        <div class="pricesbox">
-          <div class="flex-container"> 
+              <div class="flex-container"> 
             <p> CONCESSION PRICES <br> 
             <table>
               <tr>
                 <th>Seat</th>
-                <th>Monday,Wednesday AND 12pm on Weekdays</th>
-                <th>All other Times</th>
+                <th>Discount Prices</th>
+                <th>Full Price</th>
               </tr>
               <tr>
                 <td>Standard Adult</td>
@@ -178,9 +171,12 @@
                 <td>$24.00</td>
                 <td>$30.00</td>
               </tr>
+              
             </table>
-            </p>
-        </div>
+              </div>
+              
+          </div>
+            </div>
 
 
         </div>
@@ -198,11 +194,11 @@
         <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
         <h1>Avengers Endgame (M) </h1>
         <p>
-            <br> Wednesday- 9:00PM<br>
-            <br> Thursday- 9:00PM<br>
-            <br> Friday- 9:00PM<br>
-            <br> Saturday-6:00PM<br>
-            <br> Sunday-6:00PM<br>
+          <br> Wednesday- 9:00PM<br>
+          <br> Thursday- 9:00PM<br>
+          <br> Friday- 9:00PM<br>
+          <br> Saturday-6:00PM<br>
+          <br> Sunday-6:00PM<br>
         </p>
       </div>
 
@@ -210,10 +206,10 @@
         <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
         <h1>Top End Wedding (M) </h1>
         <p> 
-            <br> Monday-6:00PM<br>
-            <br> Tuesday-6:00PM<br>
-            <br> Saturday-3:00PM<br>
-            <br> Sunday-3:00PM<br>
+          <br> Monday-6:00PM<br>
+          <br> Tuesday-6:00PM<br>
+          <br> Saturday-3:00PM<br>
+          <br> Sunday-3:00PM<br>
         </p> 
       </div>
 
@@ -221,25 +217,25 @@
         <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
         <h1>Dumbo (M)</h1>
         <p> 
-            <br> Monday-12:00PM<br>
-            <br> Tuesday-12:00PM<br>
-            <br> Wednesday-6:00PM<br>
-            <br> Thursday-6:00PM<br>
-            <br> Friday- 6:00PM<br>
-            <br> Saturday-12:00PM<br>
-            <br> Sunday-12:00PM<br>
-          </p> 
+          <br> Monday-12:00PM<br>
+          <br> Tuesday-12:00PM<br>
+          <br> Wednesday-6:00PM<br>
+          <br> Thursday-6:00PM<br>
+          <br> Friday- 6:00PM<br>
+          <br> Saturday-12:00PM<br>
+          <br> Sunday-12:00PM<br>
+        </p> 
       </div>
 
       <div class="movieCard", id="AHF">
         <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
         <h1>The Happy Prince (M) </h1>
         <p> 
-            <br> Wednesday-12:00PM<br>
-            <br> Thursday-12:00PM<br>
-            <br> Friday- 12:00PM<br>
-            <br> Saturday-9:00PM<br>
-            <br> Sunday-9:00PM<br>
+          <br> Wednesday-12:00PM<br>
+          <br> Thursday-12:00PM<br>
+          <br> Friday- 12:00PM<br>
+          <br> Saturday-9:00PM<br>
+          <br> Sunday-9:00PM<br>
         </p> 
       </div>
     </article>
