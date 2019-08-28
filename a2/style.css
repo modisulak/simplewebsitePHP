@@ -307,7 +307,7 @@ header  h2{margin:0px;}
 
 
 
-.movieCard ul
+.movieCard p
 {
 	text-align: justify;
 	line-height: 1.8;
@@ -403,8 +403,8 @@ header  h2{margin:0px;}
 .pricesbox { 
 	background: grey;
 	margin:2%;
-	max-width: 700px;
-	width:547px;
+	max-width: 2000px;
+	width:80%;
 	max-height: 700px;
 	height: 1200px;
 	font-family: arial;
@@ -443,6 +443,7 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 	font
+	height:100%
 	
     
 }

@@ -107,21 +107,22 @@
         <a class = "anchor" id= "PRICES"> </a>
 
         <section id="prices" class="flex-container" style = margin:0>
-          <div class="pricesbox">
+        
 
             
           <div class="pricesbox">
             <div class="flex-container"> 
               <div class="flex-container"> 
+                <table> <tr>
+                  <th>Seat</th>
+                  <th>Discount Prices</th>
+                  <th>Full Price</th>
+                </tr></table>
               <p> ADULT PRICES <br> 
               </p>
 
               <table>
-                <tr>
-                  <th>Seat</th>
-                  <th>Discount Prices</th>
-                  <th>Full Price</th>
-                </tr>
+                
                 <tr>
                   <td>Standard Adult</td>
                   <td>$14.00</td>
@@ -137,11 +138,7 @@
             </div>
               <p> CHILD PRICES <br> 
               <table>
-                <tr>
-                  <th>Seat</th>
-                  <th>Discount Prices</th>
-                  <th>Full Price</th>
-                </tr>
+                
                 <tr>
                   <td>Standard Adult</td>
                   <td>$14.00</td>
@@ -156,11 +153,7 @@
               <div class="flex-container"> 
             <p> CONCESSION PRICES <br> 
             <table>
-              <tr>
-                <th>Seat</th>
-                <th>Discount Prices</th>
-                <th>Full Price</th>
-              </tr>
+              
               <tr>
                 <td>Standard Adult</td>
                 <td>$14.00</td>
@@ -179,7 +172,7 @@
             </div>
 
 
-        </div>
+ 
       </section>
 
     </section>
@@ -193,13 +186,13 @@
       <div class="movieCard",id="ACT">
         <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
         <h1>Avengers Endgame (M) </h1>
-        <ul>
-          <li> Wednesday- 9:00PM<li>
-          <li> Thursday- 9:00PM<li>
-          <li> Friday- 9:00PM<li>
-          <li> Saturday-6:00PM<li>
-          <li> Sunday-6:00PM<li>
-        </ul>
+        <p>
+          <br> Wednesday- 9:00PM<br>
+          <br> Thursday- 9:00PM<br>
+          <br> Friday- 9:00PM<br>
+          <br> Saturday-6:00PM<br>
+          <br> Sunday-6:00PM<br>
+        </p>
       </div>
 
       <div class="movieCard",id="RMC">
