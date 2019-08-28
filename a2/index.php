@@ -193,13 +193,13 @@
       <div class="movieCard",id="ACT">
         <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
         <h1>Avengers Endgame (M) </h1>
-        <p>
-          <br> Wednesday- 9:00PM<br>
-          <br> Thursday- 9:00PM<br>
-          <br> Friday- 9:00PM<br>
-          <br> Saturday-6:00PM<br>
-          <br> Sunday-6:00PM<br>
-        </p>
+        <ul>
+          <li> Wednesday- 9:00PM<li>
+          <li> Thursday- 9:00PM<li>
+          <li> Friday- 9:00PM<li>
+          <li> Saturday-6:00PM<li>
+          <li> Sunday-6:00PM<li>
+        </ul>
       </div>
 
       <div class="movieCard",id="RMC">
