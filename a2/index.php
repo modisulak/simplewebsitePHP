@@ -113,7 +113,7 @@
           <div class="pricesbox">
             <div class="flex-container"> 
               <div class="flex-container"> 
-                <table> <tr>
+                <table class="firsttable"> <tr>
                   <th>Seat</th>
                   <th>Discount Prices</th>
                   <th>Full Price</th>
@@ -186,50 +186,50 @@
       <div class="movieCard",id="ACT">
         <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
         <h1>Avengers Endgame (M) </h1>
-        <ul>
-            <li> Wednesday- 9:00PM</li>
-            <li> Thursday- 9:00PM</li>
-            <li> Friday- 9:00PM</li>
-            <li> Saturday-6:00PM</li>
-            <li> Sunday-6:00PM</li>
-        </ul>
+        <p>
+          <br> Wednesday- 9:00PM<br>
+          <br> Thursday- 9:00PM<br>
+          <br> Friday- 9:00PM<br>
+          <br> Saturday-6:00PM<br>
+          <br> Sunday-6:00PM<br>
+        </p>
       </div>
 
       <div class="movieCard",id="RMC">
         <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
         <h1>Top End Wedding (M) </h1>
-        <ul> 
-          <li> Monday-6:00PM</li>
-            <li> Tuesday-6:00PM</li>
-            <li> Saturday-3:00PM</li>
-            <li> Sunday-3:00PM</li>
-        </ul> 
+        <p> 
+          <br> Monday-6:00PM<br>
+          <br> Tuesday-6:00PM<br>
+          <br> Saturday-3:00PM<br>
+          <br> Sunday-3:00PM<br>
+        </p> 
       </div>
 
       <div class="movieCard", id="ANM">
         <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
         <h1>Dumbo (M)</h1>
-        <ul> 
-            <li> Monday-12:00PM</li>
-            <li> Tuesday-12:00PM</li>
-            <li> Wednesday-6:00PM</li>
-            <li> Thursday-6:00PM</li>
-            <li> Friday- 6:00PM</li>
-            <li> Saturday-12:00PM</li>
-            <li> Sunday-12:00PM</li>
-        </ul> 
+        <p> 
+          <br> Monday-12:00PM<br>
+          <br> Tuesday-12:00PM<br>
+          <br> Wednesday-6:00PM<br>
+          <br> Thursday-6:00PM<br>
+          <br> Friday- 6:00PM<br>
+          <br> Saturday-12:00PM<br>
+          <br> Sunday-12:00PM<br>
+        </p> 
       </div>
 
       <div class="movieCard", id="AHF">
         <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
         <h1>The Happy Prince (M) </h1>
-        <ul> 
-            <li> Wednesday-12:00PM</li>
-            <li> Thursday-12:00PM</li>
-            <li> Friday- 12:00PM</li>
-            <li> Saturday-9:00PM</li>
-            <li> Sunday-9:00PM</li>
-        </ul> 
+        <p> 
+          <br> Wednesday-12:00PM<br>
+          <br> Thursday-12:00PM<br>
+          <br> Friday- 12:00PM<br>
+          <br> Saturday-9:00PM<br>
+          <br> Sunday-9:00PM<br>
+        </p> 
       </div>
     </article>
   </section>
@@ -243,7 +243,9 @@
           <h1> Avengers Endgame (M) </h1> 
           <p> THis is the synopsis of this movie. THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie. </p>
         </span>
-        <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="avengers">       </div>
+        <iframe width="600" height="400" src= "https://www.youtube.com/embed/TcMBFSGVi1c" alt="avengers">  
+        </iframe>
+          </div>
       <div class="synopsis-bar"> 
         <div class="flex-container"> 
           <p> MAKE A BOOKING: <br> 
