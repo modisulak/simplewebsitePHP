@@ -278,7 +278,7 @@ header  h2{margin:0px;}
 	box-sizing:border-box;
 }
 
-.movieCardImage
+.movieCard img
 {
 	display: inline-block;
 	width: 45%;
@@ -292,7 +292,7 @@ header  h2{margin:0px;}
 
 }
 
-.movieCardTitle
+.movieCard h1
 {
 	width:45%;
 	height:auto;
@@ -304,7 +304,7 @@ header  h2{margin:0px;}
 
 
 
-.movieCardText
+.movieCard p
 {
 	text-align: justify;
 	line-height: 1.8;
