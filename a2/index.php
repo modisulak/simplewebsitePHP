@@ -9,6 +9,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
   </head>
@@ -41,11 +42,11 @@
 
       <article id='ABOUT US'>
         <div class="container">
-          <div class="centered">ABOUT US</div>
+          <div class="centered"></div> 
         </div>
         <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
         <div class="parallax">
-
+  <h1>Fish Creek's Finest New Cinema Experience</h1>
 
         </div>
       </article>
@@ -56,7 +57,7 @@
           <article class="feature left">
             <span class="image"><img src='https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg' alt="Lux Theatre Interior" /></span>
             <div class="content">
-              <h2>About Us</h2>
+              <h1>About Us</h1>
               <p>
                 Welcome to the new and improved Lunardo Cinema! We know you've missed us, but following extensive renovations we are proud to be re-opening soon, bringing world class films and comforts to your back-door. Our roots and history are the most important things to us, and we can't wait to open up our doors and show off our brand new screens, sound and seats to all of you- familiar or new. Stay tuned and join us for the next step in our story... see you at the movies! 
               </p>
@@ -112,16 +113,16 @@
             
           <div class="pricesbox">
             <div class="flex-container"> 
-              <div class="flex-container"> 
-                <table> <tr>
+              
+                
+              <h3> ADULT PRICES 
+              </h3>
+
+              <table> <tr class="firstRow">
                   <th>Seat</th>
                   <th>Discount Prices</th>
                   <th>Full Price</th>
-                </tr></table>
-              <p> ADULT PRICES <br> 
-              </p>
-
-              <table>
+                </tr>
                 
                 <tr>
                   <td>Standard Adult</td>
@@ -135,9 +136,14 @@
                 </tr>
               </table>
 
-            </div>
-              <p> CHILD PRICES <br> 
-              <table>
+          
+              <h3> CHILD PRICES 
+              </h3>
+              <table> <tr class="firstRow">
+                  <th>Seat</th>
+                  <th>Discount Prices</th>
+                  <th>Full Price</th>
+                </tr>
                 
                 <tr>
                   <td>Standard Adult</td>
@@ -151,8 +157,12 @@
                 </tr>
               </table>
               <div class="flex-container"> 
-            <p> CONCESSION PRICES <br> 
-            <table>
+            <h3>  CONCESSION PRICES </h3> 
+            <table> <tr class="firstRow">
+                  <th>Seat</th>
+                  <th>Discount Prices</th>
+                  <th>Full Price</th>
+                </tr>
               
               <tr>
                 <td>Standard Adult</td>
@@ -177,7 +187,7 @@
 
     </section>
 
-  <section>
+  <section class="nowShow4">
     <a class = "anchor" id= "NOW SHOWING"> </a>
     <h1>NOW SHOWING</h1>
 
