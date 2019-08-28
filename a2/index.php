@@ -100,7 +100,7 @@
         </div>
       </section>
       <a class = "anchor" id= "PRICES"> </a>
-      <h1><center>PRICES</center></h1>
+      <h1>PRICES</h1>
 
       <!-- Three -->
       <section id="PRICES1" class="section3">
@@ -113,7 +113,7 @@
           <div class="pricesbox">
             <div class="flex-container"> 
               <div class="flex-container"> 
-                <table class="firsttable"> <tr>
+                <table> <tr>
                   <th>Seat</th>
                   <th>Discount Prices</th>
                   <th>Full Price</th>
@@ -179,7 +179,7 @@
 
   <section>
     <a class = "anchor" id= "NOW SHOWING"> </a>
-    <h1><center>NOW SHOWING</center></h1>
+    <h1>NOW SHOWING</h1>
 
     <article class="flex-container">
 
@@ -224,16 +224,14 @@
 
   <section> 
     <a class = "anchor" id= "SYPNOSIS"> </a>
-    <h1><center>SYPNOSIS</center></h1>
+    <h1>SYPNOSIS</h1>
     <div class=synopsis-box>
       <div class="flex-container">
         <span> 
           <h1> Avengers Endgame (M) </h1> 
-          <p> THis is the synopsis of this movie. THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie.THis is the synopsis of this movie. </p>
+          <p> After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.  </p>
         </span>
-        <iframe width="600" height="400" src= "https://www.youtube.com/embed/TcMBFSGVi1c" alt="avengers">  
-        </iframe>
-          </div>
+        <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="avengers">       </div>
       <div class="synopsis-bar"> 
         <div class="flex-container"> 
           <p> MAKE A BOOKING: <br> 
