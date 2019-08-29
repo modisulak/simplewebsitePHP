@@ -32,7 +32,7 @@
           <li><a href="#ABOUT US">ABOUT US</a></li>
           <li><a href="#PRICES">PRICES</a></li>
           <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-          <li><a href="#SYPNOSIS">SYPNOSIS</a></li>
+          <li><a href="#SYPNOSIS">SYNOPSIS</a></li>
         </ul>
       </div>
     </nav>
@@ -46,7 +46,7 @@
         </div>
         <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
         <div class="parallax">
-  <h1>Fish Creek's Finest New Cinema Experience</h1>
+  <h1>Fish Creek's Finest Cinema Experience</h1>
 
         </div>
       </article>
@@ -234,21 +234,22 @@
 
   <section> 
     <a class = "anchor" id= "SYPNOSIS"> </a>
-    <h1>SYPNOSIS</h1>
+    <h1>SYNOPSIS</h1>
     <div class=synopsis-box>
       <div class="flex-container">
         <span> 
           <h1> Avengers Endgame (M) </h1> 
-          <p> After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.  </p>
+            <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
         </span>
         <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="avengers">       </div>
       <div class="synopsis-bar"> 
         <div class="flex-container"> 
-          <p> MAKE A BOOKING: <br> 
-            <button> WED 9:00pm</button>
+          <p> 
+            BOOK NOW:<br> 
+            <button class = "discount-button"> WED 9:00pm</button>
             <button> THU 9:00pm</button>
             <button> FRI 9:00pm</button>
-            <button> SAT 6:00pm</button>
+            <button > SAT 6:00pm</button>
             <button> SUN 6:00pm</button>
           </p> 
         </div>
@@ -261,7 +262,7 @@
 <footer>
   <div>&copy;<script>
     document.write(new Date().getFullYear());
-    </script> Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+    </script> Maximillian Young, Moditha Sulakshana, s3769993,s3756843, Max n Modi. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
   <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
   <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 </footer>
