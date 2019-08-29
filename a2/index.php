@@ -46,7 +46,7 @@
         </div>
         <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
         <div class="parallax">
-  <h1>Fish Creek's Finest Cinema Experience</h1>
+          <h1>Fish Creek's Finest Cinema Experience</h1>
 
         </div>
       </article>
@@ -57,7 +57,7 @@
           <article class="feature left">
             <span class="image"><img src='https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg' alt="Lux Theatre Interior" /></span>
             <div class="content">
-              <h1>About Us</h1>
+              <h2>About Us</h2>
               <p>
                 Welcome to the new and improved Lunardo Cinema! We know you've missed us, but following extensive renovations we are proud to be re-opening soon, bringing world class films and comforts to your back-door. Our roots and history are the most important things to us, and we can't wait to open up our doors and show off our brand new screens, sound and seats to all of you- familiar or new. Stay tuned and join us for the next step in our story... see you at the movies! 
               </p>
@@ -108,22 +108,22 @@
         <a class = "anchor" id= "PRICES"> </a>
 
         <section id="prices" class="flex-container" style = margin:0>
-        
 
-            
+
+
           <div class="pricesbox">
             <div class="flex-container"> 
-              
-                
+
+
               <h3> ADULT PRICES 
               </h3>
 
               <table> <tr class="firstRow">
-                  <th>Seat</th>
-                  <th>Discount Prices</th>
-                  <th>Full Price</th>
+                <th>Seat</th>
+                <th>Discount Prices</th>
+                <th>Full Price</th>
                 </tr>
-                
+
                 <tr>
                   <td>Standard Adult</td>
                   <td>$14.00</td>
@@ -136,15 +136,15 @@
                 </tr>
               </table>
 
-          
+
               <h3> CHILD PRICES 
               </h3>
               <table> <tr class="firstRow">
-                  <th>Seat</th>
-                  <th>Discount Prices</th>
-                  <th>Full Price</th>
+                <th>Seat</th>
+                <th>Discount Prices</th>
+                <th>Full Price</th>
                 </tr>
-                
+
                 <tr>
                   <td>Standard Adult</td>
                   <td>$14.00</td>
@@ -157,115 +157,122 @@
                 </tr>
               </table>
               <div class="flex-container"> 
-            <h3>  CONCESSION PRICES </h3> 
-            <table> <tr class="firstRow">
+                <h3>  CONCESSION PRICES </h3> 
+                <table> <tr class="firstRow">
                   <th>Seat</th>
                   <th>Discount Prices</th>
                   <th>Full Price</th>
-                </tr>
-              
-              <tr>
-                <td>Standard Adult</td>
-                <td>$14.00</td>
-                <td>$19.80</td>
-              </tr>
-              <tr>
-                <td>First Class Adult</td>
-                <td>$24.00</td>
-                <td>$30.00</td>
-              </tr>
-              
-            </table>
+                  </tr>
+
+                  <tr>
+                    <td>Standard Adult</td>
+                    <td>$14.00</td>
+                    <td>$19.80</td>
+                  </tr>
+                  <tr>
+                    <td>First Class Adult</td>
+                    <td>$24.00</td>
+                    <td>$30.00</td>
+                  </tr>
+
+                </table>
               </div>
-              
-          </div>
+
             </div>
+          </div>
 
 
- 
+
+        </section>
+
+      </section>
+     <h1>NOW SHOWING</h1>
+      <section class="nowShow4">
+        <a class = "anchor" id= "NOW SHOWING"> </a>
+       
+
+        <article class="flex-container">
+
+          <div class="movieCard",id="ACT">
+            <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
+            <h1>Avengers Endgame (M) </h1>
+            <ul>
+              <li>Wed,Thu,Fri<br>9:00PM</li>
+              <li>Sat,Sun<br>6:00PM</li>
+            </ul>
+          </div>
+
+          <div class="movieCard",id="RMC">
+            <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
+            <h1>Top End Wedding (M) </h1>
+            <ul> 
+              <li>Mon,Tue<br>6:00PM</li>
+              <li>Sat,Sun<br>3:00PM</li>
+            </ul> 
+          </div>
+
+          <div class="movieCard", id="ANM">
+            <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
+            <h1>Dumbo (M)</h1>
+            <ul> 
+              <li>Mon,Tue<br>12:00PM</li>
+              <li>Wed,Thu,Fri<br>6:00PM</li>
+              <li>Sat,Sun<br>12:00PM</li>
+            </ul> 
+          </div>
+
+          <div class="movieCard", id="AHF">
+            <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
+            <h1>The Happy Prince (M) </h1>
+            <ul> 
+              <li>Wed,Thu,Fri<br>12:00PM</li>
+              <li>Sat,Sun<br>9:00PM</li>
+            </ul> 
+          </div>
+        </article>
+      </section>
+<h1>SYNOPSIS</h1>
+      <section> 
+        <a class = "anchor" id= "SYPNOSIS"> </a>
+       
+        <div class=synopsis-box>
+          <div class="flex-containerImage">
+          <div class="flex-containerSipnosis">
+            <span> 
+              <h1> Avengers Endgame (M) </h1> 
+              <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
+            </span>
+           
+              <iframe class = "sypnosisVideo" width="700" height="432" 
+                      src="https://www.youtube.com/embed/TcMBFSGVi1c">
+              </iframe>
+     
+          </div>
+          <div class="synopsis-bar"> 
+            <div class="flex-containerButton"> 
+              <p> 
+                BOOK NOW:<br> 
+                <button class = "discount-button"> WED 9:00pm</button>
+                <button> THU 9:00pm</button>
+                <button> FRI 9:00pm</button>
+                <button > SAT 6:00pm</button>
+                <button> SUN 6:00pm</button>
+              </p> 
+            </div>
+          </div>
+        </div>
+        </div>
       </section>
 
-    </section>
+    </main>
 
-  <section class="nowShow4">
-    <a class = "anchor" id= "NOW SHOWING"> </a>
-    <h1>NOW SHOWING</h1>
+    <footer>
+      <div>&copy;<script>
+        document.write(new Date().getFullYear());
+        </script> Maximillian Young, Moditha Sulakshana, s3769993,s3756843, Max n Modi. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+    </footer>
 
-    <article class="flex-container">
-
-      <div class="movieCard",id="ACT">
-        <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
-        <h1>Avengers Endgame (M) </h1>
-        <ul>
-            <li>Wed,Thu,Fri<br>9:00PM</li>
-            <li>Sat,Sun<br>6:00PM</li>
-        </ul>
-      </div>
-
-      <div class="movieCard",id="RMC">
-        <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
-        <h1>Top End Wedding (M) </h1>
-        <ul> 
-            <li>Mon,Tue<br>6:00PM</li>
-            <li>Sat,Sun<br>3:00PM</li>
-        </ul> 
-      </div>
-
-      <div class="movieCard", id="ANM">
-        <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
-        <h1>Dumbo (M)</h1>
-        <ul> 
-            <li>Mon,Tue<br>12:00PM</li>
-            <li>Wed,Thu,Fri<br>6:00PM</li>
-            <li>Sat,Sun<br>12:00PM</li>
-        </ul> 
-      </div>
-
-      <div class="movieCard", id="AHF">
-        <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
-        <h1>The Happy Prince (M) </h1>
-        <ul> 
-            <li>Wed,Thu,Fri<br>12:00PM</li>
-            <li>Sat,Sun<br>9:00PM</li>
-        </ul> 
-      </div>
-    </article>
-  </section>
-
-  <section> 
-    <a class = "anchor" id= "SYPNOSIS"> </a>
-    <h1>SYNOPSIS</h1>
-    <div class=synopsis-box>
-      <div class="flex-container">
-        <span> 
-          <h1> Avengers Endgame (M) </h1> 
-            <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
-        </span>
-        <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="avengers">       </div>
-      <div class="synopsis-bar"> 
-        <div class="flex-container"> 
-          <p> 
-            BOOK NOW:<br> 
-            <button class = "discount-button"> WED 9:00pm</button>
-            <button> THU 9:00pm</button>
-            <button> FRI 9:00pm</button>
-            <button > SAT 6:00pm</button>
-            <button> SUN 6:00pm</button>
-          </p> 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-<footer>
-  <div>&copy;<script>
-    document.write(new Date().getFullYear());
-    </script> Maximillian Young, Moditha Sulakshana, s3769993,s3756843, Max n Modi. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-  <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-  <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-</footer>
-
-</body>
+  </body>
 </html>

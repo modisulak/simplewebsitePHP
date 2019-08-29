@@ -1,15 +1,19 @@
 html {
 	scroll-behavior: smooth;
-    font-family: arial;
+	font-family: arial;
 
 }
-
+.firsth1 h1 { 
+	margin-top: 20px;
+}
 h1{
 	text-align: center;
-	color: black;
-	margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+	color: #555;
+	margin-top: 120px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	
 }
 
 
@@ -17,7 +21,7 @@ h1{
 header h2{
 	color: black;
 	font-size: 30px;
-    margin:0px;
+	margin:0px;
 }
 
 p{
@@ -31,12 +35,12 @@ body{
 }
 
 nav {
-    position: sticky; 
-    top:0;
-    right: 0;
-    width: 100%;
-    z-index:1;
-    background:white;
+	position: sticky; 
+	top:0;
+	right: 0;
+	width: 100%;
+	z-index:1;
+	background:white;
 }
 
 
@@ -261,7 +265,7 @@ nav {
 
 
 .section3 {
-	
+
 	color: rgba(255, 255, 255, 0.75);
 	background-attachment: fixed;
 	background-position: center; /* Center the image */
@@ -269,7 +273,7 @@ nav {
 	background-image: url("../../media/overlay.png"), url("https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=945&q=80");
 	background-size: cover;
 	height: auto;
-	
+
 
 }
 
@@ -316,15 +320,16 @@ nav {
 .movieCard
 {
 	border-radius: 15px;
-	background: rgba(20, 20, 20, 0.8);
+	background: rgba(0, 0, 0, 0.8);
 	margin:2%;
 	height: 400px;
 	width:600px;
-	border-style: solid; 
+	border-style: solid goldenrod; 
 	border-width: 1px;
 	overflow: hidden;
 	box-sizing:border-box;
-	
+		border: 2px outset  goldenrod; 
+
 }
 
 .movieCard:hover {
@@ -361,6 +366,8 @@ nav {
 	box-sizing:border-box;
 	margin-left: -20%;
 	margin-right: 5%;
+	margin-top: 15px;
+	
 }
 
 
@@ -390,7 +397,7 @@ nav {
 	border-top-style: solid;
 	border-top-color: aliceblue;
 	border-top-width: 150%;
-	color:black;
+	color:white;
 }
 
 
@@ -398,6 +405,8 @@ nav {
 .flex-container
 {
 	width:100%;
+
+	margin: 0; 
 	box-sizing: border-box;
 	display: inline-flex;
 	flex-direction: row;
@@ -408,19 +417,71 @@ nav {
 }
 
 
-
-.synopsis-box
+.flex-containerSipnosis
 {
-    border-radius: 15px;
-	background: rgba(20, 20, 20, 0.8);
-	border-style: solid;
+	width:100%;
+	min-height:620px;
+	margin: 0; 
+	box-sizing: border-box;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;  
+}
+
+.flex-containerButton {
+
+
+	width:100%;
+
+	margin: 0; 
+	box-sizing: border-box;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;  
+}
+
+
+.nowShow4 { 
+	background-image: url("../../media/overlay.png"), url("https://backgrounddownload.com/wp-content/uploads/2018/09/background-black-clean-4.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+
+}
+
+
+
+
+
+.synopsis-box{
+
+
+
+	/* Center the image */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto; 
+	min-height: 625px;
+	background-image: url("../../media/overlay.png"), url("https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80");
+
+
 	display: block;
-	width: 100%;
-	height: 700px;
 	overflow:scroll;
-	margin:auto;
-    padding-top: 0;
-    padding-bottom: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 	font-size: 20px;
 }
 
@@ -430,7 +491,7 @@ nav {
 	border-style: solid;
 	display: inline-block;
 	margin:1%;
-    margin-top:0''
+	margin-top:0;
 	float:right;
 	height:440px;
 	width: 700px;
@@ -440,26 +501,27 @@ nav {
 .synopsis-box span 
 {
 	display: inline-block;
-    border-radius: 15px;
+	border-radius: 15px;
 	width:700px;
-	height:440px;
+	height:435px;
 	min-width: 40%;
-	border-style: solid;
+	border: 2px outset  goldenrod; 
+
 	margin: 2%;
 	padding: 2%;
 	margin-top: 1.5%;
 	box-sizing: border-box;
-    background-color: aliceblue;
+	background-color: aliceblue;
 }
 
 .synopsis-box h1
 {
 	font-size: 5;
-    letter-spacing: 3px;
+	letter-spacing: 3px;
 	color: goldenrod;
 	text-align: center;
-    margin-top: 1%;
-    margin-bottom: 8%;
+	margin-top: 1%;
+	margin-bottom: 8%;
 }
 
 .synopsis-bar 
@@ -478,39 +540,40 @@ nav {
 .synopsis-bar p
 {
 	width: 100%;
-    margin-bottom:-2%;
-    letter-spacing: 20px;
+	margin-bottom:-2%;
+	letter-spacing: 20px;
 }
 
 .synopsis-box button
 {
 	font-size: 15px;
-    font-weight: 400;
+	font-weight: 400;
 	background-color: goldenrod;
 	border-radius: 12px;
 	color:black;
-	padding: 25px 70px;
-	margin: 2%;
-	width:230px;
-	white-space: nowrap;
-	text-align: left;
+	padding: 10px 20px;
+
+}
+
+.sypnosisVideo{
+	border: 2px outset  goldenrod;
 }
 
 .synopsis-box button:hover
 {
-    background-color: aliceblue;
+	background-color: aliceblue;
 }
 
 
 .synopsis-box discount-button
 {
-    background-color: darkred;
+	background-color: darkred;
 }
 
 
 .synopsis-box discount-button:hover
 {
-    background-color: darkgreen;
+	background-color: darkgreen;
 }
 
 
@@ -558,7 +621,7 @@ table {
 	color: white;
 	height:100%;
 	table-layout: fixed ;
-	
+
 
 
 }
