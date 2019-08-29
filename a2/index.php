@@ -236,14 +236,14 @@
         <a class = "anchor" id= "SYPNOSIS"> </a>
        
         <div class=synopsis-box>
-          <div class="flex-containerImage">
-          <div class="flex-containerSipnosis">
+          <div class="flex-container-Image">
+          <div class="flex-container-Synopsis">
             <span> 
               <h1> Avengers Endgame (M) </h1> 
               <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
             </span>
            
-              <iframe class = "sypnosisVideo" width="700" height="432" 
+              <iframe
                       src="https://www.youtube.com/embed/TcMBFSGVi1c">
               </iframe>
      

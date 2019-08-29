@@ -1,33 +1,42 @@
 html {
 	scroll-behavior: smooth;
 	font-family: arial;
+    border-style: solid goldenrod; 
 
 }
-.firsth1 h1 { 
-	margin-top: 20px;
+
+footer
+{
+    margin-top: 3%;
+    border-style: solid;
+    color: grey;
 }
+
+
+
 h1{
+    
 	text-align: center;
 	color: #555;
 	margin-top: 120px;
-	
 	font-family: 'Montserrat', sans-serif;
-	font-weight: bolder;
-	
+	font-weight: 900;
+    letter-spacing: 3px;
 }
 
 
 
-header h2{
+header h2
+{
 	color: black;
 	font-size: 30px;
 	margin:0px;
 }
 
-p{
+p
+{
 	line-height: 2;
 }
-
 
 body{
 	background-color:#fff;
@@ -93,15 +102,10 @@ nav {
 }
 
 .parallax h1 { 
-	text-align: center;
 	font-size: 50px;
 	font-style: italic;
-	font-family: 'Montserrat'; 
-
-
 	position: absolute;
-	margin: auto;
-	top: 180px;
+	top: 90px;
 	left:0;
 	right:0;
 	bottom:0;
@@ -324,11 +328,10 @@ nav {
 	margin:2%;
 	height: 400px;
 	width:600px;
-	border-style: solid goldenrod; 
 	border-width: 1px;
 	overflow: hidden;
 	box-sizing:border-box;
-		border: 2px outset  goldenrod; 
+    border: 2px outset  goldenrod; 
 
 }
 
@@ -339,19 +342,7 @@ nav {
 .nowShow4{
 	background-color: #FFFFFF;
 }
-.movieCard img
-{
-	display: inline-block;
-	border-radius: 7px;
-	width: 240px;
-	height: 360px;
-	margin: 2%;
-	border-style: solid;
-	border-width: 2px;
 
-	box-sizing:border-box;
-
-}
 
 .movieCard h1
 {
@@ -359,7 +350,6 @@ nav {
 	font-size: 22px;
 	width:45%;
 	height:auto;
-	text-align:center;
 	float:right;
 	display:inline-block;
 	white-space: nowrap;
@@ -367,7 +357,7 @@ nav {
 	margin-left: -20%;
 	margin-right: 5%;
 	margin-top: 15px;
-	
+    letter-spacing: 1px;
 }
 
 
@@ -400,12 +390,23 @@ nav {
 	color:white;
 }
 
+.movieCard img
+{
+	display: inline-block;
+	border-radius: 7px;
+	width: 240px;
+	height: 360px;
+	margin: 2%;
+    margin-top: 3%;
+	border-width: 2px;
+	box-sizing:border-box;
+
+}
 
 
 .flex-container
 {
 	width:100%;
-
 	margin: 0; 
 	box-sizing: border-box;
 	display: inline-flex;
@@ -417,7 +418,7 @@ nav {
 }
 
 
-.flex-containerSipnosis
+.flex-container-Synopsis
 {
 	width:100%;
 	min-height:620px;
@@ -431,7 +432,7 @@ nav {
 	align-content: space-around;  
 }
 
-.flex-containerButton {
+.flex-container Button {
 
 
 	width:100%;
@@ -457,59 +458,38 @@ nav {
 
 }
 
-
-
-
-
 .synopsis-box{
-
-
 
 	/* Center the image */
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: auto; 
+	height: auto;
 	min-height: 625px;
 	background-image: url("../../media/overlay.png"), url("https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80");
 
-
 	display: block;
 	overflow:scroll;
-
-	padding-top: 0;
+	padding-top: -5;
 	padding-bottom: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	font-size: 20px;
 }
 
-.synopsis-box img
-{
-	box-sizing: border-box;
-	border-style: solid;
-	display: inline-block;
-	margin:1%;
-	margin-top:0;
-	float:right;
-	height:440px;
-	width: 700px;
-	min-width:450px;
-
-}
 .synopsis-box span 
 {
 	display: inline-block;
-	border-radius: 15px;
+	border-radius: 7px;
 	width:700px;
 	height:435px;
 	min-width: 40%;
 	border: 2px outset  goldenrod; 
-
 	margin: 2%;
 	padding: 2%;
-	margin-top: 1.5%;
+	margin-top: 1%;
+    margin-bottom: 7%;
 	box-sizing: border-box;
 	background-color: aliceblue;
 }
@@ -517,9 +497,7 @@ nav {
 .synopsis-box h1
 {
 	font-size: 5;
-	letter-spacing: 3px;
 	color: goldenrod;
-	text-align: center;
 	margin-top: 1%;
 	margin-bottom: 8%;
 }
@@ -533,8 +511,9 @@ nav {
 	display:block;
 	color:white;
 	margin: 5%;
-	margin-top: -2%;
-	margin-bottom:-1%;
+	margin-top: -8%;
+	margin-bottom:1%;
+    box-sizing: border-box;
 }
 
 .synopsis-bar p
@@ -555,8 +534,16 @@ nav {
 
 }
 
-.sypnosisVideo{
+.synopsis-box iframe
+{
 	border: 2px outset  goldenrod;
+    box-sizing: border-box;
+    margin-top:1%;
+    margin-bottom:7%;
+    border-radius: 7px;
+    width:700px;
+    height:432px;
+    
 }
 
 .synopsis-box button:hover
@@ -587,9 +574,7 @@ nav {
 	border-style: solid; 
 	border-width: 1px;
 	border-left: none;
-
 	border-bottom: none;
-
 	overflow: auto;
 	box-sizing:border-box;
 	margin: 0px;
@@ -601,16 +586,6 @@ nav {
 	position: relative;
 	top: -42px; 
 	visibility: hidden;
-}
-
-.priceCardTitle
-{
-	width:45%;
-	height:auto;
-	text-align: center;
-
-	white-space: nowrap;
-	box-sizing:border-box;
 }
 
 table {
@@ -637,24 +612,17 @@ td, th {
 	border-top: none;
 	border-bottom: none;
 
-
 }
 
 th{ 
 	background-color: goldenrod;
 }
 
-
-
 tr:hover {background-color:#262626}
 
 
 .pricesbox #priceFont { 
 	font-size: 30px; 
-}
-
-.flex-container p { 
-
 }
 
 .pricesbox h3 { 
