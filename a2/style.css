@@ -458,16 +458,21 @@ nav {
 
 }
 
-.synopsis-box{
-
-	/* Center the image */
+.synopsis { 
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: auto;
-	min-height: 625px;
+	min-height: 650px;
 	background-image: url("../../media/overlay.png"), url("https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3289&q=80");
+
+}
+
+.synopsis-box{
+
+	/* Center the image */
+	
 
 	display: block;
 	overflow:scroll;
