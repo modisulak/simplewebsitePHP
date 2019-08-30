@@ -40,7 +40,7 @@
     <main>
 
 
-      <article id="ABOUT US">
+      <article id="WELCOME">
         <div class="container">
           <div class="centered"></div> 
         </div>
@@ -52,10 +52,12 @@
       </article>
 
       <!-- One -->
+      <a class = "anchor" id= "ABOUT US"> </a>
       <section id="one" class="wrapper style1">
         <div class="inner">
           <article class="feature left">
-            <span class="image"><img src="https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg" alt="Lux Theatre Interior" /></span>
+            <span class="image"><img src="https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg" alt="Lux Theatre Interior" />
+            </span>
             <div class="content">
               <h2>About Us</h2>
               <p>
@@ -102,9 +104,10 @@
       </section>
       <a class = "anchor" id= "PRICES"> </a>
       <h1>PRICES</h1>
+      <h3> Discount Prices during all day Mon and Tue and 12PM on Weekends</h3>
 
       <!-- Three -->
-      <section id="PRICES1" class="section3">
+      <section id="pricesSection" class="section3">
         <a class = "anchor" id= "PRICES"> </a>
 
         <section id="prices" class="flex-container" style = margin:0>
@@ -125,12 +128,12 @@
                 </tr>
 
                 <tr>
-                  <td>Standard Adult</td>
+                  <td>Standard </td>
                   <td>$14.00</td>
                   <td>$19.80</td>
                 </tr>
                 <tr>
-                  <td>First Class Adult</td>
+                  <td>First Class</td>
                   <td>$24.00</td>
                   <td>$30.00</td>
                 </tr>
@@ -146,14 +149,14 @@
                 </tr>
 
                 <tr>
-                  <td>Standard Adult</td>
-                  <td>$14.00</td>
-                  <td>$19.80</td>
+                  <td>Standard</td>
+                  <td>$11.00</td>
+                  <td>$15.30</td>
                 </tr>
                 <tr>
-                  <td>First Class Adult</td>
+                  <td>First Class</td>
+                  <td>$21.00</td>
                   <td>$24.00</td>
-                  <td>$30.00</td>
                 </tr>
               </table>
               <div class="flex-container"> 
@@ -165,14 +168,14 @@
                   </tr>
 
                   <tr>
-                    <td>Standard Adult</td>
-                    <td>$14.00</td>
-                    <td>$19.80</td>
+                    <td>Standard</td>
+                    <td>$12.50</td>
+                    <td>$17.50</td>
                   </tr>
                   <tr>
-                    <td>First Class Adult</td>
-                    <td>$24.00</td>
-                    <td>$30.00</td>
+                    <td>First Class</td>
+                    <td>$22.50</td>
+                    <td>$27.00</td>
                   </tr>
 
                 </table>
@@ -186,15 +189,15 @@
         </section>
 
       </section>
-     <h1>NOW SHOWING</h1>
+      <h1>NOW SHOWING</h1>
       <section class="nowShow4">
         <a class = "anchor" id= "NOW SHOWING"> </a>
-       
+
 
         <article class="flex-container">
 
-          <div class="movieCard" id="ACT">
-            <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
+          <div class="movieCard" , id="ACT">
+            <img src='../../media/avengers.jpg' alt="Avengers Poster">
             <h1>Avengers Endgame (M) </h1>
             <ul>
               <li>Wed,Thu,Fri<br>9:00PM</li>
@@ -202,8 +205,8 @@
             </ul>
           </div>
 
-          <div class="movieCard" id="RMC">
-            <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
+          <div class="movieCard" , id="RMC">
+            <img src='../../media/wedding.jpg' alt="Top End Wedding Poster">
             <h1>Top End Wedding (M) </h1>
             <ul> 
               <li>Mon,Tue<br>6:00PM</li>
@@ -211,8 +214,8 @@
             </ul> 
           </div>
 
-          <div class="movieCard" id="ANM">
-            <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
+          <div class="movieCard" , id="ANM">
+            <img src='../../media/dumbo.jpg' alt="Dumbo Poster">
             <h1>Dumbo (M)</h1>
             <ul> 
               <li>Mon,Tue<br>12:00PM</li>
@@ -221,8 +224,8 @@
             </ul> 
           </div>
 
-          <div class="movieCard" id="AHF">
-            <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
+          <div class="movieCard" , id="AHF">
+            <img src='../../media/prince.jpg'alt="Happy Prince Poster">
             <h1>The Happy Prince (M) </h1>
             <ul> 
               <li>Wed,Thu,Fri<br>12:00PM</li>
@@ -231,37 +234,38 @@
           </div>
         </article>
       </section>
-<h1>SYNOPSIS</h1>
+      <h1>SYNOPSIS</h1>
       <section class="synopsis">
-      <section> 
-        <a class = "anchor" id= "SYPNOSIS"> </a>
-       
-        <div class="synopsis-box">
-          <div class="flex-container-Image">
-         
-            <span> 
-              <h1> Avengers Endgame (M) </h1> 
-              <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
-            </span>
-            
-              <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c">
-                  
-              </iframe>
-          </div>
-          <div class="synopsis-bar"> 
-            <div class="flex-containerButton"> 
-              <p> 
-                BOOK NOW:<br> 
-                <button class = "discount-button"> WED 9:00pm</button>
-                <button> THU 9:00pm</button>
-                <button> FRI 9:00pm</button>
-                <button > SAT 6:00pm</button>
-                <button> SUN 6:00pm</button>
-              </p> 
-            </div>
-          </div>
-        </div>
+        <section> 
+          <a class = "anchor" id= "SYPNOSIS"> </a>
 
+          <div class="synopsis-box">
+
+            <div class="flex-container-Image">
+
+              <span> 
+                <h1> Avengers Endgame (M) </h1> 
+                <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
+              </span>
+
+              <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c">
+
+              </iframe>
+            </div>
+            <div class="synopsis-bar"> 
+              <div class="flex-containerButton"> 
+                <p> 
+                  BOOK NOW:<br> 
+                  <button class = "discount-button"> WED 9:00pm</button>
+                  <button> THU 9:00pm</button>
+                  <button> FRI 9:00pm</button>
+                  <button > SAT 6:00pm</button>
+                  <button> SUN 6:00pm</button>
+                </p> 
+              </div>
+            </div>
+
+          </div>
         </section>
       </section>
 
