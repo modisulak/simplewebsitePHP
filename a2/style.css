@@ -472,8 +472,6 @@ nav {
 .synopsis-box{
 
 	/* Center the image */
-	
-
 	display: block;
 	overflow:scroll;
 	padding-top: -5;
@@ -486,15 +484,17 @@ nav {
 .synopsis-box span 
 {
 	display: inline-block;
+    float:left;
 	border-radius: 7px;
 	width:700px;
 	height:435px;
 	min-width: 40%;
 	border: 2px outset  goldenrod; 
-	margin: 2%;
-	padding: 2%;
-	margin-top: 1%;
-    margin-bottom: 7%;
+    padding: 2%;
+	margin-top: .5%;
+    margin-bottom: 6%;
+    margin-left: 5%;
+    margin-right:4%;
 	box-sizing: border-box;
 	background-color: aliceblue;
 }
@@ -510,13 +510,12 @@ nav {
 .synopsis-bar 
 {
 	font-size:30px;
-	height:120px;
+	height:130px;
 	text-align: center;
 	width:90%;
-	display:block;
+	display:inline-block;
 	color:white;
-	margin: 5%;
-	margin-top: -8%;
+	margin-top: -12%;
 	margin-bottom:1%;
     box-sizing: border-box;
 }
@@ -543,9 +542,12 @@ nav {
 {
 	border: 2px outset  goldenrod;
     box-sizing: border-box;
-    margin-top:1%;
-    margin-bottom:7%;
+    margin-top:.5%;
+    display: inline-block;
+    margin-bottom:6%;
+    margin-right: 5%;
     border-radius: 7px;
+    margin-left:5%;
     width:700px;
     height:432px;
     

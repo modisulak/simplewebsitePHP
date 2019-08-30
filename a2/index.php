@@ -2,7 +2,7 @@
 <html lang='en'>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <title>Assignment 2</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
@@ -17,7 +17,7 @@
   <body>
     <header>
       <center>
-        <div><img src='../../media/logo.png' alt='Company Logo' style="margin:5px 0px" height=55  />
+        <div><img src='../../media/logo.png' alt="Company Logo" style="margin:5px 0px" height=55  />
         </div>
         <div>
           <h2>LUNARDO</h2>
@@ -40,7 +40,7 @@
     <main>
 
 
-      <article id='ABOUT US'>
+      <article id="ABOUT US">
         <div class="container">
           <div class="centered"></div> 
         </div>
@@ -55,7 +55,7 @@
       <section id="one" class="wrapper style1">
         <div class="inner">
           <article class="feature left">
-            <span class="image"><img src='https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg' alt="Lux Theatre Interior" /></span>
+            <span class="image"><img src="https://images.pexels.com/photos/109669/pexels-photo-109669.jpeg?cs=srgb&dl=architecture-auditorium-chairs-109669.jpg&fm=jpg" alt="Lux Theatre Interior" /></span>
             <div class="content">
               <h2>About Us</h2>
               <p>
@@ -65,7 +65,7 @@
             </div>
           </article>
           <article class="feature right">
-            <span class="image"><img src='../../media/atmos.jpg' alt="Dolby Atmos Sound System Diagram" /></span>
+            <span class="image"><img src="../../media/atmos.jpg" alt="Dolby Atmos Sound System Diagram" /></span>
             <div class="content">
               <h2>Dolby Atmos Sound System</h2>
               <p>
@@ -193,7 +193,7 @@
 
         <article class="flex-container">
 
-          <div class="movieCard",id="ACT">
+          <div class="movieCard" id="ACT">
             <img src='https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SY1000_CR0,0,674,1000_AL_.jpg' alt="Avengers Poster">
             <h1>Avengers Endgame (M) </h1>
             <ul>
@@ -202,7 +202,7 @@
             </ul>
           </div>
 
-          <div class="movieCard",id="RMC">
+          <div class="movieCard" id="RMC">
             <img src='https://m.media-amazon.com/images/M/MV5BMjU0NDk0N2EtNTliZS00MjNmLTk0M2MtYTMzOTUxMGQwZWI3XkEyXkFqcGdeQXVyMzE0MTQ2NzQ@._V1_SY999_CR0,0,738,999_AL_.jpg' alt="Top End Wedding Poster">
             <h1>Top End Wedding (M) </h1>
             <ul> 
@@ -211,7 +211,7 @@
             </ul> 
           </div>
 
-          <div class="movieCard", id="ANM">
+          <div class="movieCard" id="ANM">
             <img src='https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SY1000_CR0,0,675,1000_AL_.jpg' alt="Dumbo Poster">
             <h1>Dumbo (M)</h1>
             <ul> 
@@ -221,7 +221,7 @@
             </ul> 
           </div>
 
-          <div class="movieCard", id="AHF">
+          <div class="movieCard" id="AHF">
             <img src='https://m.media-amazon.com/images/M/MV5BODVjZThlMzMtZjQwNy00YjRlLWE5ZTMtMWVlMWUwM2U1NjRkXkEyXkFqcGdeQXVyODcyODY1Mzg@._V1_SY1000_SX675_AL_.jpg' alt="Happy Prince Poster">
             <h1>The Happy Prince (M) </h1>
             <ul> 
@@ -236,18 +236,17 @@
       <section> 
         <a class = "anchor" id= "SYPNOSIS"> </a>
        
-        <div class=synopsis-box>
+        <div class="synopsis-box">
           <div class="flex-container-Image">
          
             <span> 
               <h1> Avengers Endgame (M) </h1> 
               <p> That cheeky Thanos is at it again! Team up with all your favourite millionaires for the 23rd time in a row, as they try and fix the mess that big purple left them in following the acclaimed Infinity War (2018). Will Spiderman be back in time for the release of Spiderman 2 in a few weeks? Tune in and find out.. tickets on sale soon! </p>
             </span>
-           
-              <iframe
-                      src="https://www.youtube.com/embed/TcMBFSGVi1c">
+            
+              <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c">
+                  
               </iframe>
-     
           </div>
           <div class="synopsis-bar"> 
             <div class="flex-containerButton"> 
