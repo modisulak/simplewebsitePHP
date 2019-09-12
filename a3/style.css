@@ -85,9 +85,15 @@ nav {
 	text-decoration: none;
 }
 
-.nav a:hover { 
+.nav  a:hover { 
 	background-color: #111;
 	color: white;
+}
+
+.nav .active { 
+	background-color: #111;
+	color: white;
+
 }
 
 @media screen and (max-width: 44em) {

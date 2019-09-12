@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
-  
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
@@ -10,13 +10,13 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
     <script src='../wireframe.js'></script>
-    <script scr= "script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
   </head>
 
-  <body>
+  <body onload="displayActive()">
     <header>
       <center>
         <div><img src='../../media/logo.png' alt="Company Logo" style="margin:5px 0px" height=55  />
@@ -28,16 +28,18 @@
 
 
     </header>
+
     <nav role="full-horizontal">
-      <div>
+     
         <ul class ="nav">
-          <li><a href="#ABOUT US">ABOUT US</a></li>
-          <li><a href="#PRICES">PRICES</a></li>
-          <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-          <li><a href="#SYPNOSIS">SYNOPSIS</a></li>
+          <li><a class ="navs" href="#ABOUT US">ABOUT US</a></li>
+          <li><a class ="navs" href="#PRICES">PRICES</a></li>
+          <li><a class ="navs" href="#NOW SHOWING">NOW SHOWING</a></li>
+          <li><a class ="navs" href="#SYPNOSIS">SYNOPSIS</a></li>
         </ul>
-      </div>
+      
     </nav>
+
 
     <main>
 
@@ -189,41 +191,9 @@
 
 
         </section>
-          
-<script>
-    function clearSynopsis()
-    { 
-        alert("In the method");
-        var x = document.getElementById("synopsisACT");
-        x.style.display = "none";
-        alert("avengers cleared");
-        
-        var y = document.getElementById("synopsisRMC");
-        y.style.display = "none";
-        alert("top end cleared")
-        
-        var z = document.getElementById("synopsisANM");
-        z.style.display = "none";
-        alert("dumbo cleared");
-        
-        var a = document.getElementById("synopsisAHF");
-        a.style.display = "none";
-        alert("cleared");
-    }
-    
-    function changeSynopsis(workingId)
-    { 
-        alert("clearing current synopsis");
-        clearSynopsis();
-        alert(workingId);
-        var y = 'synopsis'+workingId;
-        alert(y);
-        var x = document.getElementById(y);
-        x.style.display = "block";   
-    }
-</script>
-          
-          
+
+
+
       </section>
       <h1>NOW SHOWING</h1>
       <section class="nowShow4">
@@ -238,7 +208,7 @@
               <li>Wed,Thu,Fri<br>9:00PM</li>
               <li>Sat,Sun<br>6:00PM</li>
             </ul>
-            
+
           </div>
 
           <div class="movieCard" , id="RMC" onclick="changeSynopsis('RMC')">
@@ -270,11 +240,11 @@
           </div>
         </article>
       </section>
-      
+
       <section class="synopsis" id="synopsisACT">
-      <h1>SYNOPSIS</h1>
-      <section> 
-      <a class = "anchor" id= "SYPNOSIS"> </a>
+        <h1>SYNOPSIS</h1>
+        <section> 
+          <a class = "anchor" id= "SYPNOSIS"> </a>
 
           <div class="synopsis-box">
 
@@ -301,9 +271,9 @@
           </div>
         </section>
       </section>
-        
-        <section class="synopsis" id="synopsisRMC">
-            <h1>SYNOPSIS</h1>
+
+      <section class="synopsis" id="synopsisRMC">
+        <h1>SYNOPSIS</h1>
         <section> 
           <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -331,9 +301,9 @@
           </div>
         </section>
       </section>
-        
-        <section class="synopsis" id="synopsisANM">
-            <h1>SYNOPSIS</h1>
+
+      <section class="synopsis" id="synopsisANM">
+        <h1>SYNOPSIS</h1>
         <section> 
           <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -364,9 +334,9 @@
           </div>
         </section>
       </section>
-        
-        <section class="synopsis" id="synopsisAHF">
-            <h1>SYNOPSIS</h1>
+
+      <section class="synopsis" id="synopsisAHF">
+        <h1>SYNOPSIS</h1>
         <section> 
           <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -395,8 +365,8 @@
           </div>
         </section>
       </section>
-    
-        
+
+
 
     </main>
 

@@ -14,7 +14,7 @@
 
   </head>
 
-  <body>
+  <body onload="displayActive()">
     <header>
       <center>
         <div><img src='../../media/logo.png' alt="Company Logo" style="margin:5px 0px" height=55  />
@@ -29,10 +29,10 @@
     <nav role="full-horizontal">
       <div>
         <ul class ="nav">
-          <li><a href="#ABOUT US">ABOUT US</a></li>
-          <li><a href="#PRICES">PRICES</a></li>
-          <li><a href="#NOW SHOWING">NOW SHOWING</a></li>
-          <li><a href="#SYPNOSIS">SYNOPSIS</a></li>
+          <li><a class ="navs" href="#ABOUT US">ABOUT US</a></li>
+          <li><a class ="navs" href="#PRICES">PRICES</a></li>
+          <li><a class ="navs" href="#NOW SHOWING">NOW SHOWING</a></li>
+          <li><a class ="navs" href="#SYPNOSIS">SYNOPSIS</a></li>
         </ul>
       </div>
     </nav>
