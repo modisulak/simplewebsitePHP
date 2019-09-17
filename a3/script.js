@@ -1,74 +1,87 @@
 function clearSynopsis() { 
-    alert("In the method");
+    //alert("In the method");
     var x = document.getElementById("synopsisACT");
     x.style.display = "none";
-    alert("avengers cleared");
+    //alert("avengers cleared");
 
     var y = document.getElementById("synopsisRMC");
     y.style.display = "none";
-    alert("top end cleared")
+    //alert("top end cleared")
 
     var z = document.getElementById("synopsisANM");
     z.style.display = "none";
-    alert("dumbo cleared");
+    //alert("dumbo cleared");
 
     var a = document.getElementById("synopsisAHF");
     a.style.display = "none";
-    alert("cleared");
+    //alert("cleared");
 }
 
 function changeSynopsis(workingId) { 
-    alert("clearing current synopsis");
+    //alert("clearing current synopsis");
     clearSynopsis();
-    alert(workingId);
+    //alert(workingId);
     var y = 'synopsis'+workingId;
-    alert(y);
+    //alert(y);
     var x = document.getElementById(y);
     x.style.display = "block";   
 }
 
 
 
-	
-$(document).ready(function () {
-	$(document).on("scroll", onScroll);
-	
-	// Trigger Click to go specific section or add active
-	$('a[href^="#"]').on('click', function (e) {
-		e.preventDefault();
-		$(document).off("scroll");
 
-		$('a').each(function () {
-			$(this).removeClass('active');
-		})
-		$(this).addClass('active');
+function displayActive()
+{
+    var nav = document.getElementsByClassName("navs");
 
-		var target = this.hash;
-		$target = $(target);
-		
-		// Scrolling 
-		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top+2
-		}, 500, 'swing', function () {
-			window.location.hash = target;
-			$(document).on("scroll", onScroll);
-		});
-	});
-});
+    for (var i = 0; i < nav.length; i++) {
 
-function onScroll(event){
-	var scrollPosition = $(document).scrollTop();
-	
-	// set your navigation a class name
-	$('nav a').each(function () {
-		var currentLink = $(this);
-		var refElement = $(currentLink.attr("href"));
-		if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-			$('nav ul li a').removeClass(" active");
-			currentLink.addClass(" active");
-		}
-		else{
-			currentLink.removeClass(" active");
-		}
-	});
+        nav[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+
+            // If there's no active class
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+
+            // Add the active class to the current/clicked button
+            this.className += " active"; 
+        });
+    }
+}
+
+function displayScroll() {
+    window.onscroll = function() { 
+        //console.log(window.scrollY);
+        var articles = document.getElementsByTagName('main')
+        [0].getElementsByTagName('article');
+        //console.log(article);
+        var navlinks = document.getElementsByTagName('nav')
+        [0].getElementsByTagName('a');
+        //console.log(navlinks); 
+        
+        var n=-1;
+        while(n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY) { 
+            n++
+        }
+        console.log(n); 
+        for (var a=0; a<navlinks.length; a++) {
+            navlinks[a].classList.remove('active');
+            
+        }
+        if (n < 0) 
+            console.log('No active'); 
+        else {
+            console.log(articles[n].id+":"+articles[n].offsetTop); 
+            navlinks[n].classList.add('active');
+        }
+        
+    }
+}
+
+function start() { 
+    displayActive();
+    displayScroll(); 
+
+
 }
