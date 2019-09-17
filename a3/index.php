@@ -248,7 +248,7 @@
 
       <article class = "anchor" id= "SYPNOSIS"> 
 
-        <section class="synopsis" id="synopsisACT">
+        <section class="synopsis" id="synopsisACT" style="display: block">
           <h1>SYNOPSIS</h1>
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
@@ -267,11 +267,11 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button class = "discount-button"> WED 9:00pm</button>
-                    <button> THU 9:00pm</button>
-                    <button> FRI 9:00pm</button>
-                    <button> SAT 6:00pm</button>
-                    <button> SUN 6:00pm</button>
+                    <button onclick="triggerForm('ACT','Wednesday',9)"> WED 9:00pm</button>
+                    <button onclick="triggerForm('ACT','Thursday',9)"> THU 9:00pm</button>
+                    <button onclick="triggerForm('ACT','Friday',9)"> FRI 9:00pm</button>
+                    <button onclick="triggerForm('ACT','Saturday',6)"> SAT 6:00pm</button>
+                    <button onclick="triggerForm('ACT','Sunday',6)"> SUN 6:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -378,15 +378,15 @@
         </section>
       </article>
 
-<article id="Booking-Form">
+<article id="booking-form", class="booking-form">
     
 <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " style="border-style: solid">
 <div id="movie-info">
-Movie ID: <input type="text" name="movie[id]" value="ACT",title="Movie-ID", id="movie-id"> <br>
+Movie ID: <input type="text" name="movie[id]" value="",title="Movie-ID", id="movie-id"> <br>
       
-Movie Day: <input type="text" name="movie[day]" value="Monday",title="Movie-day", id="movie-day"> <br>
+Movie Day: <input type="text" name="movie[day]" value="",title="Movie-day", id="movie-day"> <br>
       
-Movie Hour: <input type="text" name="movie[hour]" value="12",title="Movie-hour", id="movie-hour"> <br><br><br><br><br><br>
+Movie Hour: <input type="text" name="movie[hour]" value="",title="Movie-hour", id="movie-hour"> <br><br><br><br><br><br>
 </div>
 <div id="customer-info">      
 Name: <input type="text" name="cust[name]" value="", required, pattern="[a-z A-Z -.,']{1,40}" title="Name", id="cust-name"> <br> 
@@ -472,7 +472,6 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
     </form>
         
 </article>
-
 
 
     </main>

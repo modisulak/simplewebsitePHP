@@ -103,13 +103,14 @@ var seatPrices = {
       
 function isFullOrDiscount(day, hour) {
     var ret = "full";
-    if(day=="Monday"||"Wednesday")
+    alert(day);
+    if(day=="Monday" || "Wednesday")
         {
-            ret= "discount"
+            ret = "discount"
         }
-    if(day=="Tuesday"||"Thursday"||"Friday"&hour==12)
+    if(day=="Tuesday" || "Thursday" || "Friday" & hour==12)
           {
-             ret="discount" 
+             ret = "discount" 
           }
     return ret;
 }
@@ -125,10 +126,29 @@ function calcResult() {
       STC: document.getElementById('STC').value,
     };
     var fod = isFullOrDiscount(document.getElementById('movie-day').value, document.getElementById('movie-hour').value);
-      
+      alert(fod);
     var total = 0;
     for ( seatCode in qtySeats ) {
       total += qtySeats[seatCode] * seatPrices[fod][seatCode];
     }
     document.getElementById("total-Price").innerHTML = total;
   }
+
+function triggerForm(MovieId,MovieDay,MovieHour)
+{
+    alert("in the trigger form method");
+    var x = document.getElementById("booking-form");
+    x.style.display = "block";
+    var id = document.getElementById("movie-id");
+    id.value = MovieId;
+    id.innerHTML = MovieId;
+    var day = document.getElementById("movie-day");
+    day.value = MovieDay;
+    day.innerHTML = MovieDay;
+    var hour = document.getElementById("movie-hour");
+    hour.value = MovieHour;
+    hour.innerHTML = MovieHour;
+    
+    
+    
+}

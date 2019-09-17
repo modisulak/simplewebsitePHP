@@ -650,6 +650,10 @@ tr:hover {background-color:#262626}
 	color: white;
 }
 
+.booking-form{
+    display: none;
+}
+
 
 
 
