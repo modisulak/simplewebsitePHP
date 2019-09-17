@@ -426,7 +426,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-      Concession <select size="" title="seats[STP]", id="STP"> 
+      Concession <select size="" title="seats[STP]", id="STP", onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -434,7 +434,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-      Child <select size="" title="seats[STC]", id="STC"> 
+      Child <select size="" title="seats[STC]", id="STC", onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -443,7 +443,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
 </select> <br><br>
       
       First Class: <br>
-       Adults <select size="" title="seats[FCA]" id="FCA"> 
+       Adults <select size="" title="seats[FCA]" id="FCA", onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -451,7 +451,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-       Concession <select size="" title="seats[FCP]", id="FCP"> 
+       Concession <select size="" title="seats[FCP]", id="FCP", onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -459,7 +459,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-       Child <select size="" title="seats[FCC]", id="FCC"> 
+       Child <select size="" title="seats[FCC]", id="FCC", onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
