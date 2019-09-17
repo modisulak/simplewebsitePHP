@@ -28,8 +28,6 @@ function changeSynopsis(workingId) {
 }
 
 
-
-
 function displayActive()
 {
     var nav = document.getElementsByClassName("navs");
@@ -82,6 +80,55 @@ function displayScroll() {
 function start() { 
     displayActive();
     displayScroll(); 
-
-
 }
+
+var seatPrices = {
+      full: {
+      FCA: 30,
+      FCP: 27,
+      FCC: 24,
+      STA: 19.8,
+      STP: 17.5,
+      STC:15.3
+    },  
+    discount: { 
+    FCA:24,
+    FCP: 22.5,
+    FCC: 21,
+    STA:14,
+    STP:12.5,
+    STC: 11
+    }
+  }
+      
+function isFullOrDiscount(day, hour) {
+    var ret = "full";
+    if(day=="Monday"||"Wednesday")
+        {
+            ret= "discount"
+        }
+    if(day=="Tuesday"||"Thursday"||"Friday"&hour==12)
+          {
+             ret="discount" 
+          }
+    return ret;
+}
+
+function calcResult() {
+     alert("in the method start");
+    var qtySeats = {
+      FCA: document.getElementById('FCA').value,
+      FCP: document.getElementById('FCP').value,
+      FCC: document.getElementById('FCC').value,
+      STA: document.getElementById('STA').value,
+      STP: document.getElementById('STP').value,
+      STC: document.getElementById('STC').value,
+    };
+    var fod = isFullOrDiscount(document.getElementById('movie-day').value, document.getElementById('movie-hour').value);
+      
+    var total = 0;
+    for ( seatCode in qtySeats ) {
+      total += qtySeats[seatCode] * seatPrices[fod][seatCode];
+    }
+    document.getElementById("total-Price").innerHTML = total;
+  }

@@ -378,6 +378,101 @@
         </section>
       </article>
 
+<article id="Booking-Form">
+    
+<form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " style="border-style: solid">
+<div id="movie-info">
+Movie ID: <input type="text" name="movie[id]" value="ACT",title="Movie-ID", id="movie-id"> <br>
+      
+Movie Day: <input type="text" name="movie[day]" value="Monday",title="Movie-day", id="movie-day"> <br>
+      
+Movie Hour: <input type="text" name="movie[hour]" value="12",title="Movie-hour", id="movie-hour"> <br><br><br><br><br><br>
+</div>
+<div id="customer-info">      
+Name: <input type="text" name="cust[name]" value="", required, pattern="[a-z A-Z -.,']{1,40}" title="Name", id="cust-name"> <br> 
+      
+Email: <input type="email" name="cust[email]" value="", title="Email" id="cust-email"><br> 
+      
+Mobile:  <input type="tel" name="cust[mobile]", required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number",id="cust-mobile"> <br/> 
+      
+Credit Card: <input type="text" name="cust[card]",required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?",id="cust-card">     
+<br/>
+      
+Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
+      <option value=''> Month</option>
+      <script>
+    for (var i=1; i<=12; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+      </select>
+      
+      <select size="" title="cust[expiryYear]", id="cust-expiryYear">
+          <option value=''> Year</option>
+      <script>
+    var year = new Date().getFullYear();
+    for ( var i=year; i<=(year+10); i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+      </select>
+</div>
+<br><br>
+<div id="seat-info">
+      Standard: <br>
+      Adults <select size="" title="seats[STA]", id="STA", onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+      Concession <select size="" title="seats[STP]", id="STP"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+      Child <select size="" title="seats[STC]", id="STC"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br><br>
+      
+      First Class: <br>
+       Adults <select size="" title="seats[FCA]" id="FCA"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+       Concession <select size="" title="seats[FCP]", id="FCP"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+       Child <select size="" title="seats[FCC]", id="FCC"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br><br><br>
+</div>
+      <input type="submit" name="order" value="Order" >
+      Total $ <div id="total-Price", name= "totalPrice"> </div>
+    </form>
+        
+</article>
+
 
 
     </main>
