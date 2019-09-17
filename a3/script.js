@@ -148,7 +148,4 @@ function triggerForm(MovieId,MovieDay,MovieHour)
     var hour = document.getElementById("movie-hour");
     hour.value = MovieHour;
     hour.innerHTML = MovieHour;
-    
-    
-    
 }
