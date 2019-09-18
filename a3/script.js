@@ -1,28 +1,20 @@
 function clearSynopsis() { 
-    //alert("In the method");
     var x = document.getElementById("synopsisACT");
     x.style.display = "none";
-    //alert("avengers cleared");
 
     var y = document.getElementById("synopsisRMC");
     y.style.display = "none";
-    //alert("top end cleared")
 
     var z = document.getElementById("synopsisANM");
     z.style.display = "none";
-    //alert("dumbo cleared");
 
     var a = document.getElementById("synopsisAHF");
     a.style.display = "none";
-    //alert("cleared");
 }
 
 function changeSynopsis(workingId) { 
-    //alert("clearing current synopsis");
     clearSynopsis();
-    //alert(workingId);
     var y = 'synopsis'+workingId;
-    //alert(y);
     var x = document.getElementById(y);
     x.style.display = "block";   
 }
@@ -36,7 +28,6 @@ function displayActive()
 
         nav[i].addEventListener("click", function() {
             var current = document.getElementsByClassName("active");
-
             // If there's no active class
             if (current.length > 0) {
                 current[0].className = current[0].className.replace(" active", "");
@@ -80,6 +71,7 @@ function displayScroll() {
 function start() { 
     displayActive();
     displayScroll(); 
+    changeSynopsis('ACT');
 }
 
 var seatPrices = {
@@ -101,21 +93,34 @@ var seatPrices = {
     }
   }
       
-function isFullOrDiscount(day, hour) 
-{  //??? syntax issues??//
-    alert(day);
-    alert(hour);
+function isFullOrDiscount(day, hour) {  //??? syntax issues??//
+    //alert(day);
+   // alert(hour);
     var ret = "full";
-    if(day=="Monday" || "Wednesday")
+    if(day == "MON" || day == "WED")
         {
+            alert("In the monday loop")
             ret = "discount"
         }
-    if((day=="Tuesday" || "Thursday" || "Friday") & hour==12)
+    if((day== "TUE" || day == "THU" || day == "FRI") && hour=="T12")
         {
              ret = "discount" 
         }
     return ret;
 }
+
+//function discountTest()
+//{
+  //  var day= ["MON","TUE","WED","THU","FRI","SAT","SUN"];
+    //var hour= ["T12", "T15", "T18", "T21"];
+    //for(d=0;d<day.length;d++)
+        //{
+        //for(h=0;h<hour.length;h++)
+          //  {
+        //    console.log(day[d]+" "+hour[h]+ " "+ isFullOrDiscount(day[d],hour[h]))
+          //  }
+        //}
+//}
 
 function calcResult() {
      alert("in the method start");
@@ -158,13 +163,9 @@ function validateCard()
 {
     alert("In validation method");
     var Cardyear = document.getElementById("cust-expiryYear").value;
-    alert(Cardyear);
     var year = new Date().getFullYear();
-    alert(year);
     var cardMonth = document.getElementById("cust-expiryMonth").value;
-    alert(cardMonth);
     var month = new Date().getMonth()+1;
-    alert(month);
     if(Cardyear==year & cardMonth<month)
     {
        document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";

@@ -248,7 +248,7 @@
 
       <article class = "anchor" id= "SYPNOSIS"> 
 
-        <section class="synopsis" id="synopsisACT" style="display: block">
+        <section class="synopsis" id="synopsisACT">
           <h1>SYNOPSIS</h1>
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
@@ -267,11 +267,11 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button onclick="triggerForm('ACT','Wednesday',9)"> WED 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Thursday',9)"> THU 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Friday',9)"> FRI 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Saturday',6)"> SAT 6:00pm</button>
-                    <button onclick="triggerForm('ACT','Sunday',6)"> SUN 6:00pm</button>
+                    <button onclick="triggerForm('ACT','WED','T21')"> WED 9:00pm</button>
+                    <button onclick="triggerForm('ACT','THU','T21')"> THU 9:00pm</button>
+                    <button onclick="triggerForm('ACT','FRI','T21')"> FRI 9:00pm</button>
+                    <button onclick="triggerForm('ACT','SAT','T18')"> SAT 6:00pm</button>
+                    <button onclick="triggerForm('ACT','SUN','T18')"> SUN 6:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -393,15 +393,15 @@ Movie Hour: <input type="text" name="movie[hour]" value="" title="Movie-hour" id
 <br>
 </div>
 <div id="customer-info">      
-Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> 
+Name: <input type="text" name="cust[name]" value="" required pattern="[a-zA-Z -.,']{1,40}" title="Name" id="cust-name"> 
 <br> 
-Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
+Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email" required>
 <br>   
-Mobile:  <input type="tel" name="cust[mobile]" required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number" id="cust-mobile" value = "04">
+Mobile:  <input type="tel" name="cust[mobile]" required, pattern="(\(04\)|04|\+614)([ ]?\d){8}" title="Phone Number" id="cust-mobile" required value = "04">
 <br>  
-Credit Card: <input type="text" name="cust[card]" required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">     
+Credit Card: <input type="text" name="cust[card]" required pattern="^[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">     
 <br/>
-Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validateCard()">
+Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" required onchange="validateCard()">
       <option value=''> Month</option>
   <script>
     for (var i=1; i<=12; i++ )
@@ -409,7 +409,7 @@ Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validat
   </script>
       </select>
     
-      <select size="" title="cust[expiryYear]" id="cust-expiryYear" onchange="validateCard()">
+      <select size="" title="cust[expiryYear]" id="cust-expiryYear" required onchange="validateCard()">
           <option value=''> Year</option>
   <script>
     var year = new Date().getFullYear();
@@ -490,4 +490,5 @@ Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validat
     </footer>
 
   </body>
+    <script> discountTest();</script>
 </html>
