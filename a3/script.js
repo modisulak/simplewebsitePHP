@@ -101,7 +101,8 @@ var seatPrices = {
     }
   }
       
-function isFullOrDiscount(day, hour) {  //??? syntax issues??//
+function isFullOrDiscount(day, hour) 
+{  //??? syntax issues??//
     alert(day);
     alert(hour);
     var ret = "full";
@@ -167,5 +168,9 @@ function validateCard()
     if(Cardyear==year & cardMonth<month)
     {
        document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";
+    }
+    else
+    {
+       document.getElementById("card-warning").innerHTML = ""; 
     }
 }
