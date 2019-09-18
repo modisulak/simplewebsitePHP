@@ -101,17 +101,18 @@ var seatPrices = {
     }
   }
       
-function isFullOrDiscount(day, hour) {
-    var ret = "full";
+function isFullOrDiscount(day, hour) {  //??? syntax issues??//
     alert(day);
+    alert(hour);
+    var ret = "full";
     if(day=="Monday" || "Wednesday")
         {
             ret = "discount"
         }
-    if(day=="Tuesday" || "Thursday" || "Friday" & hour==12)
-          {
+    if((day=="Tuesday" || "Thursday" || "Friday") & hour==12)
+        {
              ret = "discount" 
-          }
+        }
     return ret;
 }
 
@@ -125,10 +126,12 @@ function calcResult() {
       STP: document.getElementById('STP').value,
       STC: document.getElementById('STC').value,
     };
+    
     var fod = isFullOrDiscount(document.getElementById('movie-day').value, document.getElementById('movie-hour').value);
-      alert(fod);
+    alert(fod); 
     var total = 0;
-    for ( seatCode in qtySeats ) {
+    for ( seatCode in qtySeats ) 
+    {
       total += qtySeats[seatCode] * seatPrices[fod][seatCode];
     }
     document.getElementById("total-Price").innerHTML = total;
@@ -148,4 +151,21 @@ function triggerForm(MovieId,MovieDay,MovieHour)
     var hour = document.getElementById("movie-hour");
     hour.value = MovieHour;
     hour.innerHTML = MovieHour;
+}
+
+function validateCard()
+{
+    alert("In validation method");
+    var Cardyear = document.getElementById("cust-expiryYear").value;
+    alert(Cardyear);
+    var year = new Date().getFullYear();
+    alert(year);
+    var cardMonth = document.getElementById("cust-expiryMonth").value;
+    alert(cardMonth);
+    var month = new Date().getMonth()+1;
+    alert(month);
+    if(Cardyear==year & cardMonth<month)
+    {
+       document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";
+    }
 }

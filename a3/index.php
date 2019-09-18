@@ -205,7 +205,7 @@
 
 
           <section class="flex-container">
-            <div class="movieCard" , id="ACT" onclick= "changeSynopsis('ACT')">
+            <div class="movieCard"  id="ACT" onclick= "changeSynopsis('ACT')">
               <img src='../../media/avengers.jpg' alt="Avengers Poster">
               <h1>Avengers Endgame (M) </h1>
               <ul>
@@ -215,7 +215,7 @@
 
             </div>
 
-            <div class="movieCard" , id="RMC" onclick="changeSynopsis('RMC')">
+            <div class="movieCard"  id="RMC" onclick="changeSynopsis('RMC')">
               <img src='../../media/wedding.jpg' alt="Top End Wedding Poster">
               <h1>Top End Wedding (M) </h1>
               <ul> 
@@ -224,7 +224,7 @@
               </ul> 
             </div>
 
-            <div class="movieCard" , id="ANM" onclick="changeSynopsis('ANM')">
+            <div class="movieCard"  id="ANM" onclick="changeSynopsis('ANM')">
               <img src='../../media/dumbo.jpg' alt="Dumbo Poster">
               <h1>Dumbo (M)</h1>
               <ul> 
@@ -234,7 +234,7 @@
               </ul> 
             </div>
 
-            <div class="movieCard" , id="AHF">
+            <div class="movieCard"  id="AHF">
               <img src='../../media/prince.jpg'alt="Happy Prince Poster" onclick="changeSynopsis('AHF')">
               <h1>The Happy Prince (M) </h1>
               <ul> 
@@ -378,47 +378,52 @@
         </section>
       </article>
 
-<article id="booking-form", class="booking-form">
+<article id="booking-form" class="booking-form">
     
 <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " style="border-style: solid">
 <div id="movie-info">
-Movie ID: <input type="text" name="movie[id]" value="",title="Movie-ID", id="movie-id"> <br>
-      
-Movie Day: <input type="text" name="movie[day]" value="",title="Movie-day", id="movie-day"> <br>
-      
-Movie Hour: <input type="text" name="movie[hour]" value="",title="Movie-hour", id="movie-hour"> <br><br><br><br><br><br>
+Movie ID: <input type="text" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
+<br>
+Movie Day: <input type="text" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
+Movie Hour: <input type="text" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
 <div id="customer-info">      
-Name: <input type="text" name="cust[name]" value="", required, pattern="[a-z A-Z -.,']{1,40}" title="Name", id="cust-name"> <br> 
-      
-Email: <input type="email" name="cust[email]" value="", title="Email" id="cust-email"><br> 
-      
-Mobile:  <input type="tel" name="cust[mobile]", required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number",id="cust-mobile"> <br/> 
-      
-Credit Card: <input type="text" name="cust[card]",required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?",id="cust-card">     
+Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> 
+<br> 
+Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
+<br>   
+Mobile:  <input type="tel" name="cust[mobile]" required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number" id="cust-mobile" value = "04">
+<br>  
+Credit Card: <input type="text" name="cust[card]" required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">     
 <br/>
-      
-Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
+Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validateCard()">
       <option value=''> Month</option>
-      <script>
+  <script>
     for (var i=1; i<=12; i++ )
       document.write('<option value="'+i+'">'+i+'</option>');
   </script>
       </select>
-      
-      <select size="" title="cust[expiryYear]", id="cust-expiryYear">
+    
+      <select size="" title="cust[expiryYear]" id="cust-expiryYear" onchange="validateCard()">
           <option value=''> Year</option>
-      <script>
+  <script>
     var year = new Date().getFullYear();
     for ( var i=year; i<=(year+10); i++ )
       document.write('<option value="'+i+'">'+i+'</option>');
   </script>
       </select>
+<span id="card-warning"> </span>
 </div>
-<br><br>
+<br>
+<br>
 <div id="seat-info">
       Standard: <br>
-      Adults <select size="" title="seats[STA]", id="STA", onchange="calcResult()"> 
+      Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -426,7 +431,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-      Concession <select size="" title="seats[STP]", id="STP", onchange="calcResult()"> 
+      Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -434,7 +439,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-      Child <select size="" title="seats[STC]", id="STC", onchange="calcResult()"> 
+      Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -443,7 +448,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
 </select> <br><br>
       
       First Class: <br>
-       Adults <select size="" title="seats[FCA]" id="FCA", onchange="calcResult()"> 
+       Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -451,7 +456,7 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-       Concession <select size="" title="seats[FCP]", id="FCP", onchange="calcResult()"> 
+       Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
@@ -459,21 +464,21 @@ Expiry: <select name="cust[expiryMonth]",id="cust-expiryMonth">
   </script>
 </select> <br>
       
-       Child <select size="" title="seats[FCC]", id="FCC", onchange="calcResult()"> 
+       Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()"> 
       <option value=''> Please Select</option>
       <script>
     for (var i=0; i<=10; i++ )
       document.write('<option value="'+i+'">'+i+'</option>');
   </script>
-</select> <br><br><br>
+</select>
+<br>
+<br>
+<br>
 </div>
       <input type="submit" name="order" value="Order" >
-      Total $ <div id="total-Price", name= "totalPrice"> </div>
-    </form>
-        
+      Total $<span id="total-Price" name= "totalPrice"> </span>
+</form> 
 </article>
-
-
     </main>
 
     <footer>
