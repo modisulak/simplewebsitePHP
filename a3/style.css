@@ -655,5 +655,85 @@ tr:hover {background-color:#262626}
 }
 
 
+form {
+	overflow: hidden;
+}
+.formStyle fieldset{
+	border-radius: 10px;
+	
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	 
+	 height: 100%;
+	background: goldenrod;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	
+}
 
+.formStyle fieldset legend{
+	color: black;
+	border-top: 1px solid #FFD2D2;
+	border-left: 1px solid #FFD2D2;
+	border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+
+	background: #FFF4F4;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.formStyle textarea{
+	width:250px;
+	height:100px;
+}
+.personalField { 
+     height: 50%;
+}
+.formStyle textarea{
+	border-radius: 3px;
+	
+	border: 1px solid #FFC2DC;
+	outline: none;
+	color: #F072A9;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #FFD5E7;
+	
+	background: #FFEFF6;
+	width:50%;
+}
+
+.formStyle div { 
+	width: 30%
+
+}
+
+label { 
+      
+	
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 25px;
+  font-family: sans-serif;
+  line-height: 50px;
+  margin-bottom: 50px;
+	border-bottom: 50px;
+}
+
+.formStyle #customer-info { 
+	
+	padding-left: 2%;
+	font-family:sans-serif;
+	
+
+}
+
+.formStyle #seat-info {
+	float: right;
+	
+
+}
 

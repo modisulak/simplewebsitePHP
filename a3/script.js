@@ -140,7 +140,7 @@ function calcResult() {
 
 function triggerForm(MovieId,MovieDay,MovieHour)
 {
-    alert("in the trigger form method");
+    //alert("in the trigger form method");
     var x = document.getElementById("booking-form");
     x.style.display = "block";
     var id = document.getElementById("movie-id");
@@ -156,15 +156,15 @@ function triggerForm(MovieId,MovieDay,MovieHour)
 
 function validateCard()
 {
-    alert("In validation method");
+    //alert("In validation method");
     var Cardyear = document.getElementById("cust-expiryYear").value;
-    alert(Cardyear);
+    //alert(Cardyear);
     var year = new Date().getFullYear();
-    alert(year);
+    //alert(year);
     var cardMonth = document.getElementById("cust-expiryMonth").value;
-    alert(cardMonth);
+    //alert(cardMonth);
     var month = new Date().getMonth()+1;
-    alert(month);
+    //alert(month);
     if(Cardyear==year & cardMonth<month)
     {
        document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";
