@@ -300,10 +300,10 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button> MON 6:00pm</button>
-                    <button> TUE 6:00pm</button>
-                    <button > SAT 3:00pm</button>
-                    <button> SUN 3:00pm</button>
+                    <button onclick="triggerForm('RMC','MON','T18')"> MON 6:00pm</button>
+                    <button onclick="triggerForm('RMC','TUE','T18')"> TUE 6:00pm</button>
+                    <button onclick="triggerForm('RMC','SAT','T15')"> SAT 3:00pm</button>
+                    <button onclick="triggerForm('RMC','SUN','T15')"> SUN 3:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -330,13 +330,13 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button> MON 12:00pm</button>
-                    <button> TUE 12:00pm</button>
-                    <button > WED 6:00pm</button>
-                    <button > THU 6:00pm</button>
-                    <button > FRI 6:00pm</button>
-                    <button > SAT 12:00pm</button>
-                    <button> SUN 12:00pm</button>
+                    <button onclick="triggerForm('ANM','MON','T12')"> MON 12:00pm</button>
+                    <button onclick="triggerForm('ANM','TUE','T12')"> TUE 12:00pm</button>
+                    <button onclick="triggerForm('ANM','WED','T18')"> WED 6:00pm</button>
+                    <button onclick="triggerForm('ANM','THU','T18')"> THU 6:00pm</button>
+                    <button onclick="triggerForm('ANM','FRI','T18')"> FRI 6:00pm</button>
+                    <button onclick="triggerForm('ANM','SAT','T12')"> SAT 12:00pm</button>
+                    <button onclick="triggerForm('ANM','SUN','T12')"> SUN 12:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -365,11 +365,11 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button> WED 12:00pm</button>
-                    <button> THU 12:00pm</button>
-                    <button > FRI 12:00pm</button>
-                    <button> SAT 9:00pm</button>
-                    <button > SUN 9:00pm</button>
+                    <button onclick="triggerForm('AHF','WED','T12')"> WED 12:00pm</button>
+                    <button onclick="triggerForm('AHF','THU','T12')"> THU 12:00pm</button>
+                    <button onclick="triggerForm('AHF','FRI','T12')"> FRI 12:00pm</button>
+                    <button onclick="triggerForm('AHF','SAT','T21')"> SAT 9:00pm</button>
+                    <button onclick="triggerForm('AHF','SUN','T21')"> SUN 9:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -382,19 +382,20 @@
       <article id="booking-form" class="booking-form">
         <div class = "formStyle"> 
           <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " method="post" style="border-style: solid">
-            <div id="movie-info">
-              Movie ID: <input type="text" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
+            <div id="movie-info" class="hidden-fields">
+              <input type="hidden" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
               <br>
-              Movie Day: <input type="text" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
-              Movie Hour: <input type="text" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
+              <input type="hidden" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
+              <input type="hidden" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
               <br>
               <br>
               <br>
               <br>
               <br>
             </div>
+              <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
             <div id="customer-info">   
-              <fieldset class="personalField"><legend>Personal</legend>
+              <fieldset><legend>Personal</legend>
                 <label> Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> </label>
                 <br> 
                 <label> Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
@@ -495,113 +496,14 @@
               <br>
               <br>
             </div>
+              
+            <div class="submission-bar">
             <input type="submit" name="order" value="Order" >
             Total $<span id="total-Price" name= "totalPrice"> </span>
+            </div>
           </form> 
         </div>
       </article>
-
-<article id="booking-form" class="booking-form">
-    
-<form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " style="border-style: solid">
-<div id="movie-info">
-Movie ID: <input type="text" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
-<br>
-Movie Day: <input type="text" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
-Movie Hour: <input type="text" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
-<div id="customer-info">      
-Name: <input type="text" name="cust[name]" value="" required pattern="[a-zA-Z -.,']{1,40}" title="Name" id="cust-name"> 
-<br> 
-Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email" required>
-<br>   
-Mobile:  <input type="tel" name="cust[mobile]" required, pattern="(\(04\)|04|\+614)([ ]?\d){8}" title="Phone Number" id="cust-mobile" required value = "04">
-<br>  
-Credit Card: <input type="text" name="cust[card]" required pattern="^[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">     
-<br/>
-Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" required onchange="validateCard()">
-      <option value=''> Month</option>
-  <script>
-    for (var i=1; i<=12; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-      </select>
-    
-      <select size="" title="cust[expiryYear]" id="cust-expiryYear" required onchange="validateCard()">
-          <option value=''> Year</option>
-  <script>
-    var year = new Date().getFullYear();
-    for ( var i=year; i<=(year+10); i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-      </select>
-<span id="card-warning"> </span>
-</div>
-<br>
-<br>
-<div id="seat-info">
-      Standard: <br>
-      Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select> <br>
-      
-      Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select> <br>
-      
-      Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select> <br><br>
-      
-      First Class: <br>
-       Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select> <br>
-      
-       Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select> <br>
-      
-       Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()"> 
-      <option value=''> Please Select</option>
-      <script>
-    for (var i=0; i<=10; i++ )
-      document.write('<option value="'+i+'">'+i+'</option>');
-  </script>
-</select>
-<br>
-<br>
-<br>
-</div>
-      <input type="submit" name="order" value="Order" >
-      Total $<span id="total-Price" name= "totalPrice"> </span>
-</form> 
-</article>
 
     </main>
 
