@@ -248,7 +248,7 @@
 
       <article class = "anchor" id= "SYPNOSIS"> 
 
-        <section class="synopsis" id="synopsisACT" style="display: block">
+        <section class="synopsis" id="synopsisACT">
           <h1>SYNOPSIS</h1>
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
@@ -267,11 +267,11 @@
                 <div class="flex-containerButton"> 
                   <p> 
                     BOOK NOW:<br> 
-                    <button onclick="triggerForm('ACT','Wednesday',9)"> WED 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Thursday',9)"> THU 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Friday',9)"> FRI 9:00pm</button>
-                    <button onclick="triggerForm('ACT','Saturday',6)"> SAT 6:00pm</button>
-                    <button onclick="triggerForm('ACT','Sunday',6)"> SUN 6:00pm</button>
+                    <button onclick="triggerForm('ACT','WED','T21')"> WED 9:00pm</button>
+                    <button onclick="triggerForm('ACT','THU','T21')"> THU 9:00pm</button>
+                    <button onclick="triggerForm('ACT','FRI','T21')"> FRI 9:00pm</button>
+                    <button onclick="triggerForm('ACT','SAT','T18')"> SAT 6:00pm</button>
+                    <button onclick="triggerForm('ACT','SUN','T18')"> SUN 6:00pm</button>
                   </p> 
                 </div>
               </div>
@@ -377,6 +377,7 @@
           </section>
         </section>
       </article>
+
 
       <article id="booking-form" class="booking-form">
         <div class = "formStyle"> 
@@ -499,6 +500,109 @@
           </form> 
         </div>
       </article>
+
+<article id="booking-form" class="booking-form">
+    
+<form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " style="border-style: solid">
+<div id="movie-info">
+Movie ID: <input type="text" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
+<br>
+Movie Day: <input type="text" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
+Movie Hour: <input type="text" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="customer-info">      
+Name: <input type="text" name="cust[name]" value="" required pattern="[a-zA-Z -.,']{1,40}" title="Name" id="cust-name"> 
+<br> 
+Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email" required>
+<br>   
+Mobile:  <input type="tel" name="cust[mobile]" required, pattern="(\(04\)|04|\+614)([ ]?\d){8}" title="Phone Number" id="cust-mobile" required value = "04">
+<br>  
+Credit Card: <input type="text" name="cust[card]" required pattern="^[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">     
+<br/>
+Expiry: <select name="cust[expiryMonth]" id="cust-expiryMonth" required onchange="validateCard()">
+      <option value=''> Month</option>
+  <script>
+    for (var i=1; i<=12; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+      </select>
+    
+      <select size="" title="cust[expiryYear]" id="cust-expiryYear" required onchange="validateCard()">
+          <option value=''> Year</option>
+  <script>
+    var year = new Date().getFullYear();
+    for ( var i=year; i<=(year+10); i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+      </select>
+<span id="card-warning"> </span>
+</div>
+<br>
+<br>
+<div id="seat-info">
+      Standard: <br>
+      Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+      Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+      Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br><br>
+      
+      First Class: <br>
+       Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+       Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select> <br>
+      
+       Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()"> 
+      <option value=''> Please Select</option>
+      <script>
+    for (var i=0; i<=10; i++ )
+      document.write('<option value="'+i+'">'+i+'</option>');
+  </script>
+</select>
+<br>
+<br>
+<br>
+</div>
+      <input type="submit" name="order" value="Order" >
+      Total $<span id="total-Price" name= "totalPrice"> </span>
+</form> 
+</article>
+
     </main>
 
     <footer>
@@ -510,4 +614,5 @@
     </footer>
 
   </body>
+    <script> discountTest();</script>
 </html>
