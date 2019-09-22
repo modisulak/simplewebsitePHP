@@ -247,9 +247,9 @@
       </article>
 
       <article class = "anchor" id= "SYPNOSIS"> 
-
+        <h1>SYNOPSIS</h1>
         <section class="synopsis" id="synopsisACT">
-          <h1>SYNOPSIS</h1>
+
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -282,7 +282,7 @@
 
 
         <section class="synopsis" id="synopsisRMC">
-          <h1>SYNOPSIS</h1>
+         
           <section> 
 
 
@@ -312,7 +312,7 @@
         </section>
 
         <section class="synopsis" id="synopsisANM">
-          <h1>SYNOPSIS</h1>
+          
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -347,7 +347,7 @@
 
 
         <section class="synopsis" id="synopsisAHF">
-          <h1>SYNOPSIS</h1>
+         
           <section> 
 
 
@@ -393,7 +393,7 @@
               <br>
               <br>
             </div>
-              <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
+            <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
             <div id="customer-info">   
               <fieldset><legend>Personal</legend>
                 <label> Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> </label>
@@ -434,72 +434,72 @@
             <div id="seat-info">
               <fieldset><legend>Standard</legend>
 
-               <label> Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select> 
-                 </label> <br>
+                <label> Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select> 
+                </label> <br>
 
                 <label> Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select> 
-                  </label> <br>
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select> 
+                </label> <br>
 
-               <label>  Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select>
-                 </label>
+                <label>  Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select>
+                </label>
               </fieldset>
 
-           
+
 
               <fieldset><legend>First Class</legend>
                 <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select> 
-                  </label> <br>
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select> 
+                </label> <br>
 
                 <label> Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select> 
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select> 
                 </label> <br>
 
                 <label> Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()"> 
-                <option value=''> Please Select</option>
-                <script>
-                  for (var i=0; i<=10; i++ )
-                    document.write('<option value="'+i+'">'+i+'</option>');
-                </script>
-                </select>
+                  <option value=''> Please Select</option>
+                  <script>
+                    for (var i=0; i<=10; i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                  </select>
                 </label>
               </fieldset>
               <br>
               <br>
               <br>
             </div>
-              
+
             <div class="submission-bar">
-            <input type="submit" name="order" value="Order" >
-            Total $<span id="total-Price" name= "totalPrice"> </span>
+              <input type="submit" name="order" value="Order" >
+              Total $<span id="total-Price" name= "totalPrice"> </span>
             </div>
           </form> 
         </div>
@@ -516,5 +516,5 @@
     </footer>
 
   </body>
-    <script> discountTest();</script>
+  <script> discountTest();</script>
 </html>

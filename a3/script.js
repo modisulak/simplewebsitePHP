@@ -48,7 +48,7 @@ function displayScroll() {
         var navlinks = document.getElementsByTagName('nav')
         [0].getElementsByTagName('a');
         //console.log(navlinks); 
-        
+
         var n=-1;
         while(n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY) { 
             n++
@@ -56,7 +56,7 @@ function displayScroll() {
         console.log(n); 
         for (var a=0; a<navlinks.length; a++) {
             navlinks[a].classList.remove('active');
-            
+
         }
         if (n < 0) 
             console.log('No active'); 
@@ -64,7 +64,7 @@ function displayScroll() {
             console.log(articles[n].id+":"+articles[n].offsetTop); 
             navlinks[n].classList.add('active');
         }
-        
+
     }
 }
 
@@ -75,73 +75,73 @@ function start() {
 }
 
 var seatPrices = {
-      full: {
-      FCA: 30,
-      FCP: 27,
-      FCC: 24,
-      STA: 19.8,
-      STP: 17.5,
-      STC:15.3
+    full: {
+        FCA: 30,
+        FCP: 27,
+        FCC: 24,
+        STA: 19.8,
+        STP: 17.5,
+        STC:15.3
     },  
     discount: { 
-    FCA:24,
-    FCP: 22.5,
-    FCC: 21,
-    STA:14,
-    STP:12.5,
-    STC: 11
+        FCA:24,
+        FCP: 22.5,
+        FCC: 21,
+        STA:14,
+        STP:12.5,
+        STC: 11
     }
-  }
-      
+}
+
 function isFullOrDiscount(day, hour) {  //??? syntax issues??//
     //alert(day);
-   // alert(hour);
+    // alert(hour);
     var ret = "full";
     if(day == "MON" || day == "WED")
-        {
-            alert("In the monday loop")
-            ret = "discount"
-        }
+    {
+        alert("In the monday loop")
+        ret = "discount"
+    }
     if((day== "TUE" || day == "THU" || day == "FRI") && hour=="T12")
-        {
-             ret = "discount" 
-        }
+    {
+        ret = "discount" 
+    }
     return ret;
 }
 
 //function discountTest()
 //{
-  //  var day= ["MON","TUE","WED","THU","FRI","SAT","SUN"];
-    //var hour= ["T12", "T15", "T18", "T21"];
-    //for(d=0;d<day.length;d++)
-        //{
-        //for(h=0;h<hour.length;h++)
-          //  {
-        //    console.log(day[d]+" "+hour[h]+ " "+ isFullOrDiscount(day[d],hour[h]))
-          //  }
-        //}
+//  var day= ["MON","TUE","WED","THU","FRI","SAT","SUN"];
+//var hour= ["T12", "T15", "T18", "T21"];
+//for(d=0;d<day.length;d++)
+//{
+//for(h=0;h<hour.length;h++)
+//  {
+//    console.log(day[d]+" "+hour[h]+ " "+ isFullOrDiscount(day[d],hour[h]))
+//  }
+//}
 //}
 
 function calcResult() {
-     alert("in the method start");
+    alert("in the method start");
     var qtySeats = {
-      FCA: document.getElementById('FCA').value,
-      FCP: document.getElementById('FCP').value,
-      FCC: document.getElementById('FCC').value,
-      STA: document.getElementById('STA').value,
-      STP: document.getElementById('STP').value,
-      STC: document.getElementById('STC').value,
+        FCA: document.getElementById('FCA').value,
+        FCP: document.getElementById('FCP').value,
+        FCC: document.getElementById('FCC').value,
+        STA: document.getElementById('STA').value,
+        STP: document.getElementById('STP').value,
+        STC: document.getElementById('STC').value,
     };
-    
+
     var fod = isFullOrDiscount(document.getElementById('movie-day').value, document.getElementById('movie-hour').value);
     alert(fod); 
     var total = 0;
     for ( seatCode in qtySeats ) 
     {
-      total += qtySeats[seatCode] * seatPrices[fod][seatCode];
+        total += qtySeats[seatCode] * seatPrices[fod][seatCode];
     }
     document.getElementById("total-Price").innerHTML = total;
-  }
+}
 
 function triggerForm(MovieId,MovieDay,MovieHour)
 {
@@ -151,12 +151,59 @@ function triggerForm(MovieId,MovieDay,MovieHour)
     var id = document.getElementById("movie-id");
     id.value = MovieId;
     id.innerHTML = MovieId;
+    alert(MovieId);
     var day = document.getElementById("movie-day");
     day.value = MovieDay;
     day.innerHTML = MovieDay;
+    //alert(MovieDay);
     var hour = document.getElementById("movie-hour");
     hour.value = MovieHour;
     hour.innerHTML = MovieHour;
+    //alert(MovieHour);
+
+    var movieTitle = movieString(MovieId);
+    var movieHourString = timeString(MovieHour); 
+
+    document.getElementById("customer-view").innerHTML = movieTitle + "-" +MovieDay + "-" + movieHourString;
+}
+
+function movieString(MovieId) { 
+
+    if (MovieId == "ACT" ) {
+        var movieTitle = "Avengers"
+
+        }
+    if (MovieId == "RMC" ) {
+        var movieTitle = "Top End Wedding"
+
+        }
+    if (MovieId == "ANM" ) {
+        var movieTitle = "Dumbo"
+
+        }
+    if (MovieId == "AHF" ) {
+        var movieTitle = "The Happy Prince"
+
+        }
+    return movieTitle; 
+}
+
+function timeString (MovieHour) { 
+
+    if (MovieHour == "T12" ) {
+        var movieHour = "12:00 PM"
+        }
+    if (MovieHour == "T15" ) {
+        var movieHour = "3:00 PM"
+        }
+    if (MovieHour == "T18" ) {
+        var movieHour = "6:00 PM"
+        }
+    if (MovieHour == "T21" ) {
+        var movieHour = "9:00 PM"
+        }
+    return movieHour; 
+
 }
 
 function validateCard()
@@ -178,10 +225,13 @@ function validateCard()
 
     if(Cardyear==year & cardMonth<month)
     {
-       document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";
+        document.getElementById("card-warning").innerHTML = "Invalid Card Expiry.";
     }
     else
     {
-       document.getElementById("card-warning").innerHTML = ""; 
+        document.getElementById("card-warning").innerHTML = ""; 
     }
 }
+
+
+
