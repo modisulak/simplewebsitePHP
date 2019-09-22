@@ -48,7 +48,6 @@ function displayScroll() {
         var navlinks = document.getElementsByTagName('nav')
         [0].getElementsByTagName('a');
         //console.log(navlinks); 
-
         var n=-1;
         while(n < articles.length -1 && articles[n+1].offsetTop <= window.scrollY) { 
             n++
@@ -160,10 +159,8 @@ function triggerForm(MovieId,MovieDay,MovieHour)
     hour.value = MovieHour;
     hour.innerHTML = MovieHour;
     //alert(MovieHour);
-
     var movieTitle = movieString(MovieId);
     var movieHourString = timeString(MovieHour); 
-
     document.getElementById("customer-view").innerHTML = movieTitle + "-" +MovieDay + "-" + movieHourString;
 }
 
@@ -208,9 +205,8 @@ function timeString (MovieHour) {
 
 function validateCard()
 {
-    //alert("In validation method");
+    
     var Cardyear = document.getElementById("cust-expiryYear").value;
-
     //alert(Cardyear);
     var year = new Date().getFullYear();
     //alert(year);

@@ -418,7 +418,7 @@
                   </select>
                 </label>
 
-                <select size="" title="cust[expiryYear]" id="cust-expiryYear" onchange="validateCard()">
+                <select size="" title="cust[expiryYear]" id="cust-expiryYear"  name="cust[expiryYear]" onchange="validateCard()">
                   <option value=''> Year</option>
                   <script>
                     var year = new Date().getFullYear();
@@ -432,27 +432,27 @@
             </div>
 
             <div id="seat-info">
-              <fieldset><legend>Standard</legend>
+              <fieldset ><legend>Standard</legend>
 
-                <label> Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()"> 
+                <label> Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()" name="seats[STA]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br>
+                </label> <br> <br><br><br>
 
-                <label> Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()"> 
+                <label> Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()" name = "seats[STP]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br>
+                </label> <br> <br><br><br>
 
-                <label>  Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()"> 
+                <label>  Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()" name = "seats[STC]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
@@ -465,25 +465,25 @@
 
 
               <fieldset><legend>First Class</legend>
-                <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()"> 
+                <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br>
+                </label> <br><br> <br><br>
 
-                <label> Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()"> 
+                <label> Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()" name = "seats[FCP]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br>
+                </label> <br> <br><br> <br>
 
-                <label> Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()"> 
+                <label> Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()" name = "seats[FCC]"> 
                   <option value=''> Please Select</option>
                   <script>
                     for (var i=0; i<=10; i++ )
@@ -498,7 +498,7 @@
             </div>
 
             <div class="submission-bar">
-              <input type="submit" name="order" value="Order" >
+              <input type="submit" name="order" value="Order" class="order-button" >
               Total $<span id="total-Price" name= "totalPrice"> </span>
             </div>
           </form> 

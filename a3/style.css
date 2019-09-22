@@ -572,17 +572,6 @@ nav {
 }
 
 
-.synopsis-box discount-button
-{
-	background-color: darkred;
-}
-
-
-.synopsis-box discount-button:hover
-{
-	background-color: darkgreen;
-}
-
 
 .pricesbox { 
 	background: grey;
@@ -667,6 +656,8 @@ tr:hover {background-color:#262626}
 	margin-right: 40%;
 	margin-bottom: 10px;
 	font-size: 30px;
+    align-content: space-between;
+    align-items: baseline;
 
 }
 
@@ -682,25 +673,46 @@ form {
 	align-content: space-between;  
 	width: 100%;
 	height:auto;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .customer-view
 {
-	margin-top: -700px;
-	border-style: solid;
+    border: 1px solid #FFD2D2;
+	margin-top: -800px;
+    margin-right: -580px;
 	align-self: center;
+    box-sizing: border-box;
+    background: aliceBlue;
+    font-size: 50px;
+    border-radius: 10px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.order-button
+{
+    margin-right: 20px;
+    height: 100px;
+    width:200px;
+    font-size: 24px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
 }
 
 fieldset{
-	border-radius: 10px;
+	border: 1px solid #FFD2D2;
 	box-sizing: border-box;
 	margin: 40px 50px 60px 0px;
 	border: 1px solid #FFD2D2;
 	padding: 20px;
 	height: 400px;
-	
 	background: goldenrod;
-	box-shadow: inset 0px 0px 15px #FFE5E5;
+	border-radius: 10px;
+    line-height: auto;
+    
 
 }
 
@@ -725,6 +737,7 @@ fieldset{
 .formStyle input[type=tel],
 .formStyle input[type=email],
 .formStyle select,
+
 .formStyle textarea{
 	border-radius: 3px;
 	border: 1px solid #FFC2DC;
@@ -755,8 +768,7 @@ label {
 
 	padding-left: 2%;
 	font-family:sans-serif;
-
-
+    
 }
 
 .formStyle #seat-info {
