@@ -395,10 +395,10 @@
             </div>
             <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
             <br>
-             <br>
-             <br>
-             <br>
-             <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <div id="customer-info">   
               <fieldset><legend>Personal</legend>
                 <label> Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> </label>
@@ -446,7 +446,7 @@
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br> <br><br><br>
+                </label> <br> 
 
                 <label> Concession <select size="" title="seats[STP]" id="STP" onchange="calcResult()" name = "seats[STP]"> 
                   <option value=''> Please Select</option>
@@ -455,7 +455,7 @@
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br> <br><br><br>
+                </label> <br> 
 
                 <label>  Child <select size="" title="seats[STC]" id="STC" onchange="calcResult()" name = "seats[STC]"> 
                   <option value=''> Please Select</option>
@@ -466,10 +466,10 @@
                   </select>
                 </label>
               </fieldset>
-            </div>
+        
 
 
-            <div id="seat-info2">
+        
               <fieldset><legend>First Class</legend>
                 <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
                   <option value=''> Please Select</option>
@@ -478,7 +478,7 @@
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br><br> <br><br>
+                </label> <br>
 
                 <label> Concession <select size="" title="seats[FCP]", id="FCP" onchange="calcResult()" name = "seats[FCP]"> 
                   <option value=''> Please Select</option>
@@ -487,7 +487,7 @@
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
                   </select> 
-                </label> <br> <br><br> <br>
+                </label> <br> 
 
                 <label> Child <select size="" title="seats[FCC]" id="FCC" onchange="calcResult()" name = "seats[FCC]"> 
                   <option value=''> Please Select</option>
