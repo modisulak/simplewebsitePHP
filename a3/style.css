@@ -650,7 +650,7 @@ tr:hover {background-color:#262626}
 
 .submission-bar
 {
-	display: flex;
+	display: inline-block;
 	margin-top: -300px;
 	margin-left: 15%;
 	margin-right: 40%;
@@ -658,6 +658,7 @@ tr:hover {background-color:#262626}
 	font-size: 30px;
     align-content: space-between;
     align-items: baseline;
+	overflow: hidden;
 
 }
 
@@ -665,13 +666,13 @@ tr:hover {background-color:#262626}
 
 form {
 	overflow: hidden;
-	display: inline-flex;
+	display: inline-block;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: space-between;  
-	width: 100%;
+	
 	height:auto;
     background: rgba(0, 0, 0, 0.8);
 }
@@ -679,7 +680,7 @@ form {
 .customer-view
 {
     border: 1px solid #FFD2D2;
-	margin-top: -800px;
+	position: absolute;
     margin-right: -580px;
 	align-self: center;
     box-sizing: border-box;
@@ -689,6 +690,7 @@ form {
     height: 100px;
     text-align: center;
     line-height: 100px;
+	display: inline-block;
 }
 
 .order-button
@@ -702,19 +704,20 @@ form {
 
 }
 
+
+
 fieldset{
 	border: 1px solid #FFD2D2;
 	box-sizing: border-box;
 	margin: 40px 50px 60px 0px;
 	border: 1px solid #FFD2D2;
 	padding: 20px;
-	height: 400px;
+	height: 30%;
 	background: goldenrod;
 	border-radius: 10px;
     line-height: auto;
-    
-
-}
+	
+    }
 
 .formStyle fieldset legend{
 	color: black;
@@ -737,7 +740,6 @@ fieldset{
 .formStyle input[type=tel],
 .formStyle input[type=email],
 .formStyle select,
-
 .formStyle textarea{
 	border-radius: 3px;
 	border: 1px solid #FFC2DC;
@@ -746,13 +748,10 @@ fieldset{
 	padding: 5px 8px 5px 8px;
 	box-shadow: inset 1px 1px 4px #FFD5E7;
 	background: #FFEFF6;
-	width:50%;
+	
 }
 
-.formStyle div { 
-	width: 30%
 
-}
 
 label { 
 	flex-direction: row;
@@ -768,11 +767,32 @@ label {
 
 	padding-left: 2%;
 	font-family:sans-serif;
+	width: 35%;
+	margin: 0px;
+	display: inline-block;
+	overflow: hidden;
+	padding-top: 200px;
+	padding-left: 100px;
+	
     
 }
 
-.formStyle #seat-info {
-	float: right;
+.formStyle #seat-info2 {
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	width:35%;
+	clear:both;
+	padding-top: -200px;
+
+}
+
+.formStyle #seat-info1 {
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	width:35%;
+	vertical-align: top;
 
 }
 

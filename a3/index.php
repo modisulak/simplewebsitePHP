@@ -282,7 +282,7 @@
 
 
         <section class="synopsis" id="synopsisRMC">
-         
+
           <section> 
 
 
@@ -312,7 +312,7 @@
         </section>
 
         <section class="synopsis" id="synopsisANM">
-          
+
           <section> 
             <a class = "anchor" id= "SYPNOSIS"> </a>
 
@@ -347,7 +347,7 @@
 
 
         <section class="synopsis" id="synopsisAHF">
-         
+
           <section> 
 
 
@@ -394,6 +394,11 @@
               <br>
             </div>
             <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
+            <br>
+             <br>
+             <br>
+             <br>
+             <br>
             <div id="customer-info">   
               <fieldset><legend>Personal</legend>
                 <label> Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> </label>
@@ -431,8 +436,8 @@
               </fieldset>
             </div>
 
-            <div id="seat-info">
-              <fieldset ><legend>Standard</legend>
+            <div id="seat-info1">
+              <fieldset class="seat-info1"><legend>Standard</legend>
 
                 <label> Adults <select size="" title="seats[STA]" id="STA" onchange="calcResult()" name="seats[STA]"> 
                   <option value=''> Please Select</option>
@@ -461,9 +466,10 @@
                   </select>
                 </label>
               </fieldset>
+            </div>
 
 
-
+            <div id="seat-info2">
               <fieldset><legend>First Class</legend>
                 <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
                   <option value=''> Please Select</option>
