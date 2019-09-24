@@ -379,7 +379,7 @@
       </article>
 
 
-      <article id="booking-form" class="booking-form">
+      <section id="booking-form" class="booking-form">
         <div class = "formStyle"> 
           <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " method="post" style="border-style: solid">
             <div id="movie-info" class="hidden-fields">
@@ -400,7 +400,7 @@
             <br>
             <br>
             <div id="customer-info">   
-              <fieldset><legend>Personal</legend>
+              <fieldset><legend>Personal Details</legend>
                 <label> Name: <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> </label>
                 <br> 
                 <label> Email: <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
@@ -466,10 +466,10 @@
                   </select>
                 </label>
               </fieldset>
-        
 
 
-        
+
+
               <fieldset><legend>First Class</legend>
                 <label> Adults <select size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
                   <option value=''> Please Select</option>
@@ -504,12 +504,13 @@
             </div>
 
             <div class="submission-bar">
-              <input type="submit" name="order" value="Order" class="order-button" >
-              Total $<span id="total-Price" name= "totalPrice"> </span>
+              <span class ="totalText"> Total $ </span><span class="priceText" >  
+              <span id="total-Price" name= "totalPrice"> 0.00 </span> </span>
+              <input type="submit" name="order" value="Order" class="order-button" > 
             </div>
           </form> 
         </div>
-      </article>
+      </section>
 
     </main>
 

@@ -161,7 +161,7 @@ function triggerForm(MovieId,MovieDay,MovieHour)
     //alert(MovieHour);
     var movieTitle = movieString(MovieId);
     var movieHourString = timeString(MovieHour); 
-    document.getElementById("customer-view").innerHTML = movieTitle + "-" +MovieDay + "-" + movieHourString;
+    document.getElementById("customer-view").innerHTML = movieTitle + " on " +MovieDay + " at " + movieHourString;
 }
 
 function movieString(MovieId) { 
