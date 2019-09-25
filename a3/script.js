@@ -93,10 +93,12 @@ var seatPrices = {
 }
 
 function isFullOrDiscount(day, hour) {  //??? syntax issues??//
-function isFullOrDiscount(day, hour) {  //??? syntax issues??//
+    //alert(day);
+    // alert(hour);
     var ret = "full";
     if(day == "MON" || day == "WED")
     {
+        alert("In the monday loop")
         ret = "discount"
     }
     if((day== "TUE" || day == "THU" || day == "FRI") && hour=="T12")
@@ -108,6 +110,7 @@ function isFullOrDiscount(day, hour) {  //??? syntax issues??//
 
 
 function calcResult() {
+    alert("in the method start");
     var qtySeats = {
         FCA: document.getElementById('FCA').value,
         FCP: document.getElementById('FCP').value,
@@ -118,6 +121,7 @@ function calcResult() {
     };
 
     var fod = isFullOrDiscount(document.getElementById('movie-day').value, document.getElementById('movie-hour').value);
+    alert(fod); 
     var total = 0;
     for ( seatCode in qtySeats ) 
     {
@@ -129,17 +133,21 @@ function calcResult() {
 
 function triggerForm(MovieId,MovieDay,MovieHour)
 {
+    //alert("in the trigger form method");
     var x = document.getElementById("booking-form");
     x.style.display = "block";
     var id = document.getElementById("movie-id");
     id.value = MovieId;
     id.innerHTML = MovieId;
+    alert(MovieId);
     var day = document.getElementById("movie-day");
     day.value = MovieDay;
     day.innerHTML = MovieDay;
+    //alert(MovieDay);
     var hour = document.getElementById("movie-hour");
     hour.value = MovieHour;
     hour.innerHTML = MovieHour;
+    //alert(MovieHour);
     var movieTitle = movieString(MovieId);
     var movieHourString = timeString(MovieHour); 
     document.getElementById("customer-view").innerHTML = movieTitle + " on " +MovieDay + " at " + movieHourString;
@@ -188,9 +196,14 @@ function validateCard()
 {
     
     var Cardyear = document.getElementById("cust-expiryYear").value;
+    //alert(Cardyear);
     var year = new Date().getFullYear();
+    //alert(year);
     var cardMonth = document.getElementById("cust-expiryMonth").value;
+    //alert(cardMonth);
     var month = new Date().getMonth()+1;
+    //alert(month);
+
     var year = new Date().getFullYear();
     var cardMonth = document.getElementById("cust-expiryMonth").value;
     var month = new Date().getMonth()+1;
