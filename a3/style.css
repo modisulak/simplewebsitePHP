@@ -655,7 +655,7 @@ tr:hover {background-color:#262626}
 {
 	display: inline-block;
 	margin-top:10px;
-	margin-right: 30px;
+	margin-right: 160px;
 	margin-bottom: 20px;
 	font-size: 30px;
 	align-content: space-between;
@@ -676,13 +676,16 @@ form {
 	align-items: center;
 	padding-right: 30px;
 	height:auto;
-	width: 1300px;
-	max-width: 1300px;
+	width:90%;
+	max-width: 1800px;
 	background: rgba(0, 0, 0, 0.8);
 	border-color: goldenrod;
 	border-radius: 15px;
 	border-width: 5px;
-    margin-left: 250px;
+    margin: 0 auto;
+	min-width: 600px;
+	
+	
 }
 
 .customer-view
@@ -725,7 +728,7 @@ form {
 	display: inline-block;
 	border-color: goldenrod;
 	background-color: white;
-	border-width: 3px;
+	border-width: 10px;
 	width: 150px;
 	margin-right: 50px;
 	border-radius: 5px;
@@ -778,12 +781,21 @@ fieldset{
 	padding: 10px 8px 15px 8px;
 	box-shadow: inset 1px 1px 4px black;
 	background: white;
-
-
 }
 
+ .cardSelection {
+	
+	width: 92px;
+		
+	}
+
+
+.ticketSelection  {
+	
+	margin-right: 30px;
+}
 .formStyle { 
-	text-align: center;
+	text-align:center;
     align-items:center;
     display:flex;
     flex-direction: row;
@@ -794,7 +806,7 @@ fieldset{
 	background-size: cover;
 	height: auto; 
     padding: 20px;
-    width:80%;
+    width:100%;
     margin-right:-100px;
 }
 
@@ -802,20 +814,23 @@ fieldset{
 
 label { 
 	flex-direction: row;
-    text-align: center;
+    text-align: right;
+	display: inline-block;
+	width: 140px;
 	justify-content: flex-end;
 	font-size: 25px;
 	font-family: sans-serif;
 	line-height: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 	border-bottom: 50px;
+
 }
 
 .formStyle #customer-info { 
 
 	padding-left: 5%;
 	font-family:sans-serif;
-	width: 50%;
+	width: 40%;
 	margin: 0px;
 	display: inline-block;
 	overflow: hidden;
@@ -827,9 +842,10 @@ label {
 
 .formStyle #seat-info1 {
 	float: left;
-	width:35%;
+	width:30%;
 	margin-left: 10%;
 	height: 20%;
 	margin-top: -50px;
+	
 }
 
