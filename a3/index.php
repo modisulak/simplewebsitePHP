@@ -291,7 +291,7 @@
               <div class="flex-container-Image">
                 <span> 
                   <h1> Top End Wedding (M) </h1> 
-                  <p> Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis Top end wedding synopsis</p>
+                  <p> TFrom the makers of The Sapphires, come along for the next big thing in Australian film. Set against the stunnning backdrop of the northern territory, this film follows Ned and Lauren as they attempt to reunite their familys and pull of their dream wedding in the Top End.</p>
                 </span>
                 <iframe src="https://www.youtube.com/embed/uoDBvGF9pPU">
                 </iframe>
@@ -321,7 +321,7 @@
               <div class="flex-container-Image">
                 <span> 
                   <h1> Dumbo </h1> 
-                  <p> dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis dumbo synopsis  </p>
+                  <p> Childhood Remake? Check. Big Ears? Check. Tim Burton? Check. Stunning visuals? Check, check and check! A vivid re-imagining of a timeless classic-as surprising as it is familiar. One for the whole family!  </p>
                 </span>
                 <iframe src="https://www.youtube.com/embed/7NiYVoqBt">
                 </iframe>
@@ -355,8 +355,8 @@
 
               <div class="flex-container-Image">
                 <span> 
-                  <h1> THe happy Prince (M) </h1> 
-                  <p> THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis THe happy Prince synopsis  </p>
+                  <h1> The Happy Prince (M) </h1> 
+                  <p> Starring Colin Firth. The oft- neglected story of the last days of Oscar Wilde. As tragic as it is poignant and reflective, this not-quite biopic oozes passion and reverance for one of the most famous authors in history.  </p>
                 </span>
                 <iframe src="https://www.youtube.com/embed/tXANCJQkUIE&ab_channel=MovieclipsIndie">
                 </iframe>
@@ -523,5 +523,4 @@
   </footer>
 
   </body>
-<script> discountTest();</script>
 </html>
