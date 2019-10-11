@@ -102,12 +102,24 @@ function validateUserInput() {
 
 
   if(!empty($_POST)) {
-    $name = $_POST['cust[name]']; 
-    $email = $_POST['cust[email]']; 
-    $mobileno = $_POST['cust[mobile]']; 
-    $card = $_POST['cust[card]']; 
-    $cardExpiryMonth = $_POST['cust[expiryMonth]']; 
-    $cardExpiryYear = $_POST['cust[expiryYear]']; 
+    $name = $_POST['cust']['name']; 
+    $email = $_POST['cust']['email']; 
+    $mobileno = $_POST['cust']['mobile']; 
+    $card = $_POST['cust']['card']; 
+    $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
+    $cardExpiryYear = $_POST['cust']['expiryYear'];
+    $movieId = $_POST['movie']['id'];
+    $movieDay = $_POST['movie']['day'];
+    $movieHour = $_POST['movie']['hour'];
+    $qtySeats = [
+      'STA' => $_POST['seats']['STA'],
+      'STP' => $_POST['seats']['STP'],
+      'STC' => $_POST['seats']['STC'],
+      'FCA' => $_POST['seats']['FCA'],
+      'FCP' => $_POST['seats']['FCP'],
+      'FCC' => $_POST['seats']['FCC']
+      
+    ];
 
     if(empty($name)){
       $nameError = '<span style="color:red"> Must Enter Name. </span>';
@@ -154,10 +166,21 @@ function validateUserInput() {
 
 }
 
+/*
+No idea how to implement the calculate result.
+*/
+function calcResult($qtySeats,$movieDay,$movieHour) {
+  $FullOrDis = isFullorDiscount($movieDay,$movieHour);
+  $total = 0;
+  foreach($qtySeats as $seats => $seat) {
+    $total = $qtySeats[]
+  }
+}
+
 
 
 function validateCard($cardmonth,$cardYear) { 
-  $expires = \DateTime::createFromFormat('my',$cardmonth.$cardYear);
+  $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
   $current = new \DateTime();
   if ($expires < $current) {
     return false;
@@ -179,6 +202,8 @@ function isFullorDiscount($movieDay,$movieHour) {
   return $ret;
 
 }
+
+
 
 
 

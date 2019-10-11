@@ -399,7 +399,7 @@ if(POST data exists){
 
       <section id="booking-form" class="booking-form">
         <div class = "formStyle"> 
-          <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " method="post" style="border-style: solid">
+          <form action="index.php" method="post" style="border-style: solid">
             <div id="movie-info" class="hidden-fields">
               <input type="hidden" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
               <br>
