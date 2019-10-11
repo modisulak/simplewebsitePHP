@@ -1,3 +1,21 @@
+<?php 
+
+require_once ('tool.php');
+if(POST data exists){
+  preShow($_POST);
+  check POST data is okay //is where im gonna call the functions and make
+    if(all ok) {
+      add POST to SESSION
+        redirect to the reciept page
+    } else { 
+      set error message 
+        stay on the same page
+    }
+  die();
+}
+?> 
+
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -402,126 +420,129 @@
             <div class="cust-info" id="customer-info">   
               <fieldset><legend>Personal Details</legend>
                 <label> Name: </label> <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> 
-              <br> 
-              <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
+                <br> 
+                <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
 
-              <br>   
-              <label> Mobile: </label> <input type="tel" name="cust[mobile]" required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number" id="cust-mobile" value = "04">
+                <br>   
+                <label> Mobile: </label> <input type="tel" name="cust[mobile]" required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number" id="cust-mobile" value = "04">
 
-              <br>  
-              <label> Credit Card: </label> <input type="text" name="cust[card]" required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">  
+                <br>  
+                <label> Credit Card: </label> <input type="text" name="cust[card]" required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">  
 
-              <br/>
-              <label>
-                Expiry: </label> <select class="cardSelection"  name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validateCard()"> 
-              <option value=''> Month</option>
-              <script>
-                for (var i=1; i<=12; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-
-              </select>
-
-
-              <select class="cardSelection"  size="" title="cust[expiryYear]" id="cust-expiryYear"  name="cust[expiryYear]" onchange="validateCard()">
-                <option value=''> Year</option>
+                <br/>
+                <label>
+                  Expiry: </label> <select class="cardSelection"  name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validateCard()"> 
+                <option value=''> Month</option>
                 <script>
-                  var year = new Date().getFullYear();
-                  for ( var i=year; i<=(year+10); i++ )
+                  for (var i=1; i<=12; i++ )
                     document.write('<option value="'+i+'">'+i+'</option>');
                 </script>
-              </select>
 
-              <span class="cardWarning" id="card-warning"> </span>
+                </select>
+
+
+                <select class="cardSelection"  size="" title="cust[expiryYear]" id="cust-expiryYear"  name="cust[expiryYear]" onchange="validateCard()">
+                  <option value=''> Year</option>
+                  <script>
+                    var year = new Date().getFullYear();
+                    for ( var i=year; i<=(year+10); i++ )
+                      document.write('<option value="'+i+'">'+i+'</option>');
+                  </script>
+                </select>
+
+                <span class="cardWarning" id="card-warning"> </span>
               </fieldset>
             </div>
 
-          <div class="seat-info" id="seat-info1">
-            <fieldset class="seat-info1"><legend>Standard</legend>
+            <div class="seat-info" id="seat-info1">
+              <fieldset class="seat-info1"><legend>Standard</legend>
 
-              <label> Adults:  </label> <select class= "ticketSelection" size="" title="seats[STA]" id="STA" onchange="calcResult()" name="seats[STA]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select> 
-              <br> 
+                <label> Adults:  </label> <select class= "ticketSelection" size="" title="seats[STA]" id="STA" onchange="calcResult()" name="seats[STA]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select> 
+                <br> 
 
-              <label> Concession: </label> <select class= "ticketSelection" size="" title="seats[STP]" id="STP" onchange="calcResult()" name = "seats[STP]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select> 
-              <br> 
+                <label> Concession: </label> <select class= "ticketSelection" size="" title="seats[STP]" id="STP" onchange="calcResult()" name = "seats[STP]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select> 
+                <br> 
 
-              <label>  Child: </label> <select class= "ticketSelection" size="" title="seats[STC]" id="STC" onchange="calcResult()" name = "seats[STC]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select>
+                <label>  Child: </label> <select class= "ticketSelection" size="" title="seats[STC]" id="STC" onchange="calcResult()" name = "seats[STC]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select>
 
-            </fieldset>
-
-
+              </fieldset>
 
 
-            <fieldset><legend>First Class</legend>
-              <label> Adults:  </label> <select class= "ticketSelection" size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select> 
+
+
+              <fieldset><legend>First Class</legend>
+                <label> Adults:  </label> <select class= "ticketSelection" size="" title="seats[FCA]" id="FCA" onchange="calcResult()" name = "seats[FCA]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select> 
+                <br>
+
+                <label> Concession:  </label> <select class= "ticketSelection" size="" title="seats[FCP]", id="FCP" onchange="calcResult()" name = "seats[FCP]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select> 
+                <br> 
+
+                <label> Child:  </label> <select class= "ticketSelection" size="" title="seats[FCC]" id="FCC" onchange="calcResult()" name = "seats[FCC]"> 
+                <option value=''> Please Select</option>
+                <script>
+                  for (var i=1; i<=10; i++ )
+                    document.write('<option value="'+i+'">'+i+'</option>');
+                </script>
+                </select>
+
+              </fieldset>
               <br>
+              <br>
+              <br>
+            </div>
 
-              <label> Concession:  </label> <select class= "ticketSelection" size="" title="seats[FCP]", id="FCP" onchange="calcResult()" name = "seats[FCP]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select> 
-              <br> 
-
-              <label> Child:  </label> <select class= "ticketSelection" size="" title="seats[FCC]" id="FCC" onchange="calcResult()" name = "seats[FCC]"> 
-              <option value=''> Please Select</option>
-              <script>
-                for (var i=1; i<=10; i++ )
-                  document.write('<option value="'+i+'">'+i+'</option>');
-              </script>
-              </select>
-
-            </fieldset>
-            <br>
-            <br>
-            <br>
-          </div>
-
-          <div class="submission-bar">
-            <span class ="totalText"> Total $ </span><span class="priceText" >  
-            <span id="total-Price" name= "totalPrice"> 0.00 </span> </span>
-            <input type="submit" name="order" value="Order" class="order-button" > 
-          </div>
+            <div class="submission-bar">
+              <span class ="totalText"> Total $ </span><span class="priceText" >  
+              <span id="total-Price" name= "totalPrice"> 0.00 </span> </span>
+              <input type="submit" name="order" value="Order" class="order-button" > 
+            </div>
           </form> 
         </div>
       </section>
 
     </main>
 
-  <footer>
-    <div>&copy;<script>
-      document.write(new Date().getFullYear());
-      </script> Maximillian Young, Moditha Sulakshana, s3769993,s3756843, Max n Modi. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-    <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-    <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-  </footer>
+    <footer>
+      <div>&copy;<script>
+        document.write(new Date().getFullYear());
+        </script> Maximillian Young, Moditha Sulakshana, s3769993,s3756843, Max n Modi. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+
+    </footer>
+    preShow($_POST); // ie echo a string
+    preShow($_SESSION);
 
   </body>
-<script> discountTest();</script>
+  <script> discountTest();</script>
 </html>
