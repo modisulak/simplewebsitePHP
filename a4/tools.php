@@ -118,8 +118,10 @@ function validateUserInput() {
       'FCA' => $_POST['seats']['FCA'],
       'FCP' => $_POST['seats']['FCP'],
       'FCC' => $_POST['seats']['FCC']
-      
+
     ];
+    $seats = $_POST['seats']; 
+    $movie = $_POST['movie'];
 
     if(empty($name)){
       $nameError = '<span style="color:red"> Must Enter Name. </span>';
@@ -157,9 +159,18 @@ function validateUserInput() {
         $errorsfound = true;
       }
     }
-    if(empty($cardExpiryMonth)) { 
-      $cardMonthError = '<span style="color:red"> Must Enter Card Month </span>';
+    if(empty($cardExpiryMonth)) or (empty($cardExpiryYear)) { 
+      $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
       $errorsfound = true;
+    } else {
+      if(!validateCard($cardExpiryMonth,$cardExpiryYear)) {
+        $cardError = '<span style="color:red"> Card Expired! </span>';
+        $errorsfound = true;
+      }
+    } else {
+      if(!$errorsfound) {
+        calcResult($seats,$movieDay,$movieHour); 
+      }
     }
   }
 
@@ -169,13 +180,16 @@ function validateUserInput() {
 /*
 No idea how to implement the calculate result.
 */
-function calcResult($qtySeats,$movieDay,$movieHour) {
+function calcResult($seats,$movieDay,$movieHour) {
+  global $pricesObject;
   $FullOrDis = isFullorDiscount($movieDay,$movieHour);
   $total = 0;
-  foreach($qtySeats as $seats => $seat) {
-    $total = $qtySeats[]
-  }
+  foreach($seats as $seat => $seatcode) {
+    $total += $seats[$seatcode] * $pricesObject[$FullOrDis][$seatcode];
+  } 
+  return $total;
 }
+
 
 
 
