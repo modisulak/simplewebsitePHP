@@ -92,7 +92,7 @@ var seatPrices = {
     }
 }
 
-function isFullOrDiscount(day, hour) {  //??? syntax issues??//
+function isFullOrDiscount(day, hour) {  
     //alert(day);
     // alert(hour);
     var ret = "full";
@@ -110,7 +110,7 @@ function isFullOrDiscount(day, hour) {  //??? syntax issues??//
 
 
 function calcResult() {
-    //alert("in the method start");
+  
     var qtySeats = {
         FCA: document.getElementById('FCA').value,
         FCP: document.getElementById('FCP').value,
@@ -189,7 +189,6 @@ function timeString (MovieHour) {
         var movieHour = "9:00 PM"
         }
     return movieHour; 
-
 }
 
 function validateCard()

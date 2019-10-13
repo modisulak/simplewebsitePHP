@@ -1,3 +1,10 @@
+<?php
+
+require_once('tools.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang='en'>
     <head>
@@ -84,4 +91,7 @@
 
         </div><!--End Invoice-->
     </body>
+    <?php
+    preShow($_SESSION)
+    ?>
 </html>

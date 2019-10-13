@@ -1,16 +1,123 @@
 <?php
-require_once('tools.php');
- if(!empty($_POST)) {
-   $errorfound = validateUserInput(); 
-   if ($errorfound) {
-     header("Location: index.php");
-   } else {
-     header("Location: receipt.php");
-     $_SESSION["custDetails"] = $_POST["cust"];
-     $_SESSION["movieDetails"] = $_POST["movie"];
-     $_SESSION["seats"] = $_POST["seats"];
-   }
- }
+
+require('tools.php');
+
+    $name = "";
+    $email = "";
+    $mobileno = "";
+    $card = "";
+    $cardExpiryMonth =  "";
+    $cardExpiryYear = "";
+    $movieId = "";
+    $movieDay ="";
+    $movieHour = "";
+    $qtySeats = "";
+    $seats = "";
+    $movie = "";
+    
+    $nameError = "";
+    $emailError = "";
+    $mobileError = "";
+    $cardError = "";
+    
+if(!empty($_POST)) 
+{
+    $errorsfound=false;
+    $movieId = $_POST['movie']['id'];
+    $movieDay = $_POST['movie']['day'];
+    $movieHour = $_POST['movie']['hour'];
+    
+    $qtySeats = 
+    [
+      'STA' => $_POST['seats']['STA'],
+      'STP' => $_POST['seats']['STP'],
+      'STC' => $_POST['seats']['STC'],
+      'FCA' => $_POST['seats']['FCA'],
+      'FCP' => $_POST['seats']['FCP'],
+      'FCC' => $_POST['seats']['FCC']
+    ];
+    
+    if(empty($_POST['cust']['name']))
+    {
+      $nameError = '<span style="color:red"> Must Enter Name. </span>';
+      $errorsfound = true;
+    } 
+    else 
+    {
+        $name = $_POST['cust']['name']; 
+        if(!is_string($name)) //isString doesnt work. use a regex instead.
+        {
+            $nameError = '<span style="color:red"> Name must be only letters. </span>';
+            $errorsfound = true;
+        }
+    }
+    
+    if(empty($_POST['cust']['email'])) 
+    {
+      $emailError = '<span style="color:red"> Must Enter Email. </span>';
+      $errorsfound = true;
+    } 
+    else
+    {
+        $email = $_POST['cust']['email']; 
+        if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) 
+        {
+            $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
+            $errorsfound = true;
+        }
+    }
+      
+    if(empty($_POST['cust']['mobile'])) 
+    {
+      $mobileError = '<span style="color:red"> Must Enter Mobile No. </span>';
+      $errorsfound = true;
+    } 
+    else
+    {
+        $mobileno = $_POST['cust']['mobile']; 
+        if(!preg_match("^(04\)|04|\+614)( ?\d){6}^",$mobileno)) 
+        {
+            $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
+            $errorsfound = true;
+        }
+    }
+    
+    if(empty($_POST['cust']['card'])) 
+    {
+      $cardError = '<span style="color:red"> Must Enter Card No. </span>';
+      $errorsfound = true;
+    } 
+    else
+    {
+        $card = $_POST['cust']['card']; 
+//        if(!preg_match("^4[0-9]{12}(?:[0-9]{3})?^", $card)) //regex wrong, need a new one
+//        {
+//            $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
+//            $errorsfound = true;
+//        }
+    }
+      
+      
+    if(empty($_POST['cust']['expiryMonth'])) 
+    { 
+      $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
+      $errorsfound = true;
+    }
+      
+    else
+    {
+        $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
+    }
+    
+  //  $errorsfound = validateUserInput(); 
+    if (!$errorsfound)
+    {
+        header("Location: reciept.php");
+        $_SESSION["custDetails"] = $_POST["cust"];
+        $_SESSION["movieDetails"] = $_POST["movie"];
+        $_SESSION["seats"] = $_POST["seats"];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +126,7 @@ require_once('tools.php');
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <title>Assignment 3</title>
+    <title>Assignment 4</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
@@ -180,6 +287,7 @@ require_once('tools.php');
                     <td>$24.00</td>
                   </tr>
                 </table>
+                  
                 <div class="flex-container"> 
                   <h3>  CONCESSION PRICES </h3> 
                   <table> <tr class="firstRow">
@@ -216,7 +324,6 @@ require_once('tools.php');
       <article class = "anchor" id= "NOW SHOWING">
         <h1>NOW SHOWING</h1>
         <section class="nowShow4">
-
 
 
           <section class="flex-container">
@@ -397,6 +504,7 @@ require_once('tools.php');
       <section id="booking-form" class="booking-form">
         <div class = "formStyle"> 
           <form action="index.php" method="post" style="border-style: solid">
+              
             <div id="movie-info" class="hidden-fields">
               <input type="hidden" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
               <br>
@@ -414,18 +522,25 @@ require_once('tools.php');
             <br>
             <br>
             <br>
+              
             <div class="cust-info" id="customer-info">   
               <fieldset><legend>Personal Details</legend>
-                <label> Name: </label> <input type="text" name="cust[name]" value="" required pattern="[a-z A-Z -.,']{1,40}" title="Name" id="cust-name"> 
+                  
+                <label> Name: </label> <input type="text" name="cust[name]" title="Name" id="cust-name" value='<?= $name ?>'/> <br>
+                <span><?= $nameError ?></span>
+                  
                 <br> 
-                <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email">
+                <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email" value='<?= $email ?>'/>  <br>
+               <span> <?= $emailError ?></span>
 
                 <br>   
-                <label> Mobile: </label> <input type="tel" name="cust[mobile]" required, pattern="^[(04\)|04|\+614)( ?\d)}{6}" title="Phone Number" id="cust-mobile" value = "04">
+                <label> Mobile: </label> <input type="tel" name="cust[mobile]" title="Phone Number" id="cust-mobile" value = '<?= $mobileno ?>'/> <br>
+               <span> <?= $mobileError ?></span>
 
                 <br>  
-                <label> Credit Card: </label> <input type="text" name="cust[card]" required pattern="[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?" id="cust-card">  
-
+                <label> Credit Card: </label> <input type="text" name="cust[card]"  id="cust-card" 
+                value= '<?= $card ?>'/>
+               
                 <br/>
                 <label>
                   Expiry: </label> <select class="cardSelection"  name="cust[expiryMonth]" id="cust-expiryMonth" onchange="validateCard()"> 
@@ -445,9 +560,8 @@ require_once('tools.php');
                     for ( var i=year; i<=(year+10); i++ )
                       document.write('<option value="'+i+'">'+i+'</option>');
                   </script>
-                </select>
-
-                <span class="cardWarning" id="card-warning"> </span>
+                </select> <br>
+            <span> <?= $cardError ?> </span>
               </fieldset>
             </div>
 
@@ -519,8 +633,10 @@ require_once('tools.php');
             </div>
 
             <div class="submission-bar">
-              <span class ="totalText"> Total $ </span><span class="priceText" >  
-              <span id="total-Price" name= "totalPrice"> 0.00 </span> </span>
+              <span class ="totalText"> Total $ </span>
+                <span class="priceText" >  
+              <span id="total-Price" name= "totalPrice"> 0.00 </span>
+                </span>
               <input type="submit" name="order" value="Order" class="order-button" > 
             </div>
           </form> 
@@ -537,9 +653,14 @@ require_once('tools.php');
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 
     </footer>
-    preShow($_POST); // ie echo a string
+    
+    <?php 
+    preShow($_POST); 
     preShow($_SESSION);
+    preShow(printMyCode());
+    ?>
+      
+    
 
   </body>
-  <script> discountTest();</script>
 </html>

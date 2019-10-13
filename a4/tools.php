@@ -5,7 +5,7 @@ $moviesObject = [
   'ACT' => [
     'title' => 'Avengers: Endgame',
     'rating' => 'M',
-    'description' => '<p> Avengers Discription </p>',
+    'description' => '<p> Avengers Description </p>',
     'screenings' => [
       'WED' => 'T21',
       'THU'=> 'T21',
@@ -17,7 +17,7 @@ $moviesObject = [
   'RMC' => [
     'title' => 'Top End Wedding',
     'rating' => 'M',
-    'description' => '<p> Top End Wedding Discription </p>',
+    'description' => '<p> Top End Wedding Description </p>',
     'screenings' => [
       'MON' => 'T18',
       'TUE'=> 'T18',
@@ -28,7 +28,7 @@ $moviesObject = [
   'ANM' => [
     'title' => 'Dumbo',
     'rating' => 'M',
-    'description' => '<p> Dumbo Discription </p>',
+    'description' => '<p> Dumbo Description </p>',
     'screenings' => [
       'MON' => 'T12',
       'TUE'=> 'T12',
@@ -42,7 +42,7 @@ $moviesObject = [
   ],'AHF' => [
     'title' => 'The Happy Prince',
     'rating' => 'M',
-    'description' => '<p> Avengers Discription </p>',
+    'description' => '<p> Avengers Description </p>',
     'screenings' => [
       'WED' => 'T12',
       'THU'=> 'T12',
@@ -73,6 +73,28 @@ $pricesObject = [
   ]
 ];  
 
+//initialise variables  
+    $name = "";
+    $email = "";
+    $mobileno = "";
+    $card = "";
+    $cardExpiryMonth =  "";
+    $cardExpiryYear = "";
+    $movieId = "";
+    $movieDay ="";
+    $movieHour = "";
+    $qtySeats = "";
+    $seats = "";
+    $movie = "";
+    
+    $nameError = "";
+    $emailError = "";
+    $mobileError = "";
+    $cardError = "";
+    
+
+
+
 function preShow( $arr, $returnAsString=false ) {
   $ret  = '<pre>' . print_r($arr, true) . '</pre>';
   if ($returnAsString)
@@ -97,82 +119,123 @@ function php2js( $arr, $arrName ) {
   echo "</script>\n\n";
 }
 
-function validateUserInput() {
+function validateUserInput() 
+{
   $errorsfound = false;
+  if(!empty($_POST)) 
+  {
+    $seats = $_POST['seats']; 
+    $movie = $_POST['movie'];
 
-
-  if(!empty($_POST)) {
-    $name = $_POST['cust']['name']; 
-    $email = $_POST['cust']['email']; 
-    $mobileno = $_POST['cust']['mobile']; 
-    $card = $_POST['cust']['card']; 
-    $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
-    $cardExpiryYear = $_POST['cust']['expiryYear'];
     $movieId = $_POST['movie']['id'];
     $movieDay = $_POST['movie']['day'];
     $movieHour = $_POST['movie']['hour'];
-    $qtySeats = [
+    
+      
+    
+    $qtySeats = 
+    [
       'STA' => $_POST['seats']['STA'],
       'STP' => $_POST['seats']['STP'],
       'STC' => $_POST['seats']['STC'],
       'FCA' => $_POST['seats']['FCA'],
       'FCP' => $_POST['seats']['FCP'],
       'FCC' => $_POST['seats']['FCC']
-
     ];
-    $seats = $_POST['seats']; 
-    $movie = $_POST['movie'];
-
-    if(empty($name)){
+    
+    if(empty($_POST['cust']['name']))
+    {
       $nameError = '<span style="color:red"> Must Enter Name. </span>';
       $errorsfound = true;
-    } else {
-      if(!is_string($name)) {
-        $nameError = '<span style="color:red"> Must Letters Only. </span>';
-        $errorsfound = true;
-      }
+    } 
+    else 
+    {
+        $name = $_POST['cust']['name']; 
+        if(!is_string($name)) 
+        {
+            $nameError = '<span style="color:red"> Name must be only letters. </span>';
+            $errorsfound = true;
+        }
     }
-    if(empty($email)) {
+      
+    
+    if(empty($_POST['cust']['email'])) 
+    {
       $emailError = '<span style="color:red"> Must Enter Email. </span>';
       $errorsfound = true;
-    } else {
-      if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) {
-        $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
-        $errorsfound = true;
-      }
+    } 
+    else
+    {
+        $email = $_POST['cust']['email']; 
+        if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) 
+        {
+            $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
+            $errorsfound = true;
+        }
     }
-    if(empty($mobileno)) {
+      
+    if(empty($_POST['cust']['mobile'])) 
+    {
       $mobileError = '<span style="color:red"> Must Enter Mobile No. </span>';
       $errorsfound = true;
-    } else {
-      if(!preg_match("^[(04\)|04|\+614)( ?\d)}{6}")) {
-        $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
-        $errorsfound = true;
-      }
+    } 
+    else
+    {
+        $mobileno = $_POST['cust']['mobile']; 
+        if(!preg_match("^(04\)|04|\+614)( ?\d){6}^",$mobileno)) 
+        {
+            $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
+            $errorsfound = true;
+        }
     }
-    if(empty($card)) {
+    
+    if(empty($_POST['cust']['card'])) 
+    {
       $cardError = '<span style="color:red"> Must Enter Card No. </span>';
       $errorsfound = true;
-    } else {
-      if(!preg_match("[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?")) {
-        $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
-        $errorsfound = true;
-      }
+    } 
+    else
+    {
+        $card = $_POST['cust']['card']; 
+        if(!preg_match("^4[0-9]{12}(?:[0-9]{3})?^", $card)) //regex wrong
+        {
+            $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
+            $errorsfound = true;
+        }
     }
-    if(empty($cardExpiryMonth)) { 
+      
+      
+    if(empty($_POST['cust']['expiryMonth'])) 
+    { 
       $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
       $errorsfound = true;
-    } else {
-      if(!validateCard($cardExpiryMonth,$cardExpiryYear)) {
-        $cardError = '<span style="color:red"> Card Expired! </span>';
-        $errorsfound = true;
-      }
-    } 
-    return $errorsfound; 
+    }
+      
+    else
+    {
+        $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
+    }
+    
+//    if(empty($_POST['cust']['expiryYear']) 
+//    { 
+//      $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
+//      $errorsfound = true;
+//    }
+//       
+//    else
+//    {
+//        $cardExpiryYear = $_POST['cust']['expiryYear']; 
+//     }
+      
+      
+//    if(!validateCard($cardExpiryMonth,$cardExpiryYear)) 
+//    {
+//        $cardError = '<span style="color:red"> Card Expired! </span>';
+//        $errorsfound = true;
+//    } 
   }
+    return $errorsfound; 
 }
-
-
 
 
 
@@ -183,14 +246,12 @@ function calcResult($seats,$movieDay,$movieHour) {
   global $pricesObject;
   $FullOrDis = isFullorDiscount($movieDay,$movieHour);
   $total = 0;
-  foreach($seats as $seat => $seatcode) {
+  foreach($seats as $seat => $seatcode) 
+  {
     $total += $seats[$seatcode] * $pricesObject[$FullOrDis][$seatcode];
   } 
   return $total;
 }
-
-
-
 
 function validateCard($cardmonth,$cardYear) { 
   $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
@@ -214,8 +275,6 @@ function isFullorDiscount($movieDay,$movieHour) {
   return $ret;
 
 }
-
-
 
 
 
