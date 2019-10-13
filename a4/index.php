@@ -1,6 +1,17 @@
-
-
-
+<?php
+require_once('tools.php');
+ if(!empty($_POST)) {
+   $errorfound = validateUserInput(); 
+   if ($errorfound) {
+     header("Location: index.php");
+   } else {
+     header("Location: receipt.php");
+     $_SESSION["custDetails"] = $_POST["cust"];
+     $_SESSION["movieDetails"] = $_POST["movie"];
+     $_SESSION["seats"] = $_POST["seats"];
+   }
+ }
+?>
 
 <!DOCTYPE html>
 <html lang='en'>

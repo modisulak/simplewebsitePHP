@@ -159,7 +159,7 @@ function validateUserInput() {
         $errorsfound = true;
       }
     }
-    if(empty($cardExpiryMonth)) or (empty($cardExpiryYear)) { 
+    if(empty($cardExpiryMonth)) { 
       $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
       $errorsfound = true;
     } else {
@@ -167,15 +167,14 @@ function validateUserInput() {
         $cardError = '<span style="color:red"> Card Expired! </span>';
         $errorsfound = true;
       }
-    } else {
-      if(!$errorsfound) {
-        calcResult($seats,$movieDay,$movieHour); 
-      }
-    }
+    } 
+    return $errorsfound; 
   }
-
-
 }
+
+
+
+
 
 /*
 No idea how to implement the calculate result.
@@ -205,13 +204,12 @@ function validateCard($cardmonth,$cardYear) {
 
 function isFullorDiscount($movieDay,$movieHour) {
   $ret = "full";
-  if($movieDay == "MON" || $movieDay == "WED")
-  {
-    $ret = "discount"
+  if($movieDay == "MON" || $movieDay == "WED"){
+    $ret = "discount";
   }
-  if(($movieDay"TUE" || $movieDay == "THU" || $movieDay == "FRI") && $movieHour=="T12")
+  if(($movieDay == "TUE" || $movieDay == "THU" || $movieDay == "FRI") && $movieHour=="T12")
   {
-    $ret = "discount" 
+    $ret = "discount"; 
   }
   return $ret;
 
