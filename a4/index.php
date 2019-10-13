@@ -1,19 +1,5 @@
-<?php 
 
-require_once ('tool.php');
-if(POST data exists){
-  preShow($_POST);
-  check POST data is okay //is where im gonna call the functions and make
-    if(all ok) {
-      add POST to SESSION
-        redirect to the reciept page
-    } else { 
-      set error message 
-        stay on the same page
-    }
-  die();
-}
-?> 
+
 
 
 <!DOCTYPE html>
@@ -30,7 +16,7 @@ if(POST data exists){
     <script src='../wireframe.js'></script>
     <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+    <a href="reciept.php" target="_blank">A4</a>
 
   </head>
 
