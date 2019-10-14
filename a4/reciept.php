@@ -2,6 +2,22 @@
 
 require_once('tools.php');
 
+$custDetails = $_SESSION["custDetails"];
+$movieDetails = $_SESSION["movieDetails"];
+$seats = $_SESSION["seats"];
+
+$fp = fopen('bookings.txt',"a");
+    flock($fp, LOCK_EX);
+
+    fputcsv($fp, $custDetails, "\t");
+
+    fputcsv($fp, $movieDetails, "\t");
+
+    fputcsv($fp, $seats, "\t");
+
+    flock($fp, LOCK_UN);
+
+    fclose($fp);
 ?>
 
 
