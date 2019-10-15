@@ -246,9 +246,9 @@ function calcResult($seats,$movieDay,$movieHour) {
   global $pricesObject;
   $FullOrDis = isFullorDiscount($movieDay,$movieHour);
   $total = 0;
-  foreach($seats as $seat => $seatcode) 
+  foreach($seats as $seatcode => $quantity) 
   {
-    $total += $seats[$seatcode] * $pricesObject[$FullOrDis][$seatcode];
+    $total += $quantity * $pricesObject[$FullOrDis][$seatcode];
   } 
   return $total;
 }
