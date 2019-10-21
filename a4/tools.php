@@ -239,9 +239,7 @@ function validateUserInput()
 
 
 
-/*
-No idea how to implement the calculate result.
-*/
+
 function calcResult($seats,$movieDay,$movieHour) {
   global $pricesObject;
   $FullOrDis = isFullorDiscount($movieDay,$movieHour);
@@ -250,9 +248,10 @@ function calcResult($seats,$movieDay,$movieHour) {
   {
     $total += $quantity * $pricesObject[$FullOrDis][$seatcode];
   } 
-  return $total;
+   $gst= ($total*11)/100;
+   $totalGst =$total+$gst;
+   return round($totalGst,2);
 }
-
 function validateCard($cardmonth,$cardYear) { 
   $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
   $current = new \DateTime();

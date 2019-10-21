@@ -115,7 +115,7 @@ $pricesObject = [
 
                                     <tr class="tabletitle">
                                         <td></td>
-                                        <td class="Rate"><h2>Total</h2></td>
+                                        <td class="Rate"><h2>Total inc GST</h2></td>
                                         <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
                                     </tr>
 
@@ -123,14 +123,14 @@ $pricesObject = [
                             </div><!--End Table-->
 
                         <div id="legalcopy">
-                            <p class="legal"><strong>Thank you for your purchase.  </strong> Please remember to bring this invoice to get your tickets at the counter.
+                            <p class="legal"><strong> Thank you for your purchase.  </strong> Please remember to bring this invoice to get your tickets at the counter.
                             </p>
                         </div>
 
-                    </div><!--End InvoiceBot-->
+                    </div>
                     </center>
 
-                </div><!--End Invoice-->
+                </div>
             </body>
         <?php
             preShow($_SESSION)
