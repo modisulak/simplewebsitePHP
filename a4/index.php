@@ -4,7 +4,9 @@ require('tools.php');
 
 $name = "";
 $email = "";
+$spaceNo= "";
 $mobileno = "";
+$cardSpace = "";
 $card = "";
 $cardExpiryMonth =  "";
 $cardExpiryYear = "";
@@ -45,7 +47,7 @@ if(!empty($_POST))
   else 
   {
     $name = $_POST['cust']['name']; 
-    if(!is_string($name)) //isString doesnt work. use a regex instead.
+    if(!preg_match("^[A-Za-z]+((\s)?((\'\-|\.)?([A-Za-z])+))*^",$name))
     {
       $nameError = '<span style="color:red"> Name must be only letters. </span>';
       $errorsfound = true;
@@ -59,7 +61,7 @@ if(!empty($_POST))
   } 
   else
   {
-    $email = $_POST['cust']['email']; 
+    $email = $_POST['cust']['email'];
     if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) 
     {
       $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
@@ -74,12 +76,17 @@ if(!empty($_POST))
   } 
   else
   {
-    $mobileno = $_POST['cust']['mobile']; 
+    $spaceNo = $_POST['cust']['mobile']; 
+    $mobileno = str_replace(' ', '', $spaceNo);
     if(!preg_match("^(04\)|04|\+614)( ?\d){6}^",$mobileno)) 
     {
       $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
       $errorsfound = true;
     }
+      else
+      {
+          
+      }
   }
 
   if(empty($_POST['cust']['card'])) 
@@ -89,12 +96,13 @@ if(!empty($_POST))
   } 
   else
   {
-    $card = $_POST['cust']['card']; 
-    //        if(!preg_match("^4[0-9]{12}(?:[0-9]{3})?^", $card)) //regex wrong, need a new one
-    //        {
-    //            $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
-    //            $errorsfound = true;
-    //        }
+    $cardSpace = $_POST['cust']['card']; 
+    $card= str_replace(' ', '', $cardSpace);
+            if(!preg_match("^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})^", $card))
+            {
+                $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
+                $errorsfound = true;
+            }
   }
 
 
