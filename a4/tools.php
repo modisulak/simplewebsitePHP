@@ -266,11 +266,11 @@ function validateCard($cardmonth,$cardYear) {
 function isFullorDiscount($movieDay,$movieHour) {
   $ret = "full";
   if($movieDay == "MON" || $movieDay == "WED"){
-    $ret = "discount";
+    $ret = "disc";
   }
   if(($movieDay == "TUE" || $movieDay == "THU" || $movieDay == "FRI") && $movieHour=="T12")
   {
-    $ret = "discount"; 
+    $ret = "disc"; 
   }
   return $ret;
 

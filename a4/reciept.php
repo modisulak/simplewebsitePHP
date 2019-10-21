@@ -30,6 +30,16 @@ $moviesNames = [
     'AHF' => 'The Happy Prince'];
 
 $total = calcResult($seats,$movieDetails['day'],$movieDetails['hour']);
+$isFullOrDisc = isFullorDiscount($movieDetails['day'],$movieDetails['hour']);
+
+$seatstitle = [
+    'FCA' => 'First Class Adult     ',
+    'FCP' => 'First Class Concession     ',
+    'FCC' => 'First Class Child     ',
+    'STA' => 'Standard Adult     ',
+    'STP' => 'Standard Concession    ',
+    'STC' => 'Standard Child    ',
+];
 
 $pricesObject = [
     'full' => [
@@ -88,11 +98,12 @@ $pricesObject = [
                                 <td class="Rate"><h2>Total</h2></td>
                             </tr>
                             <?php foreach($seats as $seatcode => $quantity) {
+    
                             if($quantity > 0): ?>
                             <tr class="service">
                                 <td class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
                                 <td class="tableitem"><?= $quantity ?></td>
-                                <td class="tableitem"><?= $quantity ?></td>
+                                <td class="tableitem"><?= $quantity * $pricesObject[$isFullOrDisc][$seatcode]?></td>
                             </tr>    
                             
                             <?php endif; } ?>
@@ -105,7 +116,7 @@ $pricesObject = [
                                     <tr class="tabletitle">
                                         <td></td>
                                         <td class="Rate"><h2>Total</h2></td>
-                                        <td class="payment"><h2><?php echo $total ?></h2></td>
+                                        <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
                                     </tr>
 
                         </table>
