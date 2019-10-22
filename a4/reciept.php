@@ -6,7 +6,8 @@ $custDetails = $_SESSION["custDetails"];
 $movieDetails = $_SESSION["movieDetails"];
 $seats = $_SESSION["seats"];
 
-if(empty($_SESSION)) {
+if(empty($_SESSION)) 
+{
     header("Location: index.php");
 }
 
@@ -18,7 +19,6 @@ $allDetails = array_merge($custDetails,$movieDetails,$seats);
 fputcsv($fp, $allDetails, "\t");
 
 flock($fp, LOCK_UN);
-
 fclose($fp);
 
 $moviesNames = [

@@ -82,11 +82,7 @@ if(!empty($_POST))
     {
       $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
       $errorsfound = true;
-    }
-      else
-      {
-          
-      }
+    } 
   }
 
   if(empty($_POST['cust']['card'])) 
@@ -98,32 +94,43 @@ if(!empty($_POST))
   {
     $cardSpace = $_POST['cust']['card']; 
     $card= str_replace(' ', '', $cardSpace);
-            if(!preg_match("/[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?/", $cardSpace))
-            {
-                $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
-                $errorsfound = true;
-            }
+      
+    if(!preg_match("/^(\d){13,19}$/", $card))
+    {
+        $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
+        $errorsfound = true;
+    }
   }
-  
-  //^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})^
-
-
-
+    
   if(empty($_POST['cust']['expiryMonth'])) 
   { 
-    $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
+    $cardError = '<span style="color:red"> Must Enter Card Expiry Details! </span>';
     $errorsfound = true;
   }
-
   else
   {
     $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
   }
-
-  //  $errorsfound = validateUserInput(); 
+    
+  if(empty($_POST['cust']['expiryYear'])) 
+  {
+    $cardError = '<span style="color:red"> Must Enter Card Expiry Details! </span>';
+    $errorsfound = true;    
+  }
+  else 
+  {
+      $cardExpiryYear= $_POST['cust']['expiryYear'];
+      if(!validateCard($cardExpiryMonth,$cardExpiryYear))
+      {
+          $cardError = '<span style="color:red"> Card Expired! Please retry.</span>';
+        $errorsfound = true;    
+      }
+  }
+    
+ 
   if (!$errorsfound)
   {
-    header("Location: reciept.php");
+    header("Location: reciept.php"); //add anchor here?
     $_SESSION["custDetails"] = $_POST["cust"];
     $_SESSION["movieDetails"] = $_POST["movie"];
     $_SESSION["seats"] = $_POST["seats"];

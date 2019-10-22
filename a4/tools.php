@@ -119,128 +119,9 @@ function php2js( $arr, $arrName ) {
   echo "</script>\n\n";
 }
 
-function validateUserInput() 
+
+function calcResult($seats,$movieDay,$movieHour) 
 {
-  $errorsfound = false;
-  if(!empty($_POST)) 
-  {
-    $seats = $_POST['seats']; 
-    $movie = $_POST['movie'];
-
-    $movieId = $_POST['movie']['id'];
-    $movieDay = $_POST['movie']['day'];
-    $movieHour = $_POST['movie']['hour'];
-    
-      
-    
-    $qtySeats = 
-    [
-      'STA' => $_POST['seats']['STA'],
-      'STP' => $_POST['seats']['STP'],
-      'STC' => $_POST['seats']['STC'],
-      'FCA' => $_POST['seats']['FCA'],
-      'FCP' => $_POST['seats']['FCP'],
-      'FCC' => $_POST['seats']['FCC']
-    ];
-    
-    if(empty($_POST['cust']['name']))
-    {
-      $nameError = '<span style="color:red"> Must Enter Name. </span>';
-      $errorsfound = true;
-    } 
-    else 
-    {
-        $name = $_POST['cust']['name']; 
-        if(!is_string($name)) 
-        {
-            $nameError = '<span style="color:red"> Name must be only letters. </span>';
-            $errorsfound = true;
-        }
-    }
-      
-    
-    if(empty($_POST['cust']['email'])) 
-    {
-      $emailError = '<span style="color:red"> Must Enter Email. </span>';
-      $errorsfound = true;
-    } 
-    else
-    {
-        $email = $_POST['cust']['email']; 
-        if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) 
-        {
-            $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
-            $errorsfound = true;
-        }
-    }
-      
-    if(empty($_POST['cust']['mobile'])) 
-    {
-      $mobileError = '<span style="color:red"> Must Enter Mobile No. </span>';
-      $errorsfound = true;
-    } 
-    else
-    {
-        $mobileno = $_POST['cust']['mobile']; 
-        if(!preg_match("^(04\)|04|\+614)( ?\d){6}^",$mobileno)) 
-        {
-            $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
-            $errorsfound = true;
-        }
-    }
-    
-    if(empty($_POST['cust']['card'])) 
-    {
-      $cardError = '<span style="color:red"> Must Enter Card No. </span>';
-      $errorsfound = true;
-    } 
-    else
-    {
-        $card = $_POST['cust']['card']; 
-        if(!preg_match("^4[0-9]{12}(?:[0-9]{3})?^", $card)) //regex wrong
-        {
-            $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
-            $errorsfound = true;
-        }
-    }
-      
-      
-    if(empty($_POST['cust']['expiryMonth'])) 
-    { 
-      $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
-      $errorsfound = true;
-    }
-      
-    else
-    {
-        $cardExpiryMonth = $_POST['cust']['expiryMonth']; 
-    }
-    
-//    if(empty($_POST['cust']['expiryYear']) 
-//    { 
-//      $cardError = '<span style="color:red"> Must Enter Card Expire Details! </span>';
-//      $errorsfound = true;
-//    }
-//       
-//    else
-//    {
-//        $cardExpiryYear = $_POST['cust']['expiryYear']; 
-//     }
-      
-      
-//    if(!validateCard($cardExpiryMonth,$cardExpiryYear)) 
-//    {
-//        $cardError = '<span style="color:red"> Card Expired! </span>';
-//        $errorsfound = true;
-//    } 
-  }
-    return $errorsfound; 
-}
-
-
-
-
-function calcResult($seats,$movieDay,$movieHour) {
   global $pricesObject;
   $FullOrDis = isFullorDiscount($movieDay,$movieHour);
   $total = 0;
@@ -252,17 +133,22 @@ function calcResult($seats,$movieDay,$movieHour) {
    $totalGst =$total+$gst;
    return round($totalGst,2);
 }
-function validateCard($cardmonth,$cardYear) { 
+function validateCard($cardmonth,$cardYear)
+{ 
   $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
   $current = new \DateTime();
-  if ($expires < $current) {
+  if ($expires < $current) 
+  {
     return false;
-  } else {
-    return true; 
-  }
+  } 
+ else 
+ {
+     return true; 
+}
 }
 
-function isFullorDiscount($movieDay,$movieHour) {
+function isFullorDiscount($movieDay,$movieHour) 
+{
   $ret = "full";
   if($movieDay == "MON" || $movieDay == "WED"){
     $ret = "disc";
@@ -272,7 +158,6 @@ function isFullorDiscount($movieDay,$movieHour) {
     $ret = "disc"; 
   }
   return $ret;
-
 }
 
 
