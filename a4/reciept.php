@@ -13,11 +13,9 @@ if(empty($_SESSION)) {
 $fp = fopen('bookings.txt',"a");
 flock($fp, LOCK_EX);
 
-fputcsv($fp, $custDetails, "\t");
+$allDetails = array_merge($custDetails,$movieDetails,$seats);
 
-fputcsv($fp, $movieDetails, "\t");
-
-fputcsv($fp, $seats, "\t");
+fputcsv($fp, $allDetails, "\t");
 
 flock($fp, LOCK_UN);
 
@@ -93,46 +91,46 @@ $pricesObject = [
                     <div id="table">
                         <table>
                             <tr class="tabletitle">
-                                <td class="item"><h2>Item</h2></td>
-                                <td class="Hours"><h2>Qty</h2></td>
-                                <td class="Rate"><h2>Total</h2></td>
+                                <td style="padding:0 15px 0 15px;" class="item"><h2>Item</h2></td>
+                                <td style="padding:0 30px 0 15px;" class="quantity"><h2>Quantity</h2></td>
+                                <td  style="padding:0 15px 0 15px;" class="total"><h2>Total</h2></td>
                             </tr>
                             <?php foreach($seats as $seatcode => $quantity) {
-    
+
                             if($quantity > 0): ?>
                             <tr class="service">
-                                <td class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
-                                <td class="tableitem"><?= $quantity ?></td>
-                                <td class="tableitem"><?= $quantity * $pricesObject[$isFullOrDisc][$seatcode]?></td>
+                                <td style="padding:0 30px 0 15px;" class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
+                                <td style="padding:0 15px 0 50px;" class="tableitem"><?= $quantity ?></td>
+                                <td style="padding:0 15px 0 30px;" class="tableitem"><?= $quantity * $pricesObject[$isFullOrDisc][$seatcode]?></td>
                             </tr>    
-                            
+
                             <?php endif; } ?>
-                                    
-                                    
-                                    
 
 
 
-                                    <tr class="tabletitle">
-                                        <td></td>
-                                        <td class="Rate"><h2>Total inc GST</h2></td>
-                                        <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
-                                    </tr>
+
+
+
+                            <tr class="tabletitle">
+                                <td></td>
+                                <td style="padding:0 15px 0 30px;" class="Rate"><h2>Total inc GST</h2></td>
+                                <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
+                            </tr>
 
                         </table>
-                            </div><!--End Table-->
+                    </div><!--End Table-->
 
-                        <div id="legalcopy">
-                            <p class="legal"><strong> Thank you for your purchase.  </strong> Please remember to bring this invoice to get your tickets at the counter.
-                            </p>
-                        </div>
-
+                    <div id="legalcopy">
+                        <p class="legal"><strong> Thank you for your purchase.  </strong> Please remember to bring this invoice to get your tickets at the counter.
+                        </p>
                     </div>
-                    </center>
 
                 </div>
-            </body>
-        <?php
-            preShow($_SESSION)
-        ?>
-        </html>
+            </center>
+
+        </div>
+    </body>
+    <?php
+    preShow($_SESSION)
+    ?>
+</html>

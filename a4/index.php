@@ -98,12 +98,15 @@ if(!empty($_POST))
   {
     $cardSpace = $_POST['cust']['card']; 
     $card= str_replace(' ', '', $cardSpace);
-            if(!preg_match("^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})^", $card))
+            if(!preg_match("/[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?[(\d)]{4} ?/", $cardSpace))
             {
                 $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
                 $errorsfound = true;
             }
   }
+  
+  //^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})^
+
 
 
   if(empty($_POST['cust']['expiryMonth'])) 
@@ -142,7 +145,7 @@ if(!empty($_POST))
     <script src='../wireframe.js'></script>
     <script type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <a href="reciept.php" target="_blank">A4</a>
+
 
   </head>
 
