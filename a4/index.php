@@ -120,14 +120,14 @@ if(!empty($_POST))
   else 
   {
       $cardExpiryYear= $_POST['cust']['expiryYear'];
-      if(!validateCard($cardExpiryMonth,$cardExpiryYear))
-      {
-          $cardError = '<span style="color:red"> Card Expired! Please retry.</span>';
-        $errorsfound = true;    
-      }
+if (!validateCard($cardExpiryMonth,$cardExpiryYear)) 
+{
+     $cardError = '<span style="color:red"> Card Expired! Please retry.</span>';
+        $errorsfound = true;   
+}  
+   
   }
     
- 
   if (!$errorsfound)
   {
     header("Location: reciept.php"); //add anchor here?

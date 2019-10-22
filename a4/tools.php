@@ -133,21 +133,22 @@ function calcResult($seats,$movieDay,$movieHour)
    $totalGst =$total+$gst;
    return round($totalGst,2);
 }
-function validateCard($cardmonth,$cardYear)
+
+function validateCard($cardExpiryMonth,$cardExpiryYear)
 { 
-  $valid = false;
-  $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
-  $current = new \DateTime();
-  if ($expires < $current) 
-  {
-    $valid = false;
-  } 
- else 
- {
-     $valid = true;
+$expires = \DateTime::createFromFormat('mY', $cardExpiryMonth.$cardExpiryYear); 
+$now= new \DateTime();
+$nowFormat = $now->format('mY');
+if ($expires < $nowFormat) 
+{
+    return false;
 }
-  return $valid;
+   return true;
 }
+    
+
+
+
 
 function isFullorDiscount($movieDay,$movieHour) 
 {

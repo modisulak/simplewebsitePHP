@@ -132,7 +132,7 @@ $pricesObject = [
        
         <div class="cardWrap">
             <div class="card">
-                <h1>Lunado <span>Cinema</span></h1>
+                <h1>Lunardo <span>Cinema</span></h1>
                 <div class="title">
                     <h2> <?php if(isset($movieDetails)) echo $moviesNames[$movieDetails['id']] ?> </h2>
                     <span>movie</span>
@@ -156,13 +156,17 @@ $pricesObject = [
 
         <?php endif; } ?>
         
+        
         <footer> 
-   
-    </footer>
-         <?php
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+            <?php
     preShow($_SESSION)
     ?>
+            
+    </footer>
+         
     </body>
-    
 
 </html>
