@@ -135,16 +135,18 @@ function calcResult($seats,$movieDay,$movieHour)
 }
 function validateCard($cardmonth,$cardYear)
 { 
+  $valid = false;
   $expires = \DateTime::createFromFormat('mY',$cardmonth.$cardYear);
   $current = new \DateTime();
   if ($expires < $current) 
   {
-    return false;
+    $valid = false;
   } 
  else 
  {
-     return true; 
+     $valid = true;
 }
+  return $valid;
 }
 
 function isFullorDiscount($movieDay,$movieHour) 

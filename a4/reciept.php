@@ -97,7 +97,7 @@ $pricesObject = [
                             </tr>
                             <?php foreach($seats as $seatcode => $quantity) {
 
-                            if($quantity > 0): ?>
+    if($quantity > 0): ?>
                             <tr class="service">
                                 <td style="padding:0 30px 0 15px;" class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
                                 <td style="padding:0 15px 0 50px;" class="tableitem"><?= $quantity ?></td>
@@ -105,11 +105,6 @@ $pricesObject = [
                             </tr>    
 
                             <?php endif; } ?>
-
-
-
-
-
 
                             <tr class="tabletitle">
                                 <td></td>
@@ -129,8 +124,45 @@ $pricesObject = [
             </center>
 
         </div>
-    </body>
-    <?php
+
+        <?php foreach($seats as $seatcode => $quantity) {
+    if($quantity > 0): ?>
+       
+        <?php for ($x = 1; $x <= $quantity; $x++) { ?>
+       
+        <div class="cardWrap">
+            <div class="card">
+                <h1>Lunado <span>Cinema</span></h1>
+                <div class="title">
+                    <h2> <?php if(isset($movieDetails)) echo $moviesNames[$movieDetails['id']] ?> </h2>
+                    <span>movie</span>
+                </div>
+                <div class="name">
+                    <h2> <?= $seatstitle[$seatcode] ?> </h2>
+                    <span>ticket type</span>
+                </div>
+                <div class="seat">
+                    <h2>12:00</h2>
+                    <span>time</span>
+                </div>
+
+                <div class="barcode"></div>
+            </div>
+
+        </div>
+  <?php } ?> 
+
+  
+
+        <?php endif; } ?>
+        
+        <footer> 
+   
+    </footer>
+         <?php
     preShow($_SESSION)
     ?>
+    </body>
+    
+
 </html>
