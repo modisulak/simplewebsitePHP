@@ -3,6 +3,10 @@
 require_once('tools.php');
 
 $custDetails = $_SESSION["custDetails"];
+unset($custDetails['card']);
+unset($custDetails['expiryMonth']);
+unset($custDetails['expiryYear']);
+
 $movieDetails = $_SESSION["movieDetails"];
 $seats = $_SESSION["seats"];
 
