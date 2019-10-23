@@ -7,8 +7,13 @@ unset($custDetails['card']);
 unset($custDetails['expiryMonth']);
 unset($custDetails['expiryYear']);
 
+$now = date_create()->format('Y-m-d');
+
+
 $movieDetails = $_SESSION["movieDetails"];
 $seats = $_SESSION["seats"];
+
+$total = calcResult($seats,$movieDetails['day'],$movieDetails['hour']);
 
 if(empty($_SESSION)) 
 {
@@ -19,6 +24,8 @@ $fp = fopen('bookings.txt',"a");
 flock($fp, LOCK_EX);
 
 $allDetails = array_merge($custDetails,$movieDetails,$seats);
+array_unshift($allDetails,$now);
+array_push($allDetails,$total);
 
 fputcsv($fp, $allDetails, "\t");
 
@@ -47,7 +54,7 @@ $seatstitle = [
 
 $pricesObject = [
     'full' => [
-        'FCA' =>   30,
+        'FCA' => 30,
         'FCP' => 27,
         'FCC' => 24,
         'STA' => 19.8,
@@ -98,25 +105,25 @@ $pricesObject = [
                     <div id="table">
                         <table>
                             <tr class="tabletitle">
-                                <td style="padding:0 15px 0 15px;" class="item"><h2>Item</h2></td>
-                                <td style="padding:0 30px 0 15px;" class="quantity"><h2>Quantity</h2></td>
-                                <td  style="padding:0 15px 0 15px;" class="total"><h2>Total</h2></td>
+                                <td class="item"><h2>Item</h2></td>
+                                <td class="quantity"><h2>Quantity</h2></td>
+                                <td  class="total"><h2>Total</h2></td>
                             </tr>
                             <?php foreach($seats as $seatcode => $quantity) {
 
                             if($quantity > 0): ?>
                             <tr class="service">
-                                <td style="padding:0 30px 0 15px;" class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
-                                <td style="padding:0 15px 0 50px;" class="tableitem"><?= $quantity ?></td>
-                                <td style="padding:0 15px 0 30px;" class="tableitem"><?= $quantity * $pricesObject[$isFullOrDisc][$seatcode]?></td>
+                                <td  class="tableitem"><p><?= $seatstitle[$seatcode] ?></p> </td>
+                                <td class="tableitem"><p><?= $quantity ?> </p></td>
+                                <td class="tableitem"><p>$<?= $quantity * $pricesObject[$isFullOrDisc][$seatcode]?> </p></td>
                             </tr>    
 
                             <?php endif; } ?>
 
                             <tr class="tabletitle">
                                 <td></td>
-                                <td style="padding:0 15px 0 30px;" class="Rate"><h2>Total inc GST $</h2></td>
-                                <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
+                                <td style="padding:0 15px 0 30px;" class="Rate"><h2>Total inc GST </h2></td>
+                                <td class="payment"><h2 style="color:red;">$<?php echo $total ?></h2></td>
                             </tr>
 
                         </table>
@@ -130,6 +137,7 @@ $pricesObject = [
                             Address : Small Town, Melbourne<br>
                             Email   : info@lunado.com<br>
                             Phone   : 555-555-5555<br>
+                            ABN     : 123-123-124<br>
                         </p>
                     </div>
 
