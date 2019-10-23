@@ -79,11 +79,12 @@ $pricesObject = [
 
                 <div id="mid">
                     <div class="info">
-                        <h2>Contact Info</h2>
+                      
+                         <h3>Customer-Info</h3>
                         <p> 
-                            Address : Small Town, Melbourne<br>
-                            Email   : info@lunado.com<br>
-                            Phone   : 555-555-5555<br>
+                            Name  : <?php if(isset($custDetails)) echo $custDetails['name'] ?><br>
+                            Email : <?php if(isset($custDetails)) echo $custDetails['email'] ?><br>
+                            Phone : <?php if(isset($custDetails)) echo $custDetails['mobile'] ?><br>
                         </p>
                     </div>
                 </div><!--End Invoice Mid-->
@@ -99,7 +100,7 @@ $pricesObject = [
                             </tr>
                             <?php foreach($seats as $seatcode => $quantity) {
 
-    if($quantity > 0): ?>
+                            if($quantity > 0): ?>
                             <tr class="service">
                                 <td style="padding:0 30px 0 15px;" class="tableitem"><?= $seatstitle[$seatcode] ?> </td>
                                 <td style="padding:0 15px 0 50px;" class="tableitem"><?= $quantity ?></td>
@@ -110,7 +111,7 @@ $pricesObject = [
 
                             <tr class="tabletitle">
                                 <td></td>
-                                <td style="padding:0 15px 0 30px;" class="Rate"><h2>Total inc GST</h2></td>
+                                <td style="padding:0 15px 0 30px;" class="Rate"><h2>Total inc GST $</h2></td>
                                 <td class="payment"><h2 style="color:red;"><?php echo $total ?></h2></td>
                             </tr>
 
@@ -120,15 +121,26 @@ $pricesObject = [
                     <div id="legalcopy">
                         <p class="legal"><strong> Thank you for your purchase.  </strong> Please remember to bring this invoice to get your tickets at the counter.
                         </p>
+                          <h3>Contact Info</h3>
+                        <p> 
+                            Address : Small Town, Melbourne<br>
+                            Email   : info@lunado.com<br>
+                            Phone   : 555-555-5555<br>
+                        </p>
                     </div>
 
                 </div>
             </center>
 
         </div>
+        
+      
+        <br>
+        <br>
+        <br>
         <div class = "alltix">
         <?php foreach($seats as $seatcode => $quantity) {
-    if($quantity > 0): ?>
+        if($quantity > 0): ?>
        
         <?php for ($x = 1; $x <= $quantity; $x++) { ?>
        
@@ -143,7 +155,7 @@ $pricesObject = [
                     <h2> <?= $seatstitle[$seatcode] ?> </h2>
                     <span>ticket type</span>
                 </div>
-                <div class="seat">
+                <div class="time">
                     <h2>12:00</h2>
                     <span>time</span>
                 </div>
