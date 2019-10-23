@@ -134,19 +134,26 @@ function calcResult($seats,$movieDay,$movieHour)
    return round($totalGst,2);
 }
 
-function validateCard($cardExpiryMonth,$cardExpiryYear)
+function validateCard($cardmonth,$cardYear)
 { 
-$expires = \DateTime::createFromFormat('mY', $cardExpiryMonth.$cardExpiryYear); 
-$now= new \DateTime();
-//$nowFormat = $now->format('mY');
-    
-if ($expires < $now) 
-{
+
+  $currentMonth = date('m');
+  $currentYear = date('Y');
+
+  $currentDays = ($currentYear * 12) + $currentMonth;
+  
+  $expireDays = ($cardYear * 12) + $cardmonth;
+ 
+ if ($expireDays < $currentDays) 
+  {
     return false;
+  } 
+ else 
+ {
+     return true;
 }
-   return true;
-}
-    
+  
+}   
 
 
 

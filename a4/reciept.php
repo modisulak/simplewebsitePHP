@@ -27,6 +27,8 @@ $moviesNames = [
     'ANM' => 'Dumbo',
     'AHF' => 'The Happy Prince'];
 
+
+
 $total = calcResult($seats,$movieDetails['day'],$movieDetails['hour']);
 $isFullOrDisc = isFullorDiscount($movieDetails['day'],$movieDetails['hour']);
 

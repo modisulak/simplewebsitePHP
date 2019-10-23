@@ -2,6 +2,19 @@
 
 require('tools.php');
 
+
+$moviesNames = [
+    'ACT' => 'Avengers',
+    'RMC' => 'Top End Wedding',
+    'ANM' => 'Dumbo',
+    'AHF' => 'The Happy Prince'];
+
+$moviesTimes = [
+    'T12' => '12:00 PM',
+    'T15' => '3:00 PM',
+    'T18' => '6:00 PM',
+    'T21' => '9:00 PM'];
+
 $name = "";
 $email = "";
 $spaceNo= "";
@@ -28,6 +41,8 @@ if(!empty($_POST))
   $movieId = $_POST['movie']['id'];
   $movieDay = $_POST['movie']['day'];
   $movieHour = $_POST['movie']['hour'];
+  
+  print($movie);
 
   $qtySeats = 
     [
@@ -53,6 +68,7 @@ if(!empty($_POST))
       $errorsfound = true;
     }
   }
+  
 
   if(empty($_POST['cust']['email'])) 
   {
@@ -122,7 +138,7 @@ if(!empty($_POST))
       $cardExpiryYear= $_POST['cust']['expiryYear'];
 if (!validateCard($cardExpiryMonth,$cardExpiryYear)) 
 {
-     $cardError = '<span style="color:red"> Card Expired! Please retry.</span>';
+     $cardError = '<span style="color:red;font-weight:900;font-size:25px"> Card Expired! Please retry.</span>';
      $errorsfound = true;   
 }  
    
@@ -524,17 +540,17 @@ if (!validateCard($cardExpiryMonth,$cardExpiryYear))
           <form action="index.php" method="post" style="border-style: solid">
 
             <div id="movie-info" class="hidden-fields">
-              <input type="hidden" name="movie[id]" value="" title="Movie-ID" id="movie-id"> 
+              <input type="hidden" name="movie[id]" title="Movie-id" id="movie-id"  value='<?= $movieId ?>' > 
               <br>
-              <input type="hidden" name="movie[day]" value="" title="Movie-day" id="movie-day"> <br>   
-              <input type="hidden" name="movie[hour]" value="" title="Movie-hour" id="movie-hour"> <br>
+              <input type="hidden" name="movie[day]" title="Movie-day" id="movie-day"  value='<?= $movieDay ?>' > <br>   
+              <input type="hidden" name="movie[hour]"  title="Movie-hour" id="movie-hour"  value='<?= $movieHour ?>' > <br>
               <br>
               <br>
               <br>
               <br>
               <br>
             </div>
-            <span id="customer-view" class="customer-view"> TITLE-DAY-TIME </span>
+            <span id="customer-view" class="customer-view"> <?= $moviesNames[$movieId] ?> on <?= $movieDay ?> at <?= $moviesTimes[$movieHour] ?> </span>
             <br>
             <br>
             <br>
@@ -548,7 +564,7 @@ if (!validateCard($cardExpiryMonth,$cardExpiryYear))
                 <?= $nameError ?>
 
                 <br> 
-                <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email" value='<?= $email ?>'/>  <br>
+                <label> Email: </label> <input type="email" name="cust[email]" title="Email" id="cust-email" value='<?= $email ?>'/>  <br>
                 <?= $emailError ?>
 
                 <br>   
