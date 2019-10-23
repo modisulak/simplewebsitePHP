@@ -138,8 +138,9 @@ function validateCard($cardExpiryMonth,$cardExpiryYear)
 { 
 $expires = \DateTime::createFromFormat('mY', $cardExpiryMonth.$cardExpiryYear); 
 $now= new \DateTime();
-$nowFormat = $now->format('mY');
-if ($expires < $nowFormat) 
+//$nowFormat = $now->format('mY');
+    
+if ($expires < $now) 
 {
     return false;
 }
