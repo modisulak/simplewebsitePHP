@@ -124,7 +124,7 @@ $pricesObject = [
             </center>
 
         </div>
-
+        <div class = "alltix">
         <?php foreach($seats as $seatcode => $quantity) {
     if($quantity > 0): ?>
        
@@ -155,12 +155,10 @@ $pricesObject = [
   
 
         <?php endif; } ?>
+        </div>
         
         
         <footer> 
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br>
-        <br><br><br><br><br><br>
             <?php
     preShow($_SESSION)
     ?>
