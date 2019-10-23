@@ -41,7 +41,7 @@ if(!empty($_POST))
 
   if(empty($_POST['cust']['name']))
   {
-    $nameError = '<span style="color:red"> Must Enter Name. </span>';
+    $nameError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Name. </span>';
     $errorsfound = true;
   } 
   else 
@@ -49,14 +49,14 @@ if(!empty($_POST))
     $name = $_POST['cust']['name']; 
     if(!preg_match("^[A-Za-z]+((\s)?((\'\-|\.)?([A-Za-z])+))*^",$name))
     {
-      $nameError = '<span style="color:red"> Name must be only letters. </span>';
+      $nameError = '<span style="color:red;font-weight:900;font-size:25px"> Name must be only letters. </span>';
       $errorsfound = true;
     }
   }
 
   if(empty($_POST['cust']['email'])) 
   {
-    $emailError = '<span style="color:red"> Must Enter Email. </span>';
+    $emailError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Email. </span>';
     $errorsfound = true;
   } 
   else
@@ -64,14 +64,14 @@ if(!empty($_POST))
     $email = $_POST['cust']['email'];
     if(filter_var($email,FILTER_VALIDATE_EMAIL) == false) 
     {
-      $emailError = '<span style="color:red"> Email Format Incorrect. </span>';
+      $emailError = '<span style="color:red;font-weight:900;font-size:25px"> Email Format Incorrect. </span>';
       $errorsfound = true;
     }
   }
 
   if(empty($_POST['cust']['mobile'])) 
   {
-    $mobileError = '<span style="color:red"> Must Enter Mobile No. </span>';
+    $mobileError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Mobile No. </span>';
     $errorsfound = true;
   } 
   else
@@ -80,14 +80,14 @@ if(!empty($_POST))
     $mobileno = str_replace(' ', '', $spaceNo);
     if(!preg_match("^(04\)|04|\+614)( ?\d){6}^",$mobileno)) 
     {
-      $mobileError = '<span style="color:red"> Must Enter Correct Mobile No. </span>';
+      $mobileError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Correct Mobile No. </span>';
       $errorsfound = true;
     } 
   }
 
   if(empty($_POST['cust']['card'])) 
   {
-    $cardError = '<span style="color:red"> Must Enter Card No. </span>';
+    $cardError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Card No. </span>';
     $errorsfound = true;
   } 
   else
@@ -97,14 +97,14 @@ if(!empty($_POST))
       
     if(!preg_match("/^(\d){13,19}$/", $card))
     {
-        $cardError = '<span style="color:red"> Must Enter Correct Card No. </span>';
+        $cardError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Correct Card No. </span>';
         $errorsfound = true;
     }
   }
     
   if(empty($_POST['cust']['expiryMonth'])) 
   { 
-    $cardError = '<span style="color:red"> Must Enter Card Expiry Details! </span>';
+    $cardError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Card Expiry Details! </span>';
     $errorsfound = true;
   }
   else
@@ -114,7 +114,7 @@ if(!empty($_POST))
     
   if(empty($_POST['cust']['expiryYear'])) 
   {
-    $cardError = '<span style="color:red"> Must Enter Card Expiry Details! </span>';
+    $cardError = '<span style="color:red;font-weight:900;font-size:25px"> Must Enter Card Expiry Details! </span>';
     $errorsfound = true;    
   }
   else 
@@ -123,14 +123,14 @@ if(!empty($_POST))
 if (!validateCard($cardExpiryMonth,$cardExpiryYear)) 
 {
      $cardError = '<span style="color:red"> Card Expired! Please retry.</span>';
-        $errorsfound = true;   
+     $errorsfound = true;   
 }  
    
   }
     
   if (!$errorsfound)
   {
-    header("Location: reciept.php"); //add anchor here?
+    header("Location: reciept.php"); 
     $_SESSION["custDetails"] = $_POST["cust"];
     $_SESSION["movieDetails"] = $_POST["movie"];
     $_SESSION["seats"] = $_POST["seats"];
@@ -545,11 +545,11 @@ if (!validateCard($cardExpiryMonth,$cardExpiryYear))
               <fieldset><legend>Personal Details</legend>
 
                 <label> Name: </label> <input type="text" name="cust[name]" title="Name" id="cust-name" value='<?= $name ?>'/> <br>
-                <span><?= $nameError ?></span>
+                <?= $nameError ?>
 
                 <br> 
                 <label> Email: </label> <input type="email" name="cust[email]" value="" title="Email" id="cust-email" value='<?= $email ?>'/>  <br>
-                <span> <?= $emailError ?></span>
+                <?= $emailError ?>
 
                 <br>   
                 <label> Mobile: </label> <input type="tel" name="cust[mobile]" title="Phone Number" id="cust-mobile" value = '<?= $mobileno ?>'/> <br>
